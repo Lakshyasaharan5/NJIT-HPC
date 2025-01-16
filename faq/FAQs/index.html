@@ -2983,15 +2983,6 @@ If you have any questions or need further assistance, please do not hesitate to 
 </li>
       
         <li class="md-nav__item">
-  <a href="#issues-with-mobaxterm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Issues with MobaXterm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#file-systems-storage" class="md-nav__link">
     <span class="md-ellipsis">
       File Systems / Storage
@@ -3019,9 +3010,9 @@ If you have any questions or need further assistance, please do not hesitate to 
 </li>
       
         <li class="md-nav__item">
-  <a href="#softwares-and-hardware-specifications" class="md-nav__link">
+  <a href="#software-and-hardware-specifications" class="md-nav__link">
     <span class="md-ellipsis">
-      Softwares and Hardware Specifications
+      Software and Hardware Specifications
     </span>
   </a>
   
@@ -3180,15 +3171,6 @@ If you have any questions or need further assistance, please do not hesitate to 
 </li>
       
         <li class="md-nav__item">
-  <a href="#issues-with-mobaxterm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Issues with MobaXterm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#file-systems-storage" class="md-nav__link">
     <span class="md-ellipsis">
       File Systems / Storage
@@ -3216,9 +3198,9 @@ If you have any questions or need further assistance, please do not hesitate to 
 </li>
       
         <li class="md-nav__item">
-  <a href="#softwares-and-hardware-specifications" class="md-nav__link">
+  <a href="#software-and-hardware-specifications" class="md-nav__link">
     <span class="md-ellipsis">
-      Softwares and Hardware Specifications
+      Software and Hardware Specifications
     </span>
   </a>
   
@@ -3258,7 +3240,7 @@ If you have any questions or need further assistance, please do not hesitate to 
 <summary>How do I get access to the Wulver HPC cluster?</summary>
 <ul>
 <li>If you are a student or researcher, your research/faculty advisor will need to request an account on your behalf. </li>
-<li>If you are a faculty member, then you can directly mail us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a> for an account.</li>
+<li>If you are a faculty member, then you can directly email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a> for an account.</li>
 <li>For individuals non affiliated with NJIT have to contact a faculty member in NJIT to sponsor you a guest account.</li>
 <li>If you are taking a course that requires computation on Wulver please ask your course instructor to email <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a> to request access for the students.</li>
 <li>For detail information please click <a href="../../clusters/cluster_access/">here</a>.</li>
@@ -3267,19 +3249,15 @@ If you have any questions or need further assistance, please do not hesitate to 
 <details class="question">
 <summary>How do I connect to the Wulver HPC cluster?</summary>
 <ul>
-<li>You can ssh into Wulver using your UCID and password</li>
 <li>For detail information please click <a href="../../clusters/cluster_access/">here</a>.</li>
 </ul>
 </details>
 <details class="question">
 <summary>Why can’t I log in to the HPC?</summary>
 <ul>
-<li>There are multiple possible reasons:<ul>
-<li>Ensure that your UCID and password are correct.</li>
 <li>It’s possible that your account is not activated on Wulver. Make sure to follow the instructions in [How do I get access to the Wulver HPC cluster?]. Once your account is created, you will receive a confirmation in your NJIT email.</li>
-<li>If you are working off-campus, make sure to connect to NJIT VPN before logging into Wulver. Visit <a href="https://ist.njit.edu/vpn">https://ist.njit.edu/vpn</a> for more information on VPN installation.            </li>
-</ul>
-</li>
+<li>Ensure that your UCID and password are correct.</li>
+<li>If you are working off-campus, make sure to connect to NJIT VPN before logging into Wulver. Visit <a href="https://ist.njit.edu/vpn">https://ist.njit.edu/vpn</a> for more information on VPN installation.</li>
 </ul>
 </details>
 <details class="question">
@@ -3291,24 +3269,21 @@ If you have any questions or need further assistance, please do not hesitate to 
 <details class="question">
 <summary>Why am I getting “permission denied” ?</summary>
 <ul>
-<li>There are multiple possible reasons:<ul>
 <li>You might not have access to the HPC yet. For requesting access, please check our <a href="../../clusters/cluster_access/">user access</a>.</li>
-<li>Your instructor/PI have not added you into the group yet.</li>
-</ul>
-</li>
+<li>Your instructor/PI might not have added you into the group yet.</li>
+<li>Cluster might be having downtime due to maintenance or other reasons.</li>
 </ul>
 </details>
 <details class="question">
-<summary>Are there data transfer considerations for the HPC cluster?</summary>
+<summary>How do I transfer data to and from the HPC cluster?</summary>
 <ul>
-<li>For transferring  data we recommend using <strong>rsync</strong> or <strong>scp</strong></li>
-<li>Detailed instructions are given <a href="https://hpc.njit.edu/clusters/cluster_access/#access-to-clusters">here</a>.</li>
+<li>Detailed instructions are given  <a href="https://hpc.njit.edu/clusters/cluster_access/#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa">here</a>.</li>
 </ul>
 </details>
 <details class="question">
 <summary>What security measures should I be aware of when using the HPC cluster?</summary>
 <ul>
-<li>Do not share your login information with anyone else or allow anyone to login with your account. </li>
+<li>Do not share your login information with anyone else or allow anyone to login with your account.</li>
 </ul>
 </details>
 <details class="question">
@@ -3318,32 +3293,19 @@ If you have any questions or need further assistance, please do not hesitate to 
 <li>Please note that you are on the login node of Wulver. Do not run any computations on the login nodes, as CPU and memory usage are limited per user on these nodes. To perform computations, you need to request resources from the compute nodes via <a href="../../Software/slurm/slurm/">SLURM</a>.</li>
 </ul>
 </details>
-<h2 id="issues-with-mobaxterm">Issues with MobaXterm<a class="headerlink" href="#issues-with-mobaxterm" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>Highly recommended to use the latest version of MobaXterm.</li>
-</ul>
-</div>
-<details class="question">
-<summary>How do I set up SSH keys in MobaXterm?</summary>
-<ul>
-<li>You don’t need to set up SSH keys because multi factor factor authentication is enabled via DUO. </li>
-</ul>
-</details>
 <h2 id="file-systems-storage">File Systems / Storage<a class="headerlink" href="#file-systems-storage" title="Permanent link">&para;</a></h2>
 <details class="question">
-<summary>I want to know the different file storage systems on Wulver.</summary>
+<summary>What are the different file storage systems available on Wulver?</summary>
 <ul>
 <li>Please visit our <a href="https://hpc.njit.edu/clusters/Wulver_filesystems/">file system</a> page for detailed information. </li>
 </ul>
 </details>
 <details class="question">
-<summary>How can I get more storage space ?</summary>
+<summary>How can I get more storage?</summary>
 <ul>
 <li>When your account is active on Wulver, you will have access to following file systems<ul>
 <li><strong>$HOME</strong> directory - Default quota of 50GB per user and cannot be increased</li>
-<li><strong>/project</strong> - Default quota of 2TB per PI group and can be increased upon PI’s request</li>
+<li><strong>/project</strong> - Default quota of 2TB per PI group and can be increased by purchasing additional storage at $200/TB for 5 years.</li>
 <li><strong>/scratch</strong> - No quota but files will be deleted after 30 days or sooner if the directory reaches 80% capacity. Users will be notified prior to deletion so they can review and move important files to <strong>/project</strong> if necessary.</li>
 </ul>
 </li>
@@ -3351,10 +3313,18 @@ If you have any questions or need further assistance, please do not hesitate to 
 </ul>
 </details>
 <details class="question">
-<summary>I have an error disk quota exceeded while running a job, how could I solve this error?</summary>
+<summary>I have an error “disk quota exceeded” while running a job, how can I solve this error?</summary>
 <ul>
-<li>First, check which filesystem is causing the error. If it’s in <strong>$HOME</strong>, it means the 50GB quota has been exceeded. You can either delete files or move them to <strong>/project</strong>. If the error is in /project, you need to delete some files. Alternatively, you can ask your PI to request an increase in the <strong>/project</strong> quota by emailing us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a>. You can also run your code in <strong>/scratch</strong> and, after the simulation, transfer the important files to <strong>/project</strong>. Use “quota_info” command to check the filesystem quota. </li>
-<li>If you are encountering this error while running Python or Jupyter Notebook via Conda, the issue is likely due to Conda packages or cache files stored in $HOME. Use the <code>sn p $HOME</code> command to view a detailed breakdown of each directory in $HOME, showing how much space it is consuming. If you notice that the .cache directory is consuming a significant amount of space, you should remove it. If the .conda directory is taking up too much space, you need to move the Conda environment to /project. Click <a href="https://hpc.njit.edu/Software/programming/python/conda/#importing-to-a-different-location">here</a> for detailed steps.</li>
+<li>First, check which filesystem is causing the error. If it’s in $HOME, it means the 50GB quota has been exceeded. You can either delete files, compress them, or move them to /project. If the error is in /project, you need to compress or delete some files. Alternatively, you can ask your PI to purchase an increase  in the /project quota by emailing us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a>. You can also run your code in /scratch and, after the simulation, transfer the important files to /project. </li>
+<li>Use <strong>quota_info</strong> command to check the filesystem quota. </li>
+<li>If you are encountering this error while running Python or Jupyter Notebook via Conda, the issue is likely due to Conda packages or cache files stored in $HOME. Use the <code>sn p $HOME</code> command to view a detailed breakdown of each directory in $HOME, showing how much space it is consuming. If you notice that the .cache directory is consuming a significant amount of space, you should remove it. If the .conda directory is taking up too much space, you need to move the Conda environment to /project. Refer to <a href="https://hpc.njit.edu/Software/programming/python/conda/#importing-to-a-different-location">this guide</a> for detailed steps. </li>
+</ul>
+</details>
+<details class="question">
+<summary>What is /scratch used for?</summary>
+<ul>
+<li>Run your code in /scratch and, after the simulation, transfer the important files to /project. </li>
+<li><strong>NB</strong> : This space is not backed up; files will be deleted after 30 days.</li>
 </ul>
 </details>
 <h2 id="jobs-and-scheduling">Jobs and scheduling<a class="headerlink" href="#jobs-and-scheduling" title="Permanent link">&para;</a></h2>
@@ -3366,34 +3336,45 @@ If you have any questions or need further assistance, please do not hesitate to 
 </ul>
 </details>
 <details class="question">
-<summary>How can I monitor the performance of my jobs and the cluster?</summary>
+<summary>What is Walltime?</summary>
 <ul>
-<li>For checking the status of your job you can use following commands
-<div class="highlight"><pre><span></span><code>squeue<span class="w"> </span>-j<span class="w"> </span><span class="o">[</span>job_id<span class="o">]</span><span class="w">          </span><span class="c1">#status by job_id</span>
-squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$LOGNAME</span><span class="w">          </span><span class="c1">#status by user </span>
+<li>Walltime refers to the maximum amount of real-world time a job is allowed to run on the cluster. </li>
+<li>It is the total elapsed time from when the job starts to when it finishes, including any idle time, queue wait time, and processing time.</li>
+<li>To set the walltime, you'll typically specify it in the job submission script: 
+<div class="highlight"><pre><span></span><code><span class="c1">#SBATCH --time=01:00:00      # Request 1 hour of walltime</span>
 </code></pre></div></li>
-<li>For detailed information please visit our <a href="https://hpc.njit.edu/Software/slurm/slurm/">SLURM page</a></li>
-<li>For checking the cluster performance use this <a href="https://hpc.njit.edu/Monitor/load.html">link</a></li>
 </ul>
 </details>
 <details class="question">
-<summary>Where does my output appear after I submit a job ?</summary>
+<summary>How can I monitor the status of my jobs?</summary>
+<ul>
+<li>For checking and monitoring the status of your job please use <a href="https://hpc.njit.edu/Software/slurm/slurm/#managing-and-monitoring-jobs">this</a> guide for detailed information.</li>
+</ul>
+</details>
+<details class="question">
+<summary>Where does my output will appear after I submit a job?</summary>
 <ul>
 <li>Your output will appear in the file which you initialized in your job script which look like below:
-<div class="highlight"><pre><span></span><code>#SBATCH --output=file_name.%j.out # %j expands to slurm JobID
+<div class="highlight"><pre><span></span><code><span class="c1">#SBATCH --output=file_name.%j.out # %j expands to slurm JobID</span>
 </code></pre></div></li>
 <li>By default, this file is in the same directory as the job script, unless you specify the working directory via <strong>sbatch</strong></li>
 </ul>
 </details>
+<details class="question">
+<summary>How can I see the status of the cluster?</summary>
+<ul>
+<li>For checking the cluster load use this <a href="https://hpc.njit.edu/Monitor/load.html">link</a></li>
+</ul>
+</details>
 <h2 id="maintenance">Maintenance<a class="headerlink" href="#maintenance" title="Permanent link">&para;</a></h2>
 <details class="question">
-<summary>When does maintenance occur ?</summary>
+<summary>When does maintenance occur?</summary>
 <ul>
-<li>Second Tuesday 9AM - 9PM every month</li>
+<li>Second Tuesday 9AM - 9PM monthly.</li>
 </ul>
 </details>
 <details class="question">
-<summary>I submitted my job before maintenance, but why did it go to pending status as <em>“ReqNodeNotAvail, Reserved for maintenance”</em>?</summary>
+<summary>I submitted my job before maintenance, but why did it go to pending status as <em>"ReqNodeNotAvail, Reserved for maintenance"</em> ?</summary>
 <ul>
 <li>If your job walltime request indicates the job will not finish before the maintenance starts then the scheduler will hold the job.  </li>
 <li>If you resubmit the job with a shorter walltime, it will not be held. </li>
@@ -3401,34 +3382,34 @@ squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$LOGNAM
 </ul>
 </details>
 <details class="question">
-<summary>How will maintenance affect me ?</summary>
+<summary>How will maintenance affect me?</summary>
 <ul>
 <li>During the maintenance downtime, logins will be disabled, users will not have access to their stored data in <strong>/project</strong>, <strong>/home</strong> and <strong>/scratch</strong>.</li>
-<li>All jobs that do not end before 9AM will be held by the scheduler until the downtime is complete and the systems are returned to service.</li>
+<li>All jobs that do not end <strong>before 9AM</strong> will be held by the scheduler until the downtime is complete and the systems are returned to service.</li>
 </ul>
 </details>
 <details class="question">
-<summary>Will I receive a notification before maintenance ?</summary>
+<summary>Will I receive a notification before maintenance?</summary>
 <ul>
-<li>Please pay attention to the Message of the Day when logging in, as it will serve as a reminder for upcoming downtimes or other crucial cluster-related information.</li>
+<li>Please pay attention to the <strong><em>Message of the Day</em></strong> when logging in, as it will serve as a reminder for upcoming downtimes or other crucial cluster-related information.</li>
 </ul>
 </details>
 <details class="question">
-<summary>What happens to my jobs ?</summary>
+<summary>What happens to my jobs during maintenance?</summary>
 <ul>
-<li>Jobs queued just before the maintenance will be held in Pending State and then later gets continued.</li>
+<li>Jobs queued just before the maintenance will be held in <strong>Pending State</strong> and then later gets continued.</li>
 </ul>
 </details>
-<h2 id="softwares-and-hardware-specifications">Softwares and Hardware Specifications<a class="headerlink" href="#softwares-and-hardware-specifications" title="Permanent link">&para;</a></h2>
+<h2 id="software-and-hardware-specifications">Software and Hardware Specifications<a class="headerlink" href="#software-and-hardware-specifications" title="Permanent link">&para;</a></h2>
 <details class="question">
-<summary>Are there any preloaded softwares ?</summary>
+<summary>Is there any installed software?</summary>
 <ul>
-<li>We have a variety of softwares already installed which can be under <code>/apps/easybuild/software/</code></li>
+<li>We have a variety of software packages already installed on Wulver.</li>
 <li>For more information, please visit our <a href="https://hpc.njit.edu/Software/">Software guide</a>.</li>
 </ul>
 </details>
 <details class="question">
-<summary>I want to install new softwares ?</summary>
+<summary>I want to install new software?</summary>
 <ul>
 <li>Please first check our already installed <a href="https://hpc.njit.edu/Software/#software-list">software list</a>, and if you still don’t find it then visit our <a href="https://hpc.njit.edu/Software/">guide</a> for detailed guidance on software installation.</li>
 </ul>
@@ -3436,28 +3417,32 @@ squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$LOGNAM
 <details class="question">
 <summary>What are the hardware specifications of the Wulver HPC cluster?</summary>
 <ul>
-<li>Please checkout our <a href="https://hpc.njit.edu/clusters/wulver/">Wulver tab</a> for details.</li>
+<li>Please checkout our <a href="https://hpc.njit.edu/clusters/wulver/">Wulver</a> tab for complete details on hardware specifications.</li>
 </ul>
 </details>
 <details class="question">
 <summary>What programming languages are commonly used on the HPC cluster?</summary>
 <ul>
-<li>It depends on your task and software. You can use any programming language as long as it has capability to parallelise and to be used on multiple cores.</li>
 <li>Most common ones are C, C++, Fortran, Python, R</li>
 </ul>
 </details>
 <details class="question">
 <summary>What are the tools and compilers available on HPC cluster?</summary>
 <ul>
-<li>Common programming tools include Intel and GNU compilers as well as MPI for multi-node jobs. </li>
-<li>Details on these resources are available <a href="https://hpc.njit.edu/Software/programming/compilers/#intel">here</a>.</li>
+<li>Common programming tools include Intel and GNU compilers as well as MPI for multi-node jobs.</li>
+<li>For GPU acceleration we have CUDA and OpenACC.</li>
+<li>Details on these resources are available <a href="https://hpc.njit.edu/Software/programming/compilers/">here</a>.</li>
 </ul>
 </details>
 <details class="question">
 <summary>How can I optimize my code for parallel processing?</summary>
 <ul>
-<li>We recommend using MPI for making the code parallelised and then specifying the cores.</li>
-<li>Key areas to consider are CPU optimization, I/O optimization, memory optimization, and parallel optimization. </li>
+<li>To optimize your code, you can use different parallelization techniques depending on your setup:<ul>
+<li><strong>MPI</strong> and <strong>OpenMP</strong> for parallelizing code and then specifying the cores.</li>
+<li><strong>CUDA</strong> and <strong>OpenACC</strong> for GPU acceleration, especially for compute-heavy tasks.</li>
+</ul>
+</li>
+<li>Focus on optimizing <strong>CPU</strong>, <strong>I/O</strong>, <strong>memory</strong>, and <strong>parallelism</strong>.</li>
 <li>If you have specific questions about this, please email HPC Help at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a> to request support.</li>
 </ul>
 </details>
@@ -3465,7 +3450,7 @@ squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$LOGNAM
 <summary>Can I request additional resources or customization for my projects?</summary>
 <ul>
 <li>Please see <a href="https://hpc.njit.edu/Policies/wulver_policies/">Wulver Usage and Condo Policy</a> for resource allocation details. </li>
-<li>If you have questions about resource usage or need short term expansion of compute resources, please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a>. We are always happy to consult with you on how to accelerate your research.</li>
+<li>The Research Computing Advisory Board is working on establishing policies and procedures for requesting additional computing time beyond the standard <strong>300K SU/year</strong>.</li>
 </ul>
 </details>
 <details class="question">
