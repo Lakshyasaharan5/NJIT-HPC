@@ -792,7 +792,7 @@ If you have any questions or need further assistance, please do not hesitate to 
   
   
     <li class="md-nav__item">
-      <a href="https://hpc.njit.edu/Monitor/cy2024.html" class="md-nav__link">
+      <a href="https://hpc.njit.edu/Monitor/cy2025.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3277,7 +3277,7 @@ If you have any questions or need further assistance, please do not hesitate to 
 <details class="question">
 <summary>How do I transfer data to and from the HPC cluster?</summary>
 <ul>
-<li>Detailed instructions are given  <a href="https://hpc.njit.edu/clusters/cluster_access/#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa">here</a>.</li>
+<li>Detailed instructions are given  <a href="../../clusters/cluster_access/#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa">here</a>.</li>
 </ul>
 </details>
 <details class="question">
@@ -3297,7 +3297,7 @@ If you have any questions or need further assistance, please do not hesitate to 
 <details class="question">
 <summary>What are the different file storage systems available on Wulver?</summary>
 <ul>
-<li>Please visit our <a href="https://hpc.njit.edu/clusters/Wulver_filesystems/">file system</a> page for detailed information. </li>
+<li>Please visit our <a href="../../clusters/Wulver_filesystems/">file system</a> page for detailed information. </li>
 </ul>
 </details>
 <details class="question">
@@ -3309,7 +3309,7 @@ If you have any questions or need further assistance, please do not hesitate to 
 <li><strong>/scratch</strong> - No quota but files will be deleted after 30 days or sooner if the directory reaches 80% capacity. Users will be notified prior to deletion so they can review and move important files to <strong>/project</strong> if necessary.</li>
 </ul>
 </li>
-<li>For more details, visit <a href="https://hpc.njit.edu/clusters/Wulver_filesystems/">file system</a>.</li>
+<li>For more details, visit <a href="../../clusters/Wulver_filesystems/">file system</a>.</li>
 </ul>
 </details>
 <details class="question">
@@ -3317,7 +3317,7 @@ If you have any questions or need further assistance, please do not hesitate to 
 <ul>
 <li>First, check which filesystem is causing the error. If it’s in $HOME, it means the 50GB quota has been exceeded. You can either delete files, compress them, or move them to /project. If the error is in /project, you need to compress or delete some files. Alternatively, you can ask your PI to purchase an increase  in the /project quota by emailing us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a>. You can also run your code in /scratch and, after the simulation, transfer the important files to /project. </li>
 <li>Use <strong>quota_info</strong> command to check the filesystem quota. </li>
-<li>If you are encountering this error while running Python or Jupyter Notebook via Conda, the issue is likely due to Conda packages or cache files stored in $HOME. Use the <code>sn p $HOME</code> command to view a detailed breakdown of each directory in $HOME, showing how much space it is consuming. If you notice that the .cache directory is consuming a significant amount of space, you should remove it. If the .conda directory is taking up too much space, you need to move the Conda environment to /project. Refer to <a href="https://hpc.njit.edu/Software/programming/python/conda/#importing-to-a-different-location">this guide</a> for detailed steps. </li>
+<li>If you are encountering this error while running Python or Jupyter Notebook via Conda, the issue is likely due to Conda packages or cache files stored in $HOME. Use the <code>sn p $HOME</code> command to view a detailed breakdown of each directory in $HOME, showing how much space it is consuming. If you notice that the .cache directory is consuming a significant amount of space, you should remove it. If the .conda directory is taking up too much space, you need to move the Conda environment to /project. Refer to <a href="../../Software/programming/python/conda/#importing-to-a-different-location">this guide</a> for detailed steps. </li>
 </ul>
 </details>
 <details class="question">
@@ -3332,14 +3332,13 @@ If you have any questions or need further assistance, please do not hesitate to 
 <summary>How do I submit and manage jobs on the Wulver HPC cluster?</summary>
 <ul>
 <li>We use the SLURM resource manager and scheduler on Wulver for submitting and managing jobs on the compute nodes. </li>
-<li>Check our <a href="https://hpc.njit.edu/Software/slurm/slurm/">SLURM page</a> on the website for more detailed guidance.</li>
+<li>Check our <a href="../../Software/slurm/slurm/">SLURM page</a> on the website for more detailed guidance.</li>
 </ul>
 </details>
 <details class="question">
 <summary>What is Walltime?</summary>
 <ul>
-<li>Walltime refers to the maximum amount of real-world time a job is allowed to run on the cluster. </li>
-<li>It is the total elapsed time from when the job starts to when it finishes, including any idle time, queue wait time, and processing time.</li>
+<li>Walltime refers to the maximum amount of real-world time a job is allowed to run on the cluster. The actual job may finish earlier. </li>
 <li>To set the walltime, you'll typically specify it in the job submission script: 
 <div class="highlight"><pre><span></span><code><span class="c1">#SBATCH --time=01:00:00      # Request 1 hour of walltime</span>
 </code></pre></div></li>
@@ -3348,7 +3347,7 @@ If you have any questions or need further assistance, please do not hesitate to 
 <details class="question">
 <summary>How can I monitor the status of my jobs?</summary>
 <ul>
-<li>For checking and monitoring the status of your job please use <a href="https://hpc.njit.edu/Software/slurm/slurm/#managing-and-monitoring-jobs">this</a> guide for detailed information.</li>
+<li>For checking and monitoring the status of your job please use <a href="../../Software/slurm/slurm/#managing-and-monitoring-jobs">this</a> guide for detailed information.</li>
 </ul>
 </details>
 <details class="question">
@@ -3405,19 +3404,19 @@ If you have any questions or need further assistance, please do not hesitate to 
 <summary>Is there any installed software?</summary>
 <ul>
 <li>We have a variety of software packages already installed on Wulver.</li>
-<li>For more information, please visit our <a href="https://hpc.njit.edu/Software/">Software guide</a>.</li>
+<li>For more information, please visit our <a href="../../Software/">Software guide</a>.</li>
 </ul>
 </details>
 <details class="question">
 <summary>I want to install new software?</summary>
 <ul>
-<li>Please first check our already installed <a href="https://hpc.njit.edu/Software/#software-list">software list</a>, and if you still don’t find it then visit our <a href="https://hpc.njit.edu/Software/">guide</a> for detailed guidance on software installation.</li>
+<li>Please first check our already installed <a href="../../Software/#software-list">software list</a>, and if you still don’t find it then visit our <a href="../../Software/">guide</a> for detailed guidance on software installation.</li>
 </ul>
 </details>
 <details class="question">
 <summary>What are the hardware specifications of the Wulver HPC cluster?</summary>
 <ul>
-<li>Please checkout our <a href="https://hpc.njit.edu/clusters/wulver/">Wulver</a> tab for complete details on hardware specifications.</li>
+<li>Please checkout our <a href="../../clusters/wulver/">Wulver</a> tab for complete details on hardware specifications.</li>
 </ul>
 </details>
 <details class="question">
@@ -3431,7 +3430,7 @@ If you have any questions or need further assistance, please do not hesitate to 
 <ul>
 <li>Common programming tools include Intel and GNU compilers as well as MPI for multi-node jobs.</li>
 <li>For GPU acceleration we have CUDA and OpenACC.</li>
-<li>Details on these resources are available <a href="https://hpc.njit.edu/Software/programming/compilers/">here</a>.</li>
+<li>Details on these resources are available <a href="../../Software/programming/compilers/">here</a>.</li>
 </ul>
 </details>
 <details class="question">
@@ -3449,7 +3448,7 @@ If you have any questions or need further assistance, please do not hesitate to 
 <details class="question">
 <summary>Can I request additional resources or customization for my projects?</summary>
 <ul>
-<li>Please see <a href="https://hpc.njit.edu/Policies/wulver_policies/">Wulver Usage and Condo Policy</a> for resource allocation details. </li>
+<li>Please see <a href="../../Policies/wulver_policies/">Wulver Usage and Condo Policy</a> for resource allocation details. </li>
 <li>The Research Computing Advisory Board is working on establishing policies and procedures for requesting additional computing time beyond the standard <strong>300K SU/year</strong>.</li>
 </ul>
 </details>
@@ -3464,7 +3463,7 @@ If you have any questions or need further assistance, please do not hesitate to 
 <details class="question">
 <summary>What documentation and support resources are available for Wulver users?</summary>
 <ul>
-<li>Please visit the <a href="https://hpc.njit.edu/Services/training/">Education and Training tab</a> on our website.</li>
+<li>Please visit the <a href="../../Services/training/">Education and Training tab</a> on our website.</li>
 <li>If you have any specific questions which are not covered, please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a></li>
 </ul>
 </details>

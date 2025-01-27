@@ -792,7 +792,7 @@ If you have any questions or need further assistance, please do not hesitate to 
   
   
     <li class="md-nav__item">
-      <a href="https://hpc.njit.edu/Monitor/cy2024.html" class="md-nav__link">
+      <a href="https://hpc.njit.edu/Monitor/cy2025.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2433,6 +2433,15 @@ If you have any questions or need further assistance, please do not hesitate to 
 </li>
         
           <li class="md-nav__item">
+  <a href="#set-different-location-for-conda-environment-and-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Different Location for Conda Environment and Package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#import-environment-on-new-machine" class="md-nav__link">
     <span class="md-ellipsis">
       Import Environment on New Machine
@@ -3430,6 +3439,15 @@ If you have any questions or need further assistance, please do not hesitate to 
 </li>
         
           <li class="md-nav__item">
+  <a href="#set-different-location-for-conda-environment-and-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Different Location for Conda Environment and Package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#import-environment-on-new-machine" class="md-nav__link">
     <span class="md-ellipsis">
       Import Environment on New Machine
@@ -3888,6 +3906,15 @@ The YAML should look like this</p>
 </code></pre></div>
 Next, edit the <code>my_environment.yml</code> file to make sure it has the correct environment name and other settings. The last line of the file specifies the path of the environment.</p>
 <p>Once the YAML file is ready, you can transfer the <code>my_environment.yml</code> file to the new machine or directory where you want to replicate the environment. See <a href="../../../../clusters/cluster_access/#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa">cluster file transfer</a> for details on transferring the files to clusters.</p>
+<h3 id="set-different-location-for-conda-environment-and-package">Set Different Location for Conda Environment and Package<a class="headerlink" href="#set-different-location-for-conda-environment-and-package" title="Permanent link">&para;</a></h3>
+<p>Since Conda, by default, downloads packages and creates environments in the <code>$HOME</code> directory, users might encounter disk quota errors if multiple environments are created. In such cases, please follow the above <a href="#export-conda-environment">steps</a> to move the existing environments from <code>$HOME</code> to <code>/project</code>. For future environment and package downloads, create a <code>.condarc</code> file in the <code>$HOME</code> directory and add the following:
+<div class="highlight"><pre><span></span><code>auto_activate_base: false
+envs_dirs:
+  - /path/to/custom/conda/envs/directory
+pkgs_dirs:
+  - /path/to/custom/conda/pkgs
+</code></pre></div></p>
+<p>Replace <code>/path/to/custom/conda/envs/directory</code> with the path you want to use. </p>
 <h3 id="import-environment-on-new-machine">Import Environment on New Machine<a class="headerlink" href="#import-environment-on-new-machine" title="Permanent link">&para;</a></h3>
 <p>On the new machine, first load Anaconda and initialize conda as before. Then, create the
 environment from the YAML file:</p>
