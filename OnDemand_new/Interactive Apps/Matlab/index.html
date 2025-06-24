@@ -1632,27 +1632,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tools
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../clusters/" class="md-nav__link">
         
   
@@ -1700,6 +1679,27 @@
   
   <span class="md-ellipsis">
     Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
   </span>
   
 
@@ -3718,7 +3718,7 @@
 <li>Matlab Server</li>
 <li>Jupyter Matlab Proxy</li>
 </ul>
-<p><img alt="matlab.png" height="40%" src="../../../assets/ondemand_new/matlab.png" width="40%" /></p>
+<p><img alt="matlab.png" height="30%" src="../../../assets/ondemand_new/matlab/matlab-dropdown.png" width="30%" /></p>
 <h2 id="guide">Guide<a class="headerlink" href="#guide" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="guide-matlab-vnc" name="__tabbed_1" type="radio" /><input id="guide-matlab-server" name="__tabbed_1" type="radio" /><input id="guide-jupyter-matlab-proxy" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="guide-matlab-vnc">Matlab VNC</label><label for="guide-matlab-server">Matlab Server</label><label for="guide-jupyter-matlab-proxy">Jupyter Matlab Proxy</label></div>
 <div class="tabbed-content">
@@ -3732,7 +3732,7 @@
 <ul>
 <li>Select the dropdown option in <code>MATLAB Version</code>. The current versions installed on Wulver are <code>2023a</code> and <code>2024a</code></li>
 </ul>
-<p><img alt="matlab1" height="60%" src="../../../assets/ondemand/matlab1.png" width="60%" /></p>
+<p><img alt="matlab-vnc-1" height="60%" src="../../../assets/ondemand_new/matlab/matlab-vnc-1.png" width="60%" /></p>
 <h2 id="configuring-resources">Configuring Resources<a class="headerlink" href="#configuring-resources" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Specify your Slurm account/partition/qos.</li>
@@ -3740,58 +3740,89 @@
 <li>Choose the number of cores you need.</li>
 <li>If required, specify the number of GPUs.</li>
 </ul>
-<p><img alt="matlab2" height="60%" src="../../../assets/ondemand/matlab2.png" width="60%" /></p>
-<p><img alt="matlab3" height="60%" src="../../../assets/ondemand/matlab3.png" width="60%" /></p>
-<p><img alt="matlab4" height="60%" src="../../../assets/ondemand/matlab4.png" width="60%" /></p>
+<p><img alt="matlab-vnc-1" height="60%" src="../../../assets/ondemand_new/matlab/matlab-vnc-2.png" width="60%" /></p>
+<p><img alt="matlab-vnc-3" height="60%" src="../../../assets/ondemand_new/matlab/matlab-vnc-3.png" width="60%" /></p>
+<p><img alt="matlab-vnc-4" height="60%" src="../../../assets/ondemand_new/matlab/matlab-vnc-4.png" width="60%" /></p>
 <h2 id="launching-the-session">Launching the Session<a class="headerlink" href="#launching-the-session" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Select the <code>Launch</code> option after finalizing the resources. Once clicking <strong>Launch</strong>, the request will be queued, and when resources have been allocated, you will be presented with the option to connect to the session by clicking on the blue <code>Launch MATLAB</code> option.</li>
 </ul>
-<p><img alt="matlab5" height="60%" src="../../../assets/ondemand/matlab5.png" width="60%" /></p>
-<p><img alt="matlab6" height="60%" src="../../../assets/ondemand/matlab6.png" width="60%" /></p>
+<p><img alt="matlab-vnc-5" height="60%" src="../../../assets/ondemand_new/matlab/matlab-vnc-5.png" width="60%" /></p>
+<p><img alt="matlab-vnc-6" height="60%" src="../../../assets/ondemand_new/matlab/matlab-vnc-6.png" width="60%" /></p>
 <ul>
 <li>You might see <code>Unable to contact settings server</code> message. It does not mean the Matlab session is terminated. You need to wait a few minutes to see the Matlab popup window.</li>
 </ul>
-<p><img alt="matlab7" height="60%" src="../../../assets/ondemand/matlab7.png" width="60%" /></p>
-<p><img alt="matlab8" height="60%" src="../../../assets/ondemand/matlab8.png" width="60%" /></p>
-<p><img alt="matlab9" height="60%" src="../../../assets/ondemand/matlab9.png" width="60%" /></p>
+<p><img alt="matlab-vnc-7" height="60%" src="../../../assets/ondemand_new/matlab/matlab-vnc-7.png" width="60%" /></p>
+<p><img alt="matlab-vnc-8" height="60%" src="../../../assets/ondemand_new/matlab/matlab-vnc-8.png" width="60%" /></p>
+<p><img alt="matlab-vnc-9" height="60%" src="../../../assets/ondemand_new/matlab/matlab-vnc-9.png" width="60%" /></p>
 </div>
 <div class="tabbed-block">
-<p><em>Same steps as matlab vnc upto launching the session</em></p>
+<ul>
+<li>
+<p>Select Matlab Server from the interactive apps dropdown menu. </p>
+</li>
+<li>
+<p>Fill in your configurations based on your job requirements</p>
+</li>
+</ul>
+<p><img alt="matlab-server-1.png" height="60%" src="../../../assets/ondemand_new/matlab/matlab-server-1.png" width="60%" /></p>
+<ul>
+<li>Wait for the job to start and then click on <strong>Connect to Matlab</strong></li>
+</ul>
+<p><img alt="matlab-server-2.png" height="60%" src="../../../assets/ondemand_new/matlab/matlab-server-2.png" width="60%" /></p>
 <ul>
 <li>Select existing License</li>
 </ul>
-<p><img alt="existing-license-button.png" height="60%" src="../../../assets/ondemand_new/existing-license-button.png" width="60%" /></p>
+<p><img alt="matlab-license-1.png" height="40%" src="../../../assets/ondemand_new/matlab/matlab-license-1.png" width="40%" /></p>
 <ul>
-<li>Click start Matlab</li>
+<li>Click <strong>Start Matlab</strong> </li>
 </ul>
-<p><img alt="start-matlab-button.png" height="60%" src="../../../assets/ondemand_new/start-matlab-button.png" width="60%" /></p>
+<p><img alt="matlab-license-2.png" height="40%" src="../../../assets/ondemand_new/matlab/matlab-license-2.png" width="40%" /></p>
 <ul>
 <li>Wait for couple minutes</li>
 </ul>
-<p><img alt="matlab-loading.png" height="60%" src="../../../assets/ondemand_new/matlab-loading.png" width="60%" /></p>
+<p><img alt="matlab-license-3.png" height="40%" src="../../../assets/ondemand_new/matlab/matlab-license-3.png" width="40%" /></p>
 <ul>
 <li>Start working!!</li>
 </ul>
+<p><img alt="matlab-start-working.png" height="60%" src="../../../assets/ondemand_new/matlab/matlab-start-working.png" width="60%" /></p>
 </div>
 <div class="tabbed-block">
-<ul>
-<li>Select matlab-proxy as conda env</li>
-</ul>
-<p><img alt="conda-env-matlab-proxy.png" height="80%" src="../../../assets/ondemand_new/conda-env-matlab-proxy.png" width="80%" /></p>
-<ul>
-<li>Fill the rest of the form based on your desired configurations and click Launch. Wait for couple of seconds (same way as other matlab servers)</li>
-<li>Once the Jupyter opens, click on Open Matlab</li>
-</ul>
-<p><img alt="jupyter-matlab-button.png" height="80%" src="../../../assets/ondemand_new/jupyter-matlab-button.png" width="80%" /></p>
+<p>Check our video tutorial <a href="../../../assets/ondemand_new/matlab/Matlab_OnDemand_Tutorial_Server.mp4">here</a></p>
 <ul>
 <li>
-<p>Then select existing license, wait for couple of minutes and matlab will start. <em>Same license steps as matlab server</em></p>
+<p>Select <strong>Jupyter-matlab-proxy</strong> from the dropdown menu.</p>
 </li>
 <li>
-<p>Start working!!</p>
+<p>Choose matlab-proxy as conda env</p>
 </li>
 </ul>
+<p><img alt="conda-env-matlab-proxy.png" height="60%" src="../../../assets/ondemand_new/matlab/jupyter-matlab-proxy-1.png" width="60%" /></p>
+<ul>
+<li>
+<p>Fill the rest of the form based on your desired configurations and click Launch. Wait for couple of seconds (same way as other matlab servers)</p>
+</li>
+<li>
+<p>Once the Jupyter opens, click on Open Matlab</p>
+</li>
+</ul>
+<p><img alt="conda-env-matlab-proxy.png" height="60%" src="../../../assets/ondemand_new/matlab/jupyter-matlab-proxy-2.png" width="60%" /></p>
+<ul>
+<li>Select existing License</li>
+</ul>
+<p><img alt="matlab-license-1.png" height="40%" src="../../../assets/ondemand_new/matlab/matlab-license-1.png" width="40%" /></p>
+<ul>
+<li>Click start Matlab</li>
+</ul>
+<p><img alt="matlab-license-2.png" height="40%" src="../../../assets/ondemand_new/matlab/matlab-license-2.png" width="40%" /></p>
+<ul>
+<li>Wait for couple minutes</li>
+</ul>
+<p><img alt="matlab-license-3.png" height="40%" src="../../../assets/ondemand_new/matlab/matlab-license-3.png" width="40%" /></p>
+<ul>
+<li>Start working!!</li>
+</ul>
+<p><img alt="matlab-start-working.png" height="60%" src="../../../assets/ondemand_new/matlab/matlab-start-working.png" width="60%" /></p>
 </div>
 </div>
 </div>

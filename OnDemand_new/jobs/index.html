@@ -15,7 +15,7 @@
         <link rel="prev" href="../files/">
       
       
-        <link rel="next" href="../Interactive%20Apps/">
+        <link rel="next" href="../tools/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -1632,27 +1632,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tools/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tools
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../clusters/" class="md-nav__link">
         
   
@@ -1743,22 +1722,49 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#job-composer" class="md-nav__link">
     <span class="md-ellipsis">
       Job Composer
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Job Composer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a New Job
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#active-jobs" class="md-nav__link">
+  <a href="#editing-the-job-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Active Jobs
+      Editing the Job Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-the-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting the Job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
     </span>
   </a>
   
@@ -1769,10 +1775,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#active-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Active Jobs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3616,22 +3652,49 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#job-composer" class="md-nav__link">
     <span class="md-ellipsis">
       Job Composer
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Job Composer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a New Job
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#active-jobs" class="md-nav__link">
+  <a href="#editing-the-job-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Active Jobs
+      Editing the Job Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-the-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting the Job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
     </span>
   </a>
   
@@ -3639,6 +3702,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Active Jobs
+    </span>
+  </a>
   
 </li>
       
@@ -3663,15 +3735,106 @@
   <h1>Jobs</h1>
 
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p><img alt="jobs.png" height="80%" src="../../assets/ondemand_new/jobs.png" width="80%" /></p>
 <p>The Jobs menu on the menu bar includes both the Job Composer and the Active Jobs tools. The Job Composer assists you to set up and submit jobs to the cluster through a graphical interface using file management tools and access to job templates. </p>
-<h3 id="job-composer">Job Composer<a class="headerlink" href="#job-composer" title="Permanent link">&para;</a></h3>
-<p><img alt="jobs.png" height="60%" src="../../assets/ondemand/jobs.png" width="60%" /></p>
-<h3 id="active-jobs">Active Jobs<a class="headerlink" href="#active-jobs" title="Permanent link">&para;</a></h3>
+<p><img alt="jobs-dropdown.png" height="80%" src="../../assets/ondemand_new/jobs/jobs-dropdown.png" width="80%" /></p>
+<h2 id="job-composer">Job Composer<a class="headerlink" href="#job-composer" title="Permanent link">&para;</a></h2>
+<p><img alt="jobs-dashboard.png" height="60%" src="../../assets/ondemand_new/jobs/jobs-dashboard.png" width="60%" /></p>
+<h3 id="creating-a-new-job">Creating a New Job<a class="headerlink" href="#creating-a-new-job" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="creating-a-new-job-from-default-template" name="__tabbed_1" type="radio" /><input id="creating-a-new-job-from-existing-job" name="__tabbed_1" type="radio" /><input id="creating-a-new-job-from-specified-path" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="creating-a-new-job-from-default-template">From Default Template</label><label for="creating-a-new-job-from-existing-job">From Existing Job</label><label for="creating-a-new-job-from-specified-path">From Specified Path</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Click New Job &gt; From Default Template</li>
+</ul>
+<p><img alt="jobcomposer-1.png" height="60%" src="../../assets/ondemand_new/jobs/jobcomposer-1.png" width="60%" /></p>
+<ul>
+<li>
+<p>A new job (e.g., Simple Sequential Job) will appear in your job list.</p>
+</li>
+<li>
+<p>Click Open Editor to open the directory in the File Editor.</p>
+</li>
+</ul>
+<p><img alt="jobcomposer-2.png" height="60%" src="../../assets/ondemand_new/jobs/jobcomposer-2.png" width="60%" /></p>
+<ul>
+<li>Modify the main_job.sh script as needed.</li>
+</ul>
+<p><img alt="jobcomposer-3.png" height="60%" src="../../assets/ondemand_new/jobs/jobcomposer-3.png" width="60%" /></p>
+<ul>
+<li>Return to the Job Composer and click Job Options to adjust:<ul>
+<li>Job Name</li>
+<li>Cluster (ensure it’s set to wulver)</li>
+<li>Account (It will take the default account. If you have or ever had multiple accounts then you have to specify your account)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="jobcomposer-4.png" height="60%" src="../../assets/ondemand_new/jobs/jobcomposer-4.png" width="60%" /></p>
+<ul>
+<li>Click Save to apply changes.    </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Select an existing job from your list.</li>
+<li>Click New Job &gt; From Selected Job.</li>
+<li>This duplicates the job, allowing you to modify it without altering the original.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Click New Job &gt; From Specified Path.</li>
+<li>Enter the full path to a directory containing your job script and necessary files.</li>
+<li>This is useful for jobs prepared outside the Job Composer.</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="editing-the-job-script">Editing the Job Script<a class="headerlink" href="#editing-the-job-script" title="Permanent link">&para;</a></h3>
+<ol>
+<li>In the Job Composer, locate your job and click Open Editor under the Submit Script section.</li>
+<li>Modify the main_job.sh script with your desired commands and SLURM directives. For example:
+<div class="highlight"><pre><span></span><code>#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+#SBATCH --error=%x.%j.err
+#SBATCH --partition=general
+#SBATCH --qos=standard
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --time=01:00  # D-HH:MM:SS
+#SBATCH --mem-per-cpu=4000M
+</code></pre></div></li>
+<li>Ensure you adjust the SLURM directives (#SBATCH lines) according to your job’s requirements.</li>
+<li>Click <strong>Save</strong> after editing.</li>
+</ol>
+<h3 id="submitting-the-job">Submitting the Job<a class="headerlink" href="#submitting-the-job" title="Permanent link">&para;</a></h3>
+<ol>
+<li>In the Job Composer, select your job.</li>
+<li>Click Submit.</li>
+<li>Monitor the job’s status under the Active Jobs tab.<ul>
+<li>Queued: Waiting for resources.</li>
+<li>Running: Currently executing.</li>
+<li>Completed: Finished execution.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="jobcomposer-5.png" height="60%" src="../../assets/ondemand_new/jobs/jobcomposer-5.png" width="60%" /></p>
+<h3 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>You can check the output/error in folder contents</li>
+</ul>
+<p><img alt="jobcomposer-6.png" height="60%" src="../../assets/ondemand_new/jobs/jobcomposer-6.png" width="60%" /></p>
+<ul>
+<li>Check both files to confirm your program ran successfully.</li>
+</ul>
+<p><img alt="jobcomposer-7.png" height="60%" src="../../assets/ondemand_new/jobs/jobcomposer-7.png" width="60%" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Even if an error might have occurred, your job status will still show complete.</p>
+</div>
+<h2 id="active-jobs">Active Jobs<a class="headerlink" href="#active-jobs" title="Permanent link">&para;</a></h2>
 <p>The Active Jobs tool will allow you to view all the jobs you’ve submitted that are currently in the queue, via OnDemand or not, so you can check on their status. <br />
-<img alt="job_submit1.png" height="60%" src="../../assets/ondemand/job_submit1.png" width="60%" /></p>
-<p><img alt="job_submit2.png" height="50%" src="../../assets/ondemand/job_submit2.png" width="50%" /></p>
-<p><img alt="job_submit3.png" height="50%" src="../../assets/ondemand/job_submit3.png" width="50%" /></p>
+<img alt="job_submit1.png" height="60%" src="../../assets/ondemand_new/jobs/job_submit1.png" width="60%" /></p>
+<p><img alt="job_submit2.png" height="50%" src="../../assets/ondemand_new/jobs/job_submit2.png" width="50%" /></p>
+<p><img alt="job_submit3.png" height="50%" src="../../assets/ondemand_new/jobs/job_submit3.png" width="50%" /></p>
 
 
 
