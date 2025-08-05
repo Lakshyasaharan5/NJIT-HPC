@@ -2841,22 +2841,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -2871,7 +2855,7 @@
             
   
   <span class="md-ellipsis">
-    Running Jobs
+    MIG
   </span>
   
 
@@ -2881,7 +2865,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
-            Running Jobs
+            MIG
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2892,7 +2876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Running_jobs/overview/" class="md-nav__link">
+      <a href="../../../MIG/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2913,11 +2897,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Running_jobs/job_limitation/" class="md-nav__link">
+      <a href="../../../MIG/profile-comparison/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Job Limitations
+    Profile Comparison
   </span>
   
 
@@ -2934,179 +2918,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Running_jobs/node-memory-config/" class="md-nav__link">
+      <a href="../../../MIG/job-submission-and-su-charges/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Nodes and Memory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Running_jobs/service-units/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Service Units (SU)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Running_jobs/batch-jobs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Batch Jobs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Running_jobs/interactive-jobs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Interactive Jobs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Running_jobs/array-jobs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Array Jobs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Running_jobs/dependency-jobs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dependency Jobs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Running_jobs/checkpointing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Checkpointing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Running_jobs/managing-jobs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Managing and Monitoring Jobs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Running_jobs/ondemand-jobs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Jobs on Ondemand
+    Job Submission and SU Charges
   </span>
   
 
@@ -3620,6 +3436,41 @@
       <header class="md-typeset">
         <h1 id="2025">2025<a class="headerlink" href="#2025" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-07-29 00:00:00+00:00">July 29, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="wulver-maintenance"><a class="toclink" href="../../2025/07/29/wulver-maintenance/">Wulver Maintenance</a></h2>
+<p>Wulver will be out of service on Tuesday, August 12<sup>th</sup>, for OS and SLURM updates.</p>
+<h3 id="maintenance-plans"><a class="toclink" href="../../2025/07/29/wulver-maintenance/#maintenance-plans">Maintenance Plans</a></h3>
+<ul>
+<li>Upgrade the OS: Upgrade from RHEL 8 to RHEL 9: This will resolve the glibc error users encounter when compiling the latest packages.</li>
+<li>Upgrade SLURM version.</li>
+<li>Implement new SU calculation: This will allow users to consume fewer SUs when using a single GPU instead of all 4 GPUs on a node.</li>
+<li>Implement <a href="../../../Software/slurm/slurm/#multi-instance-gpu-mig">MIG</a>.</li>
+<li>Add Lochness nodes for course-related usage.</li>
+</ul>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
