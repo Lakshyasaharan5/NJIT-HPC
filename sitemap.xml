@@ -77,18 +77,6 @@
          <lastmod>2025-08-05</lastmod>
     </url>
     <url>
-         <loc>https://arcs-njit-edu.github.io/Docs/MIG/job-submission-and-su-charges/</loc>
-         <lastmod>2025-08-05</lastmod>
-    </url>
-    <url>
-         <loc>https://arcs-njit-edu.github.io/Docs/MIG/overview/</loc>
-         <lastmod>2025-08-05</lastmod>
-    </url>
-    <url>
-         <loc>https://arcs-njit-edu.github.io/Docs/MIG/profile-comparison/</loc>
-         <lastmod>2025-08-05</lastmod>
-    </url>
-    <url>
          <loc>https://arcs-njit-edu.github.io/Docs/OnDemand/</loc>
          <lastmod>2025-08-05</lastmod>
     </url>
@@ -138,6 +126,50 @@
     </url>
     <url>
          <loc>https://arcs-njit-edu.github.io/Docs/Policies/wulver_policies/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/array-jobs/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/batch-jobs/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/checkpointing/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/dependency-jobs/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/interactive-jobs/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/job_limitation/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/managing-jobs/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/node-memory-config/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/ondemand-jobs/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/overview/</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://arcs-njit-edu.github.io/Docs/Running_jobs/service-units/</loc>
          <lastmod>2025-08-05</lastmod>
     </url>
     <url>

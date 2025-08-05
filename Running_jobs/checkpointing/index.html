@@ -9,13 +9,13 @@
       
       
       
-        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/MIG/job-submission-and-su-charges/">
+        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/Running_jobs/checkpointing/">
       
       
-        <link rel="prev" href="../profile-comparison/">
+        <link rel="prev" href="../dependency-jobs/">
       
       
-        <link rel="next" href="../../OnDemand/">
+        <link rel="next" href="../managing-jobs/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Job Submission and SU Charges
+              Checkpointing
             
           </span>
         </div>
@@ -2847,6 +2847,22 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2861,7 +2877,7 @@
             
   
   <span class="md-ellipsis">
-    MIG
+    Running Jobs
   </span>
   
 
@@ -2871,7 +2887,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
-            MIG
+            Running Jobs
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2903,11 +2919,137 @@
   
   
     <li class="md-nav__item">
-      <a href="../profile-comparison/" class="md-nav__link">
+      <a href="../job_limitation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Profile Comparison
+    Job Limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node-memory-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nodes and Memory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service-units/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service Units (SU)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../array-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dependency Jobs
   </span>
   
 
@@ -2930,14 +3072,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Job Submission and SU Charges
+    Checkpointing
   </span>
   
 
@@ -2948,7 +3088,7 @@
         
   
   <span class="md-ellipsis">
-    Job Submission and SU Charges
+    Checkpointing
   </span>
   
 
@@ -2960,8 +3100,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2970,36 +3108,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sample-slurm-script-for-a-mig-job" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample SLURM Script for a MIG Job
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interactive-session-with-mig" class="md-nav__link">
+  <a href="#why-use-checkpointing" class="md-nav__link">
     <span class="md-ellipsis">
-      Interactive session with MIG
+      Why Use Checkpointing?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-su-charges" class="md-nav__link">
+  <a href="#examples-for-checkpointing" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding SU Charges
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-for-efficient-job-submission-think-fit-not-power" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tips for Efficient Job Submission (Think Fit, Not Power)
+      Examples for checkpointing
     </span>
   </a>
   
@@ -3009,6 +3138,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing and Monitoring Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ondemand-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jobs on Ondemand
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3503,8 +3674,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3513,36 +3682,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sample-slurm-script-for-a-mig-job" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample SLURM Script for a MIG Job
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interactive-session-with-mig" class="md-nav__link">
+  <a href="#why-use-checkpointing" class="md-nav__link">
     <span class="md-ellipsis">
-      Interactive session with MIG
+      Why Use Checkpointing?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-su-charges" class="md-nav__link">
+  <a href="#examples-for-checkpointing" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding SU Charges
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-for-efficient-job-submission-think-fit-not-power" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tips for Efficient Job Submission (Think Fit, Not Power)
+      Examples for checkpointing
     </span>
   </a>
   
@@ -3566,121 +3726,144 @@
   
 
 
-<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<p>When submitting jobs on Wulver's MIG-enabled A100 GPUs, you must explicitly request the desired MIG profile using the --gres directive in your SLURM script.</p>
-<table>
-<thead>
-<tr>
-<th>GPU MIG</th>
-<th style="text-align: center;">Slurm Directive</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>10G MIG</td>
-<td style="text-align: center;"><code>--gres=gpu:a100_10g:1</code></td>
-</tr>
-<tr>
-<td>20G MIG</td>
-<td style="text-align: center;"><code>--gres=gpu:a100_20g:1</code></td>
-</tr>
-<tr>
-<td>40G MIG</td>
-<td style="text-align: center;"><code>--gres=gpu:a100_40g:1</code></td>
-</tr>
-<tr>
-<td>80G MIG</td>
-<td style="text-align: center;"><code>--gres=gpu:a100:1</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>For an 80G MIG, it is considered a full GPU. In that case, you can alternatively specify <code>--gres=gpu:1</code> in your job script. If you want to see a job script example of requesting a partial GPU, please refer to the sample <a href="#submitting-jobs-on-gpu-nodes">GPU job scripts</a>.</p>
-</div>
-<h3 id="sample-slurm-script-for-a-mig-job">Sample SLURM Script for a MIG Job<a class="headerlink" href="#sample-slurm-script-for-a-mig-job" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
-<span class="c1">#SBATCH --job-name=gpu_job</span>
-<span class="c1">#SBATCH --output=%x.%j.out</span>
-<span class="c1">#SBATCH --error=%x.%j.err</span>
-<span class="c1">#SBATCH --partition=gpu</span>
-<span class="c1">#SBATCH --qos=standard</span>
-<span class="c1">#SBATCH --account=$PI_ucid         # Replace with PI&#39;s UCID</span>
-<span class="c1">#SBATCH --nodes=1</span>
-<span class="c1">#SBATCH --ntasks-per-node=8</span>
-<span class="c1">#SBATCH --gres=gpu:a100_10g:1      # Change to 20g or 40g as needed</span>
-<span class="c1">#SBATCH --time=59:00</span>
-<span class="c1">#SBATCH --mem-per-cpu=4000M</span>
+  <h1>Checkpointing</h1>
 
-srun<span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;
-</code></pre></div>
-<h3 id="interactive-session-with-mig">Interactive session with MIG<a class="headerlink" href="#interactive-session-with-mig" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nv">$srun</span><span class="w"> </span>--partition<span class="o">=</span>gpu<span class="w"> </span><span class="se">\</span>
---account<span class="o">=</span><span class="nv">$PI_ucid</span><span class="w"> </span><span class="se">\</span>
---qos<span class="o">=</span>standard<span class="w"> </span><span class="se">\</span>
---gres<span class="o">=</span>gpu:a100_10g:1<span class="w"> </span><span class="se">\</span>
---time<span class="o">=</span><span class="m">00</span>:59:00<span class="w"> </span><span class="se">\</span>
---pty<span class="w"> </span>bash
-</code></pre></div>
-<h2 id="understanding-su-charges">Understanding SU Charges<a class="headerlink" href="#understanding-su-charges" title="Permanent link">&para;</a></h2>
-<p>Wulver uses a Service Unit (SU) model to track computing usage. Your job's SU cost is based on:</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Checkpointing is the process of saving the current state of a running job at regular intervals so that it can be resumed later from that state, rather than starting from scratch. This is especially useful in long-running or resource-intensive tasks on HPC systems like Wulver, where interruptions or failures may occur.</p>
+<p>Checkpointing typically involves:</p>
 <ul>
-<li>CPU usage</li>
-<li>Memory request</li>
-<li>GPU memory allocation (via MIG)</li>
+<li>Periodic saving of application state (memory, variables, file handles, etc.)</li>
+<li>Resuming computation from the last saved state</li>
+<li>Integration with SLURM job re-submission or recovery workflows</li>
 </ul>
-<p>Each component contributes to the SU calculation. The SU cost is charged per node per hour using the formula:</p>
-<div class="highlight"><pre><span></span><code>SU = MAX(#CPUs, Memory (in GB) / 4) + 16 × (GPU memory requested / 80GB)
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>GPU memory requested is based on the MIG profile, not your actual memory usage during the job.</p>
-</div>
+<h2 id="why-use-checkpointing">Why Use Checkpointing?<a class="headerlink" href="#why-use-checkpointing" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>SLURM Directive</th>
-<th style="text-align: center;">SU</th>
-<th style="text-align: center;">Explaination</th>
+<th>Benefit</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>4 CPUs + 10MIG</td>
-<td style="text-align: center;">MAX(4, 4*4G/4G) + 16 * (10G/80G) = 6</td>
-<td style="text-align: center;">Since no memory requireemnt is specified, SU is charged based on the same number of CPUs and 10G of GPU memory</td>
+<td><strong>Failure Recovery</strong></td>
+<td>Resume jobs from the last checkpoint after a node crash or time expiration.</td>
 </tr>
 <tr>
-<td>4 CPUs + 20MIG</td>
-<td style="text-align: center;">MAX(4, 4G/4G) + 16 * (20G/80G) = 8</td>
-<td style="text-align: center;">SU is charged based on the same number of CPUs and 20G of GPU memory</td>
+<td><strong>Efficient Resource Use</strong></td>
+<td>Prevents waste of computation time on long jobs that are interrupted.</td>
 </tr>
 <tr>
-<td>4 CPUs + 40MIG</td>
-<td style="text-align: center;">MAX(4, 4G/4G) + 16 * (40G/80G) = 12</td>
-<td style="text-align: center;">SU is charged based on the same number of CPUs and 40G of GPU memory</td>
+<td><strong>Preemption Tolerance</strong></td>
+<td>Helps tolerate job preemption on shared clusters or spot instances.</td>
 </tr>
 <tr>
-<td>4 CPUs + Full GPU</td>
-<td style="text-align: center;">MAX(4, 4G/4G) + 16 * (80G/80G) = 20</td>
-<td style="text-align: center;">SU is charged based on the same number of CPUs and 80G of GPU (A full GPU) memory</td>
-</tr>
-<tr>
-<td>4 CPUs + <code>--mem=64G</code> + Full GPU</td>
-<td style="text-align: center;">MAX(4, 64G/4G) + 16 * (80G/80G) = 32</td>
-<td style="text-align: center;">The MAX function the evaluates the maximum of 4 SUs (from CPUs), and 64G/4G= 16 SUs (from memory). In addition, 16 SUs are charged from 80G of GPU (A full GPU) memory, bringing the total SU charge to 32 SUs</td>
+<td><strong>Job Time Limit Bypass</strong></td>
+<td>Breaks large jobs into smaller chunks to fit within SLURM time limits.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="tips-for-efficient-job-submission-think-fit-not-power">Tips for Efficient Job Submission <strong><em>(Think Fit, Not Power)</em></strong><a class="headerlink" href="#tips-for-efficient-job-submission-think-fit-not-power" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Choose the profile that fits your workload, not the biggest one available. You’ll save SUs, get scheduled faster, and help the cluster stay responsive for everyone.</li>
-<li>Use <code>--mem-per-cpu</code> instead of <code>--mem</code> to balance memory fairly.</li>
-<li>Avoid requesting a full GPU unless your job cannot run on a MIG.</li>
-<li>Combine small jobs using job arrays or batching when possible.</li>
-<li>Need help estimating SUs? Try submitting test jobs with <code>--time=10:00</code> and reviewing the actual SU usage via the job summary.</li>
-<li>MIG is designed to make high-performance GPUs accessible and efficient — take advantage of it wisely.</li>
-</ul>
+<h2 id="examples-for-checkpointing">Examples for checkpointing<a class="headerlink" href="#examples-for-checkpointing" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="examples-for-checkpointing-python" name="__tabbed_1" type="radio" /><input id="examples-for-checkpointing-pytorch" name="__tabbed_1" type="radio" /><input id="examples-for-checkpointing-tensorflow" name="__tabbed_1" type="radio" /><input id="examples-for-checkpointing-cc" name="__tabbed_1" type="radio" /><input id="examples-for-checkpointing-gromacs" name="__tabbed_1" type="radio" /><input id="examples-for-checkpointing-lammps" name="__tabbed_1" type="radio" /><input id="examples-for-checkpointing-openfoam-cfd" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="examples-for-checkpointing-python">Python</label><label for="examples-for-checkpointing-pytorch">Pytorch</label><label for="examples-for-checkpointing-tensorflow">Tensorflow</label><label for="examples-for-checkpointing-cc">C/C++</label><label for="examples-for-checkpointing-gromacs">GROMACS</label><label for="examples-for-checkpointing-lammps">LAMMPS</label><label for="examples-for-checkpointing-openfoam-cfd">OpenFOAM (CFD)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Save intermediate state using Python’s built-in <code>pickle</code> module — ideal for lightweight scripts.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">save_checkpoint</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;checkpoint.pkl&quot;</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_checkpoint</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;checkpoint.pkl&quot;</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;iteration&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+
+<span class="n">state</span> <span class="o">=</span> <span class="n">load_checkpoint</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="s2">&quot;iteration&quot;</span><span class="p">],</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="c1"># Do some work</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running step </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Save progress every 100 steps</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">save_checkpoint</span><span class="p">({</span><span class="s2">&quot;iteration&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">})</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>A common practice in PyTorch to checkpoint model weights, optimizer state, and epoch index — useful for training recovery.    </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+
+<span class="c1"># Save checkpoint</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">({</span>
+    <span class="s1">&#39;epoch&#39;</span><span class="p">:</span> <span class="n">epoch</span><span class="p">,</span>
+    <span class="s1">&#39;model_state_dict&#39;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span>
+    <span class="s1">&#39;optimizer_state_dict&#39;</span><span class="p">:</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span>
+<span class="p">},</span> <span class="s1">&#39;checkpoint.pth&#39;</span><span class="p">)</span>
+
+<span class="c1"># Load checkpoint</span>
+<span class="n">checkpoint</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;checkpoint.pth&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;model_state_dict&#39;</span><span class="p">])</span>
+<span class="n">optimizer</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;optimizer_state_dict&#39;</span><span class="p">])</span>
+<span class="n">epoch</span> <span class="o">=</span> <span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;epoch&#39;</span><span class="p">]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Using Keras callbacks, checkpoints are saved automatically during training. Only model weights are saved to keep storage efficient.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span><span class="o">...</span><span class="p">])</span>
+<span class="n">checkpoint_path</span> <span class="o">=</span> <span class="s2">&quot;checkpoints/model.ckpt&quot;</span>
+<span class="n">checkpoint_cb</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">ModelCheckpoint</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">checkpoint_path</span><span class="p">,</span>
+                                                <span class="n">save_weights_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                                <span class="n">save_freq</span><span class="o">=</span><span class="s1">&#39;epoch&#39;</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpoint_cb</span><span class="p">])</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>In C/C++, you can implement basic checkpointing by writing a loop index or state to a file and loading it at the next run. Ideal for simple simulations or compute-intensive loops.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">current_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">load_checkpoint</span><span class="p">(</span><span class="s">&quot;state.dat&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Custom function</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current_step</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MAX</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Work</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">save_checkpoint</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;state.dat&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>GROMACS supports checkpointing with <code>.cpt</code> files during molecular simulations:</p>
+<div class="highlight"><pre><span></span><code>gmx<span class="w"> </span>mdrun<span class="w"> </span>-deffnm<span class="w"> </span>simulation<span class="w"> </span>-cpt<span class="w"> </span><span class="m">15</span><span class="w">  </span><span class="c1"># Saves checkpoints every 15 minutes</span>
+
+<span class="c1"># Restart from checkpoint</span>
+gmx<span class="w"> </span>mdrun<span class="w"> </span>-s<span class="w"> </span>topol.tpr<span class="w"> </span>-cpi<span class="w"> </span>simulation.cpt
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>LAMMPS checkpointing is usually done using <code>write_restart</code> and <code>read_restart</code>:</p>
+<div class="highlight"><pre><span></span><code>write_restart restart.equilibration
+
+# In a new job
+read_restart restart.equilibration
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Checkpointing is done by writing time steps to disk and restarting from a previous time directory:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set in controlDict</span>
+writeInterval<span class="w">   </span><span class="m">100</span><span class="p">;</span>
+
+<span class="c1"># Restart</span>
+startFrom<span class="w">       </span>latestTime<span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 
 
 

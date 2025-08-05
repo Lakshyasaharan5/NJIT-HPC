@@ -9,13 +9,13 @@
       
       
       
-        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/MIG/profile-comparison/">
+        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/Running_jobs/batch-jobs/">
       
       
-        <link rel="prev" href="../overview/">
+        <link rel="prev" href="../service-units/">
       
       
-        <link rel="next" href="../job-submission-and-su-charges/">
+        <link rel="next" href="../interactive-jobs/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Profile Comparison
+              Batch Jobs
             
           </span>
         </div>
@@ -2847,6 +2847,22 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2861,7 +2877,7 @@
             
   
   <span class="md-ellipsis">
-    MIG
+    Running Jobs
   </span>
   
 
@@ -2871,7 +2887,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
-            MIG
+            Running Jobs
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2900,6 +2916,69 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../job_limitation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node-memory-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nodes and Memory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service-units/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service Units (SU)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2909,14 +2988,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Profile Comparison
+    Batch Jobs
   </span>
   
 
@@ -2927,7 +3004,7 @@
         
   
   <span class="md-ellipsis">
-    Profile Comparison
+    Batch Jobs
   </span>
   
 
@@ -2939,8 +3016,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2949,29 +3024,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mig-profile-comparison-table" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      MIG Profile Comparison Table
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-of-batch-job-slurm-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of batch job slurm script
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example of batch job slurm script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-jobs-on-cpu-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting Jobs on CPU Nodes
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-does-xgygb-mean" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-jobs-on-gpu-nodes" class="md-nav__link">
     <span class="md-ellipsis">
-      What does Xg.Ygb mean?
+      Submitting Jobs on GPU Nodes
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-difference-between-3g40gb-and-1g10gb3" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-jobs-on-debug" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the difference between 3g.40gb and 1g.10gb:3?
+      Submitting Jobs on debug
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2991,11 +3096,116 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-submission-and-su-charges/" class="md-nav__link">
+      <a href="../interactive-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Job Submission and SU Charges
+    Interactive Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../array-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dependency Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpointing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checkpointing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing and Monitoring Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ondemand-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jobs on Ondemand
   </span>
   
 
@@ -3494,8 +3704,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3504,29 +3712,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mig-profile-comparison-table" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      MIG Profile Comparison Table
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-of-batch-job-slurm-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of batch job slurm script
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example of batch job slurm script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-jobs-on-cpu-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting Jobs on CPU Nodes
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-does-xgygb-mean" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-jobs-on-gpu-nodes" class="md-nav__link">
     <span class="md-ellipsis">
-      What does Xg.Ygb mean?
+      Submitting Jobs on GPU Nodes
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-difference-between-3g40gb-and-1g10gb3" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-jobs-on-debug" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the difference between 3g.40gb and 1g.10gb:3?
+      Submitting Jobs on debug
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3548,253 +3786,209 @@
   
 
 
-<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<p>MIG profiles represent different partitions of a physical NVIDIA A100 80GB GPU. Each profile gives users a slice of compute and memory resources while maintaining full isolation from other workloads running on the same GPU.</p>
-<p>On Wulver, the following MIG profiles are supported:</p>
+  <h1>Batch Jobs</h1>
+
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Batch jobs are like pre-written instructions handed over to the cluster to be executed when resources become available.</p>
+<p>Unlike your personal laptop where you run commands interactively, HPC jobs are queued and run asynchronously using a job script — a text file that tells Slurm:</p>
 <ul>
-<li><code>1g.10gb</code> – 10 GB memory ; 14 compute units</li>
-<li><code>2g.20gb</code> – 20 GB memory ; 28 compute units</li>
-<li><code>3g.40gb</code> – 40 GB memory ; 42 compute units</li>
-<li><code>Full 80GB GPU</code> – No MIG (for jobs that require complete GPU access)</li>
+<li>What resources you need?</li>
+<li>What is your PI account?</li>
+<li>What program or command to run?</li>
+<li>How long your job may take?</li>
 </ul>
-<h2 id="mig-profile-comparison-table">MIG Profile Comparison Table<a class="headerlink" href="#mig-profile-comparison-table" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Specification</th>
-<th style="text-align: left;">1g.10gb</th>
-<th style="text-align: left;">2g.20gb</th>
-<th style="text-align: left;">3g.40gb</th>
-<th style="text-align: left;">Full 80GB</th>
-<th style="text-align: left;">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Device Name</td>
-<td style="text-align: left;">A100 MIG 1g.10gb</td>
-<td style="text-align: left;">A100 MIG 2g.20gb</td>
-<td style="text-align: left;">A100 MIG 3g.40gb</td>
-<td style="text-align: left;">A100-SXM4-80GB</td>
-<td style="text-align: left;">MIG slice size</td>
-</tr>
-<tr>
-<td style="text-align: left;">SU Usage factor</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">16</td>
-<td style="text-align: left;">Service units</td>
-</tr>
-<tr>
-<td style="text-align: left;">Global Memory</td>
-<td style="text-align: left;">10.2 GB</td>
-<td style="text-align: left;">20.9 GB</td>
-<td style="text-align: left;">42.4 GB</td>
-<td style="text-align: left;">85.2 GB</td>
-<td style="text-align: left;">Raw hardware memory</td>
-</tr>
-<tr>
-<td style="text-align: left;">Usable Memory</td>
-<td style="text-align: left;">~9.5 GB</td>
-<td style="text-align: left;">~20 GB</td>
-<td style="text-align: left;">~40 GB</td>
-<td style="text-align: left;">~80 GB</td>
-<td style="text-align: left;">Available for applications</td>
-</tr>
-<tr>
-<td style="text-align: left;">Multiprocessors (SMs)</td>
-<td style="text-align: left;">14</td>
-<td style="text-align: left;">28</td>
-<td style="text-align: left;">42</td>
-<td style="text-align: left;">108</td>
-<td style="text-align: left;">Parallel compute units</td>
-</tr>
-<tr>
-<td style="text-align: left;">Relative Compute Power</td>
-<td style="text-align: left;">1x</td>
-<td style="text-align: left;">2x</td>
-<td style="text-align: left;">3x</td>
-<td style="text-align: left;">7.7x</td>
-<td style="text-align: left;">Performance scaling</td>
-</tr>
-<tr>
-<td style="text-align: left;">Total Parallel Threads</td>
-<td style="text-align: left;">28672</td>
-<td style="text-align: left;">57344</td>
-<td style="text-align: left;">86016</td>
-<td style="text-align: left;">221184</td>
-<td style="text-align: left;">SMs × threads/SMP</td>
-</tr>
-<tr>
-<td style="text-align: left;">Memory Bus Width</td>
-<td style="text-align: left;">640 bits</td>
-<td style="text-align: left;">1280 bits</td>
-<td style="text-align: left;">2560 bits</td>
-<td style="text-align: left;">5120 bits</td>
-<td style="text-align: left;">Memory bandwidth</td>
-</tr>
-<tr>
-<td style="text-align: left;">Memory Bandwidth limits</td>
-<td style="text-align: left;">~1.3 TB/s</td>
-<td style="text-align: left;">~2.6 TB/s</td>
-<td style="text-align: left;">~5.1 TB/s</td>
-<td style="text-align: left;">~10.2 TB/s</td>
-<td style="text-align: left;">Theoretical peak Bandwidth (B/s)=Memory Clock (Hz)×Bus Width (bits)÷8</td>
-</tr>
-<tr>
-<td style="text-align: left;">L2 Cache Size</td>
-<td style="text-align: left;">5 MB</td>
-<td style="text-align: left;">10 MB</td>
-<td style="text-align: left;">20 MB</td>
-<td style="text-align: left;">41 MB</td>
-<td style="text-align: left;">Fast memory cache</td>
-</tr>
-<tr>
-<td style="text-align: left;">Async Engines</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">Concurrent operations</td>
-</tr>
-<tr>
-<td style="text-align: left;">Max Threads per Block</td>
-<td style="text-align: left;">1024</td>
-<td style="text-align: left;">1024</td>
-<td style="text-align: left;">1024</td>
-<td style="text-align: left;">1024</td>
-<td style="text-align: left;">CUDA block limit</td>
-</tr>
-<tr>
-<td style="text-align: left;">Max Threads per SMP</td>
-<td style="text-align: left;">2048</td>
-<td style="text-align: left;">2048</td>
-<td style="text-align: left;">2048</td>
-<td style="text-align: left;">2048</td>
-<td style="text-align: left;">Per multiprocessor</td>
-</tr>
-<tr>
-<td style="text-align: left;">Memory Clock</td>
-<td style="text-align: left;">1593 MHz</td>
-<td style="text-align: left;">1593 MHz</td>
-<td style="text-align: left;">1593 MHz</td>
-<td style="text-align: left;">1593 MHz</td>
-<td style="text-align: left;">Memory frequency</td>
-</tr>
-<tr>
-<td style="text-align: left;">Clock Rate</td>
-<td style="text-align: left;">1410 MHz</td>
-<td style="text-align: left;">1410 MHz</td>
-<td style="text-align: left;">1410 MHz</td>
-<td style="text-align: left;">1410 MHz</td>
-<td style="text-align: left;">GPU core frequency</td>
-</tr>
-<tr>
-<td style="text-align: left;">Shared Memory/Block</td>
-<td style="text-align: left;">49 KB</td>
-<td style="text-align: left;">49 KB</td>
-<td style="text-align: left;">49 KB</td>
-<td style="text-align: left;">49 KB</td>
-<td style="text-align: left;">Per CUDA block</td>
-</tr>
-<tr>
-<td style="text-align: left;">Registers per Block</td>
-<td style="text-align: left;">65536</td>
-<td style="text-align: left;">65536</td>
-<td style="text-align: left;">65536</td>
-<td style="text-align: left;">65536</td>
-<td style="text-align: left;">Per CUDA block</td>
-</tr>
-<tr>
-<td style="text-align: left;">Constant Memory</td>
-<td style="text-align: left;">64 KB</td>
-<td style="text-align: left;">64 KB</td>
-<td style="text-align: left;">64 KB</td>
-<td style="text-align: left;">64 KB</td>
-<td style="text-align: left;">Read-only memory</td>
-</tr>
-<tr>
-<td style="text-align: left;">Warp Size</td>
-<td style="text-align: left;">32</td>
-<td style="text-align: left;">32</td>
-<td style="text-align: left;">32</td>
-<td style="text-align: left;">32</td>
-<td style="text-align: left;">SIMD execution width</td>
-</tr>
-<tr>
-<td style="text-align: left;">ECC Support</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Error correction</td>
-</tr>
-<tr>
-<td style="text-align: left;">Unified Memory</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">CPU-GPU memory sharing</td>
-</tr>
-<tr>
-<td style="text-align: left;">Concurrent Kernels</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Multiple kernel execution</td>
-</tr>
-<tr>
-<td style="text-align: left;">Max Grid Dimensions</td>
-<td style="text-align: left;">2³¹-1 × 65535 × 65535</td>
-<td style="text-align: left;">2³¹-1 × 65535 × 65535</td>
-<td style="text-align: left;">2³¹-1 × 65535 × 65535</td>
-<td style="text-align: left;">2³¹-1 × 65535 × 65535</td>
-<td style="text-align: left;">CUDA grid limits</td>
-</tr>
-</tbody>
-</table>
-<h2 id="what-does-xgygb-mean">What does <code>Xg.Ygb</code> mean?<a class="headerlink" href="#what-does-xgygb-mean" title="Permanent link">&para;</a></h2>
+<h3 id="example-of-batch-job-slurm-script">Example of batch job slurm script<a class="headerlink" href="#example-of-batch-job-slurm-script" title="Permanent link">&para;</a></h3>
+<h4 id="submitting-jobs-on-cpu-nodes">Submitting Jobs on CPU Nodes<a class="headerlink" href="#submitting-jobs-on-cpu-nodes" title="Permanent link">&para;</a></h4>
+<details class="example">
+<summary>Sample Job Script to use: submit.sh</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="submitting-jobs-on-cpu-nodes-using-1-core" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-threads" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores-and-threads" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-cpu-nodes-using-1-core">Using 1 core</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores">Using multiple cores</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-threads">Using multiple threads</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores-and-threads">Using multiple cores and threads</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="kp">#SBATCH --job-name=job_nme</span>
+<span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
+<span class="kp">#SBATCH --error=%x.%j.err</span>
+<span class="kp">#SBATCH --partition=general</span>
+<span class="kp">#SBATCH --qos=standard</span>
+<span class="kp">#SBATCH --account=$PI_ucid # Replace $PI_ucid which the NJIT UCID of PI</span>
+<span class="kp">#SBATCH --nodes=1</span>
+<span class="kp">#SBATCH --ntasks=1</span>
+<span class="kp">#SBATCH --time=59:00  # D-HH:MM:SS</span>
+<span class="kp">#SBATCH --mem-per-cpu=4000M</span>
+
+./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;<span class="w"> </span><span class="c1"># myexe is the executable in this example.</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="kp">#SBATCH --job-name=job_nme</span>
+<span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
+<span class="kp">#SBATCH --error=%x.%j.err</span>
+<span class="kp">#SBATCH --partition=general</span>
+<span class="kp">#SBATCH --qos=standard</span>
+<span class="kp">#SBATCH --account=$PI_ucid # Replace $PI_ucid which the NJIT UCID of PI</span>
+<span class="kp">#SBATCH --nodes=1</span>
+<span class="kp">#SBATCH --ntasks-per-node=8</span>
+<span class="kp">#SBATCH --time=59:00  # D-HH:MM:SS</span>
+<span class="kp">#SBATCH --mem-per-cpu=4000M</span>
+
+<span class="nb">srun</span><span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;<span class="w"> </span><span class="c1"># myexe is the executable in this example.</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="kp">#SBATCH --job-name=job_nme</span>
+<span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
+<span class="kp">#SBATCH --error=%x.%j.err</span>
+<span class="kp">#SBATCH --partition=general</span>
+<span class="kp">#SBATCH --qos=standard</span>
+<span class="kp">#SBATCH --account=$PI_ucid # Replace $PI_ucid which the NJIT UCID of PI</span>
+<span class="kp">#SBATCH --nodes=1</span>
+<span class="kp">#SBATCH --ntasks-per-node=8</span>
+<span class="kp">#SBATCH --time=59:00  # D-HH:MM:SS</span>
+<span class="kp">#SBATCH --mem-per-cpu=4000M</span>
+
+<span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="nv">$SLURM_NTASKS</span><span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;
+</code></pre></div>
+Use this script, if your code relies on threads instead of cores. </p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="kp">#SBATCH --job-name=job_nme</span>
+<span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
+<span class="kp">#SBATCH --error=%x.%j.err</span>
+<span class="kp">#SBATCH --partition=general</span>
+<span class="kp">#SBATCH --qos=standard</span>
+<span class="kp">#SBATCH --account=$PI_ucid # Replace $PI_ucid which the NJIT UCID of PI</span>
+<span class="kp">#SBATCH --nodes=1</span>
+<span class="kp">#SBATCH --ntasks=64</span>
+<span class="kp">#SBATCH --cpus-per-task=2</span>
+<span class="kp">#SBATCH --time=59:00  # D-HH:MM:SS</span>
+<span class="kp">#SBATCH --mem-per-cpu=4000M</span>
+
+<span class="nb">srun</span><span class="w"> </span>gmx_mpi<span class="w"> </span>mdrun<span class="w"> </span>...<span class="w"> </span>-ntomp<span class="w"> </span><span class="nv">$SLURM_CPUS_PER_TASK</span><span class="w"> </span>...
+</code></pre></div>
+This is the example script of <a href="../../Software/Molecular_Dynamics/gromacs/">GROAMCS</a> which uses both CPUs and threads.      </p>
+</div>
+</div>
+</div>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not request multiple cores unless your code is parallelized. Before using multiple cores, ensure that your code is capable of parallelizing tasks; otherwise, it will unnecessarily consume service units (SUs) and may negatively impact performance. Please review the code's documentation thoroughly and use a single core if it does not support parallel execution.  </p>
+</div>
 <ul>
-<li><code>Xg</code> = X GPU slice (partition of compute cores)</li>
-<li><code>Ygb</code> = Y GB of dedicated GPU memory (slightly less is usable)</li>
-<li>Each larger profile uses more compute slices and memory, giving higher performance at higher SU cost.</li>
+<li>Here, the job requests 1 node on the <code>general</code> partition with <code>qos=standard</code>. Please note that the memory relies on the number of cores you are requesting. </li>
+<li>As per the policy, users can request up to 4GB memory per core, therefore the flag  <code>--mem-per-cpu</code> is used for memory requirement. If you are using 1 core and need more memory, use <code>--mem</code> instead. </li>
+<li>In this above script <code>--time</code> indicates the wall time which is used to specify the maximum amount of time that a job is allowed to run. The maximum allowable wall time depends on SLURM QoS, which you can find in <a href="../../Software/slurm/slurm/#using-slurm-on-cluster">QoS</a>. </li>
+<li>To submit the job, use <code>sbatch submit.sh</code> where the <code>submit.sh</code> is the job script. Once the job has been submitted, the jobs will be in the queue, which will be executed based on priority-based scheduling. </li>
+<li>To check the status of the job use <code>squeue -u $LOGNAME</code> and you should see the following 
+<div class="highlight"><pre><span></span><code><span class="w">  </span>JOBID<span class="w"> </span>PARTITION<span class="w">     </span>NAME<span class="w">     </span>USER<span class="w">  </span>ST<span class="w">    </span>TIME<span class="w">    </span>NODES<span class="w">  </span>NODELIST<span class="o">(</span>REASON<span class="o">)</span>
+<span class="w">   </span><span class="m">635</span><span class="w">   </span>general<span class="w">     </span>job_nme<span class="w">   </span>ucid<span class="w">   </span>R<span class="w">   </span><span class="m">00</span>:02:19<span class="w">    </span><span class="m">1</span><span class="w">      </span>n0088
+</code></pre></div>
+Here, the <code>ST</code> stands for the status of the job. You may see the status of the job <code>ST</code> as <code>PD</code> which means the job is pending and has not been assigned yet. The status change depends upon the number of users using the partition and resources requested in the job. Once the job starts, you will see the output file with an extension of <code>.out</code>. If the job causes any errors, you can check the details of the error in the file with the <code>.err</code> extension.</li>
 </ul>
-<h2 id="what-is-the-difference-between-3g40gb-and-1g10gb3">What is the difference between <code>3g.40gb</code> and <code>1g.10gb:3</code>?<a class="headerlink" href="#what-is-the-difference-between-3g40gb-and-1g10gb3" title="Permanent link">&para;</a></h2>
-<p>Here is an overview of how one <code>3g.40gb</code> instance compares to three instances of <code>1g.10gb</code>.</p>
-<p><strong>Parallel overhead</strong>:<br>
-With <code>1g.10gb:3</code>, you are likely running 3 independent processes (or jobs). You have to manage:</p>
-<ul>
-<li>Scheduling</li>
-<li>Data sharding</li>
-<li>Process startup overhead</li>
-<li>Aggregation (if needed)</li>
-<li>This introduces coordination overhead compared to a single job on 3g.40gb.</li>
-</ul>
-<p><strong>Memory bandwidth and cache</strong>:<br></p>
-<ul>
-<li><code>3g.40gb</code> will likely have higher peak memory bandwidth, since it's allocated as one larger slice.</li>
-<li>It can share L2 cache and copy engines more efficiently within the slice.</li>
-</ul>
-<p><strong>Context Switching and Isolation</strong>:<br></p>
-<ul>
-<li>With <code>1g.10gb:3</code>, the slices are completely isolated, each with its own context and scheduler.</li>
-<li>With <code>3g.40gb</code>, there’s less context switching overhead, and you get better intra-GPC utilization.</li>
-</ul>
-<p><strong>When 1g.10gb × 3 is better</strong>:<br></p>
-<ul>
-<li>You're running independent batch inference jobs</li>
-<li>You’re maximizing utilization across many users</li>
-<li>You don’t need cross-slice communication</li>
-</ul>
-<p><strong>When 3g.40gb is better</strong>:<br></p>
-<ul>
-<li>You're training or fine-tuning a model that benefits from larger memory/cache</li>
-<li>You're running a single larger model or data batch</li>
-<li>You want simpler code and fewer moving parts</li>
-</ul>
+<h4 id="submitting-jobs-on-gpu-nodes">Submitting Jobs on GPU Nodes<a class="headerlink" href="#submitting-jobs-on-gpu-nodes" title="Permanent link">&para;</a></h4>
+<p>In case of submitting the jobs on GPU, you can use the following SLURM script </p>
+<details class="example">
+<summary>Sample Job Script to use: gpu_submit.sh</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="submitting-jobs-on-gpu-nodes-using-1-core-1-gpu" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-gpu-nodes-using-multiple-cores-1-gpu" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-gpu-nodes-using-multiple-cores-gpus" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-gpu-nodes-using-migs" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-gpu-nodes-using-1-core-1-gpu">Using 1 core, 1 GPU</label><label for="submitting-jobs-on-gpu-nodes-using-multiple-cores-1-gpu">Using multiple cores, 1 GPU</label><label for="submitting-jobs-on-gpu-nodes-using-multiple-cores-gpus">Using multiple cores, GPUs</label><label for="submitting-jobs-on-gpu-nodes-using-migs">Using MIGs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="kp">#SBATCH --job-name=gpu_job</span>
+<span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
+<span class="kp">#SBATCH --error=%x.%j.err</span>
+<span class="kp">#SBATCH --partition=gpu</span>
+<span class="kp">#SBATCH --qos=standard</span>
+<span class="kp">#SBATCH --account=$PI_ucid # Replace $PI_ucid which the NJIT UCID of PI</span>
+<span class="kp">#SBATCH --nodes=1</span>
+<span class="kp">#SBATCH --ntasks-per-node=1</span>
+<span class="kp">#SBATCH --gres=gpu:1</span>
+<span class="kp">#SBATCH --time=59:00  # D-HH:MM:SS</span>
+<span class="kp">#SBATCH --mem-per-cpu=4000M</span>
+
+./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;<span class="w"> </span><span class="c1"># myexe is the executable in this example.</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="kp">#SBATCH --job-name=gpu_job</span>
+<span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
+<span class="kp">#SBATCH --error=%x.%j.err</span>
+<span class="kp">#SBATCH --partition=gpu</span>
+<span class="kp">#SBATCH --qos=standard</span>
+<span class="kp">#SBATCH --account=$PI_ucid # Replace $PI_ucid which the NJIT UCID of PI</span>
+<span class="kp">#SBATCH --nodes=1</span>
+<span class="kp">#SBATCH --ntasks-per-node=8</span>
+<span class="kp">#SBATCH --gres=gpu:1</span>
+<span class="kp">#SBATCH --time=59:00  # D-HH:MM:SS</span>
+<span class="kp">#SBATCH --mem-per-cpu=4000M</span>
+
+<span class="nb">srun</span><span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;<span class="w"> </span><span class="c1"># myexe is the executable in this example.</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="kp">#SBATCH --job-name=gpu_job</span>
+<span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
+<span class="kp">#SBATCH --error=%x.%j.err</span>
+<span class="kp">#SBATCH --partition=gpu</span>
+<span class="kp">#SBATCH --qos=standard</span>
+<span class="kp">#SBATCH --account=$PI_ucid # Replace $PI_ucid which the NJIT UCID of PI</span>
+<span class="kp">#SBATCH --nodes=1</span>
+<span class="kp">#SBATCH --ntasks-per-node=8</span>
+<span class="kp">#SBATCH --gres=gpu:2</span>
+<span class="kp">#SBATCH --time=59:00  # D-HH:MM:SS</span>
+<span class="kp">#SBATCH --mem-per-cpu=4000M</span>
+
+<span class="nb">srun</span><span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;<span class="w"> </span><span class="c1"># myexe is the executable in this example.</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="kp">#SBATCH --job-name=gpu_job</span>
+<span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
+<span class="kp">#SBATCH --error=%x.%j.err</span>
+<span class="kp">#SBATCH --partition=gpu</span>
+<span class="kp">#SBATCH --qos=standard</span>
+<span class="kp">#SBATCH --account=$PI_ucid # Replace $PI_ucid which the NJIT UCID of PI</span>
+<span class="kp">#SBATCH --nodes=1</span>
+<span class="kp">#SBATCH --ntasks-per-node=8</span>
+<span class="kp">#SBATCH --gres=gpu:a100_10g:1  # This uses 10G MIG, to use 20G or 40G MIG, modify 10g to 20g or 40g </span>
+<span class="kp">#SBATCH --time=59:00  # D-HH:MM:SS</span>
+<span class="kp">#SBATCH --mem-per-cpu=4000M</span>
+
+<span class="nb">srun</span><span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;<span class="w"> </span><span class="c1"># myexe is the executable in this example.</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use multiple GPUs unless you are certain that your job's performance will benefit from them. Most GPU jobs do not require multiple CPUs either. Please remember that unnecessarily requesting additional resources can negatively impact job performance and will also consume more service units (SUs).  </p>
+</div>
+<h4 id="submitting-jobs-on-debug">Submitting Jobs on <code>debug</code><a class="headerlink" href="#submitting-jobs-on-debug" title="Permanent link">&para;</a></h4>
+<p>The <code>debug</code> QoS in Slurm is intended for debugging and testing jobs. It usually provides a shorter queue wait time and quicker job turnaround. Jobs submitted with the <code>debug</code> QoS have access to a limited set of resources (Only 4 CPUS on Wulver), making it suitable for rapid testing and debugging of applications without tying up cluster resources for extended periods. </p>
+<details class="example">
+<summary>Sample Job Script to use: debug_submit.sh</summary>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="kp">#SBATCH --job-name=debug</span>
+<span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
+<span class="kp">#SBATCH --error=%x.%j.err</span>
+<span class="kp">#SBATCH --partition=debug</span>
+<span class="kp">#SBATCH --qos=debug</span>
+<span class="kp">#SBATCH --account=$PI_ucid # Replace $PI_ucid which the NJIT UCID of PI</span>
+<span class="kp">#SBATCH --nodes=1</span>
+<span class="kp">#SBATCH --ntasks-per-node=1</span>
+<span class="kp">#SBATCH --time=7:59:00  # D-HH:MM:SS, Maximum allowable Wall Time 8 hours</span>
+<span class="kp">#SBATCH --mem-per-cpu=4000M</span>
+
+./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;
+</code></pre></div>
+</details>
+<p>To submit the jobs, <code>sbatch</code> command.</p>
 
 
 

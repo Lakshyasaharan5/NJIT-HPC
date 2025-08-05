@@ -9,13 +9,13 @@
       
       
       
-        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/MIG/overview/">
+        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/Running_jobs/overview/">
       
       
         <link rel="prev" href="../../Software/visualization/paraview/">
       
       
-        <link rel="next" href="../profile-comparison/">
+        <link rel="next" href="../job_limitation/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mig-overview" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -2847,6 +2847,22 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2861,7 +2877,7 @@
             
   
   <span class="md-ellipsis">
-    MIG
+    Running Jobs
   </span>
   
 
@@ -2871,7 +2887,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
-            MIG
+            Running Jobs
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2928,27 +2944,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#implementation-in-wulver" class="md-nav__link">
+  <a href="#what-is-slurm" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementation in Wulver
+      What is SLURM?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#profiles-supported-on-wulver" class="md-nav__link">
+  <a href="#some-best-practices-to-follow" class="md-nav__link">
     <span class="md-ellipsis">
-      Profiles Supported on Wulver
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-you-should-use-mig-instances" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why You Should Use MIG Instances
+      Some best practices to follow:
     </span>
   </a>
   
@@ -2970,11 +2977,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../profile-comparison/" class="md-nav__link">
+      <a href="../job_limitation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Profile Comparison
+    Job Limitations
   </span>
   
 
@@ -2991,11 +2998,179 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-submission-and-su-charges/" class="md-nav__link">
+      <a href="../node-memory-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Job Submission and SU Charges
+    Nodes and Memory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service-units/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service Units (SU)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../array-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dependency Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpointing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checkpointing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing and Monitoring Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ondemand-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jobs on Ondemand
   </span>
   
 
@@ -3504,27 +3679,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#implementation-in-wulver" class="md-nav__link">
+  <a href="#what-is-slurm" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementation in Wulver
+      What is SLURM?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#profiles-supported-on-wulver" class="md-nav__link">
+  <a href="#some-best-practices-to-follow" class="md-nav__link">
     <span class="md-ellipsis">
-      Profiles Supported on Wulver
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-you-should-use-mig-instances" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why You Should Use MIG Instances
+      Some best practices to follow:
     </span>
   </a>
   
@@ -3548,62 +3714,50 @@
   
 
 
-<h1 id="mig-overview">MIG Overview<a class="headerlink" href="#mig-overview" title="Permanent link">&para;</a></h1>
-<p>MIG (Multi-Instance GPU) is a technology introduced by NVIDIA starting with its Ampere architecture (e.g., A100). It enables a single physical GPU to be partitioned into multiple smaller, isolated GPU instances — each with dedicated compute cores, memory, cache, and bandwidth. These instances function independently and appear to software as discrete GPUs.</p>
-<p>This allows multiple users or processes to simultaneously run GPU workloads without interfering with one another, improving resource utilization, reducing wait times in job queues, and increasing throughput in shared computing environments like Wulver.</p>
-<h2 id="implementation-in-wulver">Implementation in Wulver<a class="headerlink" href="#implementation-in-wulver" title="Permanent link">&para;</a></h2>
-<p>Wulver supports MIG on select NVIDIA A100 80GB GPUs. It address key challenges in shared environments:</p>
-<p><strong>Fair resource sharing</strong>:<br> 
-MIG enables multiple users to share a single GPU without stepping on each other’s performance.</p>
-<p><strong>Right-sizing workloads</strong>:<br> 
-Users can request GPU capacity that matches their actual workload requirements.</p>
-<p><strong>Improved scheduling efficiency</strong>:<br> 
-MIG instances are smaller and easier to schedule than full GPUs.</p>
-<p><strong>Fair resource sharing</strong>:<br> 
-MIG enables multiple users to share a single GPU without stepping on each other’s performance.</p>
-<p><strong>Right-sizing workloads</strong>:<br> 
-Users can request GPU capacity that matches their actual workload requirements.</p>
-<p><strong>Reduced idle time</strong>:<br> 
-MIG reduces GPU underutilization by splitting large resources into usable chunks.</p>
-<h2 id="profiles-supported-on-wulver">Profiles Supported on Wulver<a class="headerlink" href="#profiles-supported-on-wulver" title="Permanent link">&para;</a></h2>
-<p>Wulver currently supports the following MIG configurations:</p>
+<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<p>Wulver is a shared resource among researchers, faculties and students. It is important to use it efficiently so that everyone can complete their tasks without delay. Therefore, running jobs on Wulver, you should follow certain norms which ensures that your work is done on time and also lets others run their task without any conflict. We use Slurm on Wulver to schedule and manage jobs.</p>
+<h2 id="what-is-slurm">What is SLURM?<a class="headerlink" href="#what-is-slurm" title="Permanent link">&para;</a></h2>
+<p>Slurm (Simple Linux Utility for Resource Management) is an open-source workload manager and job scheduler designed for high-performance computing clusters. It is widely used in research, academia, and industry to efficiently manage and allocate computing resources such as CPUs, GPUs, memory, and storage for running various types of jobs and tasks. Slurm helps optimize resource utilization, minimizes job conflicts, and provides a flexible framework for distributing workloads across a cluster of machines. It offers features like job prioritization, fair sharing of resources, job dependencies, and real-time monitoring, making it an essential tool for orchestrating complex computational workflows in diverse fields.</p>
+<h2 id="some-best-practices-to-follow">Some best practices to follow:<a class="headerlink" href="#some-best-practices-to-follow" title="Permanent link">&para;</a></h2>
 <ul>
-<li>1g.10gb</li>
-<li>2g.20gb</li>
-<li>3g.40gb</li>
-<li>Full 80GB (non-MIG)</li>
+<li>
+<p><strong>Request Only the Resources You Need :</strong><br />
+    Be precise when requesting CPUs, memory, GPUs, and runtime.<br> 
+    Avoid overestimating job time (<code>--time</code>) and memory (<code>--mem</code>) as it reduces scheduler efficiency.<br>
+    Use monitoring tools to understand your typical usage patterns and adjust accordingly.<br></p>
+</li>
+<li>
+<p><strong>Do not run jobs on Login Node :</strong><br />
+    Login node is the entry point for Wulver and has limited memory and resources.<br>
+    Please avoid directly running jobs on the login node as it can slow down the system for everyone.<br> 
+    Always submit jobs to compute nodes via slurm script or start an interactive session.</p>
+</li>
+<li>
+<p><strong>Use Appropriate Partitions :</strong><br />
+    Submit jobs to the correct partition based on resource needs (e.g., GPU, high-memory).<br></p>
+</li>
+<li>
+<p><strong>Test and Debug with Small Jobs First :</strong><br />
+    Use short test runs or dedicated debug partitions for code testing or troubleshooting.<br>
+    This helps prevent long-running failures and wasted compute hours.<br></p>
+</li>
+<li>
+<p><strong>Monitor Your Jobs :</strong><br />
+    Please use commands like <code>squeue</code>, <code>slurm_jobid $jobid</code>, <code>seff $jobid</code> to check your job status <br>
+    You can also use our <a href="../../OnDemand/4_tools/">Ondemand Tools</a>.<br></p>
+</li>
+<li>
+<p><strong>Respect Fair Usage Policies :</strong><br />
+    Do not monopolize shared resources by submitting excessive large jobs.<br>
+    Be mindful of Wulver's <a href="../../Policies/wulver_policies/">usage policy</a>.<br></p>
+</li>
+<li>
+<p><strong>Leverage MIGs for Efficient GPU Utilization :</strong><br />
+    Our Nvidia A100 GPUs have MIG implementation which allows a single GPU to be split into multiple isolated instances.<br>
+    Use MIG-compatible partitions when your task doesn’t require the full GPU power<br>
+    More info about <a href="../../Software/slurm/slurm/#multi-instance-gpu-mig">MIG</a>.<br></p>
+</li>
 </ul>
-<p>These profiles correspond to different partitions of compute and memory resources from the A100 80GB GPU. You can view a full comparison in the <a href="../profile-comparison/">Profile Comparison section</a>.</p>
-<p>Each profile also maps to a Service Unit (SU) usage factor that reflects its computational weight — ranging from 2 SU/hour for a 1g.10gb instance up to 16 SU/hour for a full GPU. You can check full SU overview of MIG <a href="./job-submission-and-su.md">here</a></p>
-<h2 id="why-you-should-use-mig-instances">Why You Should Use MIG Instances<a class="headerlink" href="#why-you-should-use-mig-instances" title="Permanent link">&para;</a></h2>
-<p><strong>Lower SU Cost for Smaller Workloads</strong>:<br> 
-MIG lets you select a GPU slice that meets your job’s needs without paying for more power than you use.
-For example:</p>
-<ul>
-<li>A small training job or inference script may only require 10–20 GB of GPU memory.</li>
-<li>Running such a job on a 1g.10gb or 2g.20gb MIG instance will consume only a fraction of the SUs compared to using a full GPU.</li>
-</ul>
-<p>This is especially important if you’re working within a research group’s annual SU allocation on Wulver.</p>
-<p><strong>No Need to Reserve a Full GPU</strong>:<br> 
-Some jobs — like unit testing, data preprocessing with GPU acceleration, or light model inference — simply don’t need the full resources of an 80GB A100. MIG allows users to avoid bottlenecks and free up resources by choosing an appropriately sized instance.This is especially valuable when:</p>
-<ul>
-<li>Cluster demand is high</li>
-<li>Your jobs don’t need massive memory or compute</li>
-<li>You're trying to run multiple parallel tasks independently</li>
-</ul>
-<p>This is especially important if you’re working within a research group’s annual SU allocation on Wulver.</p>
-<p><strong>Isolated and Predictable Performance</strong>:<br> 
-Each MIG instance has dedicated resources — memory, L2 cache, compute cores — and is logically isolated from others on the same GPU. That means:</p>
-<ul>
-<li>No performance interference from noisy neighbors</li>
-<li>Consistent and reliable job behavior</li>
-<li>Easier debugging and performance tuning</li>
-</ul>
-<p>MIG is compatible with CUDA, cuDNN, PyTorch, TensorFlow, and most GPU-accelerated libraries — no code changes are typically required.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>MIG is not enabled on all GPUs in Wulver. </p>
-</div>
 
 
 
