@@ -3725,18 +3725,18 @@
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Service Units (SUs) are the core accounting mechanism used to track and allocate compute usage on Wulver. Each job you run consumes a certain number of SUs based on the resources you request and the duration of your job.</p>
 <p>SUs help us ensure fair usage of the HPC system and monitor consumption across different users, departments, or projects.</p>
-<p>Since resources are limited, each faculty PI is allocated 300,000 Service Units (SUs) per year upon request at no cost. These SUs can be used via the standard <a href="#priority-use-qos">priority</a> on the SLURM job scheduler. 
+<p>Since resources are limited, each PI's research account is allocated 300,000 Service Units (SUs) per year upon request at no cost. These SUs can be used via the standard <a href="#priority-use-qos">priority</a> on the SLURM job scheduler. 
 One SU is defined as 1 CPU hour or 4 GB of RAM per hour. </p>
 <div class="admonition tip">
 <p class="admonition-title">Important information on SU</p>
 <ul>
-<li>The SU allocation is per PI group, not per individual student.</li>
+<li>The SU allocation is per PI account, not per individual student.</li>
 <li>The allocation resets each fiscal year.</li>
 <li>Students are expected to use SUs efficiently, as excessive usage may deplete their group's SU balance quickly.</li>
 </ul>
 </div>
 <p>If a group exhausts its SU allocation early, the PI has the option to purchase additional SUs or leverage higher <a href="#priority-use-qos">priority</a> queues through investment. For more details, refer to the  <a href="../../Policies/wulver_policies/">Wulver Policies</a> and <a href="../../Policies/condo_policies/">Condo Policies</a>.
-See the table below to see SU will be charged for different partitions. </p>
+Check the table below to see how SU will be charged for different partitions. </p>
 <table>
 <thead>
 <tr>
@@ -3783,14 +3783,14 @@ Requesting more memory than the default will result in higher SU charges than if
 <tr>
 <th>SLURM Directive</th>
 <th style="text-align: center;">SU</th>
-<th style="text-align: center;">Explaination</th>
+<th style="text-align: center;">Explanation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>4 CPUs</td>
 <td style="text-align: center;">MAX(4, 4*4G/4G) = 4</td>
-<td style="text-align: center;">Since no memory requireemnt is specified, SU is charged based on the same number of CPUs</td>
+<td style="text-align: center;">Since no memory requiremnt is specified, SU is charged based on the same number of CPUs</td>
 </tr>
 <tr>
 <td>4 CPUs + <code>--mem=64G</code></td>
@@ -3816,14 +3816,14 @@ Requesting more memory than the default will result in higher SU charges than if
 <tr>
 <th>SLURM Directive</th>
 <th style="text-align: center;">SU</th>
-<th style="text-align: center;">Explaination</th>
+<th style="text-align: center;">Explanation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>4 CPUs</td>
 <td style="text-align: center;">MAX(4*1.5, 4*16G/16G) = 6</td>
-<td style="text-align: center;">On <code>bigmem</code> partion the usage factor is 1.5</td>
+<td style="text-align: center;">On <code>bigmem</code> partition the usage factor is 1.5</td>
 </tr>
 <tr>
 <td>4 CPUs + <code>--mem=64G</code></td>
@@ -3849,14 +3849,14 @@ Requesting more memory than the default will result in higher SU charges than if
 <tr>
 <th>SLURM Directive</th>
 <th style="text-align: center;">SU</th>
-<th style="text-align: center;">Explaination</th>
+<th style="text-align: center;">Explanation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>4 CPUs + 10MIG</td>
 <td style="text-align: center;">MAX(4, 4*4G/4G) + 16 * (10G/80G) = 6</td>
-<td style="text-align: center;">Since no memory requireemnt is specified, SU is charged based on the same number of CPUs and 10G of GPU memory</td>
+<td style="text-align: center;">Since no memory requiremnt is specified, SU is charged based on the same number of CPUs and 10G of GPU memory</td>
 </tr>
 <tr>
 <td>4 CPUs + 20MIG</td>
@@ -3876,7 +3876,7 @@ Requesting more memory than the default will result in higher SU charges than if
 <tr>
 <td>4 CPUs + <code>--mem=64G</code> + Full GPU</td>
 <td style="text-align: center;">MAX(4, 64G/4G) + 16 * (80G/80G) = 32</td>
-<td style="text-align: center;">The MAX function the evaluates the maximum of 4 SUs (from CPUs), and 64G/4G= 16 SUs (from memory). In addition, 16 SUs are charged from 80G of GPU (A full GPU) memory, bringing the total SU charge to 32 SUs</td>
+<td style="text-align: center;">The MAX function evaluates the maximum of 4 SUs (from CPUs), and 64G/4G= 16 SUs (from memory). In addition, 16 SUs are charged from 80G of GPU (A full GPU) memory, bringing the total SU charge to 32 SUs</td>
 </tr>
 </tbody>
 </table>
@@ -3885,7 +3885,7 @@ Requesting more memory than the default will result in higher SU charges than if
 </div>
 </details>
 <h3 id="check-quota">Check Quota<a class="headerlink" href="#check-quota" title="Permanent link">&para;</a></h3>
-<p>Users can check the SUs utilization in <code>--qos=standard</code>, and space usage via <code>quota_info UCID</code> command. 
+<p>Users can check their account(s) SU utilization and storage usage via <code>quota_info UCID</code> command.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>

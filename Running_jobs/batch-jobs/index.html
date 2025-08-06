@@ -3792,9 +3792,9 @@
 <p>Batch jobs are like pre-written instructions handed over to the cluster to be executed when resources become available.</p>
 <p>Unlike your personal laptop where you run commands interactively, HPC jobs are queued and run asynchronously using a job script — a text file that tells Slurm:</p>
 <ul>
-<li>What resources you need?</li>
+<li>What resources do you need?</li>
 <li>What is your PI account?</li>
-<li>What program or command to run?</li>
+<li>What programs or commands are needed to run job?</li>
 <li>How long your job may take?</li>
 </ul>
 <h3 id="example-of-batch-job-slurm-script">Example of batch job slurm script<a class="headerlink" href="#example-of-batch-job-slurm-script" title="Permanent link">&para;</a></h3>
@@ -3805,7 +3805,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
-<span class="kp">#SBATCH --job-name=job_nme</span>
+<span class="kp">#SBATCH --job-name=job_name</span>
 <span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
 <span class="kp">#SBATCH --error=%x.%j.err</span>
 <span class="kp">#SBATCH --partition=general</span>
@@ -3821,7 +3821,7 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
-<span class="kp">#SBATCH --job-name=job_nme</span>
+<span class="kp">#SBATCH --job-name=job_name</span>
 <span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
 <span class="kp">#SBATCH --error=%x.%j.err</span>
 <span class="kp">#SBATCH --partition=general</span>
@@ -3837,7 +3837,7 @@
 </div>
 <div class="tabbed-block">
 <p><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
-<span class="kp">#SBATCH --job-name=job_nme</span>
+<span class="kp">#SBATCH --job-name=job_name</span>
 <span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
 <span class="kp">#SBATCH --error=%x.%j.err</span>
 <span class="kp">#SBATCH --partition=general</span>
@@ -3854,7 +3854,7 @@ Use this script, if your code relies on threads instead of cores. </p>
 </div>
 <div class="tabbed-block">
 <p><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
-<span class="kp">#SBATCH --job-name=job_nme</span>
+<span class="kp">#SBATCH --job-name=job_name</span>
 <span class="kp">#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID</span>
 <span class="kp">#SBATCH --error=%x.%j.err</span>
 <span class="kp">#SBATCH --partition=general</span>
