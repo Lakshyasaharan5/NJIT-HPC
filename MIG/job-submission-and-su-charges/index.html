@@ -3139,6 +3139,8 @@
     
       
         
+          
+        
       
         
       
@@ -3154,16 +3156,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     MIG
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
@@ -3172,25 +3182,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -3628,6 +3619,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../faq/rhel_9_faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RHEL 9 Upgrade FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../faq/faq/" class="md-nav__link">
         
   
@@ -3893,7 +3904,7 @@
 </table>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For an 80G MIG, it is considered a full GPU. In that case, you can alternatively specify <code>--gres=gpu:1</code> in your job script. If you want to see a job script example of requesting a partial GPU, please refer to the sample <a href="#submitting-jobs-on-gpu-nodes">GPU job scripts</a>.</p>
+<p>For an 80G MIG, it is considered a full GPU. In that case, you can alternatively specify <code>--gres=gpu:1</code> in your job script. If you want to see a job script example of requesting a full GPU, please refer to the sample <a href="../Running_jobs/batch-jobs/#submitting-jobs-on-gpu-nodes">GPU job scripts</a>.</p>
 </div>
 <h3 id="sample-slurm-script-for-a-mig-job">Sample SLURM Script for a MIG Job<a class="headerlink" href="#sample-slurm-script-for-a-mig-job" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
