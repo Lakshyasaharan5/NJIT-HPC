@@ -3819,7 +3819,8 @@
 
 
 <h1 id="faq-rhel8-to-rhel9-os-upgrade">FAQ: RHEL8 to RHEL9 OS Upgrade<a class="headerlink" href="#faq-rhel8-to-rhel9-os-upgrade" title="Permanent link">&para;</a></h1>
-<p>We are upgrading Wulver's OS from RHEL8 to RHEL9 during September maintenance cycle. Please review our frequently asked questions. You can email us if you want additional information. </p>
+<p>We are upgrading Wulver's operating system from RHEL8 to RHEL9 during the <a href="../../news/2025/07/29/wulver-maintenance/#wulver-maintenance">September maintenance cycle</a>.<br>
+Please review these frequently asked questions. Please contact us if you have further questions. </p>
 <details class="question">
 <summary>What is changing on Wulver with the OS upgrade from RHEL8 to RHEL9?</summary>
 <ul>
@@ -3835,6 +3836,13 @@
 <li>Software compiled under RHEL8 will still be available to use at your own risk by loading the older version of foss or Intel modules However, the default path will point to the software compiled under RHEL 9. If users intend to use the older version of the software, the path will be shared upon request.</li>
 <li>Up-to-date documentation and module lists will be provided—check the cluster’s software page or module system for specifics.</li>
 <li>The default toolchain for newer RHEL 9 applications is <code>foss/2025a</code> and <code>foss/2024a</code> </li>
+</ul>
+</details>
+<details class="question">
+<summary>How do I access the new modules or software?</summary>
+<ul>
+<li>Use the <code>module avail</code> and <code>module load</code> commands to explore new and updated software on RHEL9.</li>
+<li>Some modules or software stacks may have different names, versions, or paths—review documentation.</li>
 </ul>
 </details>
 <details class="question">
@@ -3867,13 +3875,6 @@
 <li>Checkpoint/Restart: If using application-level checkpointing, confirm that your checkpoint files are forward-compatible with the new software/libraries.</li>
 <li>Software upgrades may invalidate previous job states or results. Test recovery procedures in a development environment before production.</li>
 <li>For critical, long-running simulations or legacy applications dependent on the RHEL8 stack, consult with the cluster support team about feasible solutions like containers or legacy compatibility modules.</li>
-</ul>
-</details>
-<details class="question">
-<summary>How do I access the new modules or software?</summary>
-<ul>
-<li>Use the <code>module avail</code> and <code>module load</code> commands to explore new and updated software on RHEL9.</li>
-<li>Some modules or software stacks may have different names, versions, or paths—review documentation.</li>
 </ul>
 </details>
 <h3 id="quick-tips-for-a-smooth-transition">Quick tips for a smooth transition<a class="headerlink" href="#quick-tips-for-a-smooth-transition" title="Permanent link">&para;</a></h3>
