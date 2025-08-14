@@ -9,26 +9,26 @@
       
       
       
-        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/Software/python/libraries/scipy/">
+        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/MIG/performance_testing/">
       
       
-        <link rel="prev" href="../scikit-build/">
+        <link rel="prev" href="../job-submission-and-su-charges/">
       
       
-        <link rel="next" href="../spark/">
+        <link rel="next" href="../../OnDemand/">
       
       
-      <link rel="icon" href="../../../../favicon.ico">
+      <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
   <title>NJIT HPC Documentation</title>
 
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -47,13 +47,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_markdown_exec_pyodide.css">
+      <link rel="stylesheet" href="../../assets/_markdown_exec_pyodide.css">
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#performance-testing-overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -88,9 +93,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="NJIT HPC Documentation" class="md-header__button md-logo" aria-label="NJIT HPC Documentation" data-md-component="logo">
+    <a href="../.." title="NJIT HPC Documentation" class="md-header__button md-logo" aria-label="NJIT HPC Documentation" data-md-component="logo">
       
-  <img src="../../../../img/Logo_NJIT.png" alt="logo">
+  <img src="../../img/Logo_NJIT.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scipy
+              Performance Testing
             
           </span>
         </div>
@@ -194,9 +199,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="NJIT HPC Documentation" class="md-nav__button md-logo" aria-label="NJIT HPC Documentation" data-md-component="logo">
+    <a href="../.." title="NJIT HPC Documentation" class="md-nav__button md-logo" aria-label="NJIT HPC Documentation" data-md-component="logo">
       
-  <img src="../../../../img/Logo_NJIT.png" alt="logo">
+  <img src="../../img/Logo_NJIT.png" alt="logo">
 
     </a>
     NJIT HPC Documentation
@@ -223,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,7 +268,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../about/" class="md-nav__link ">
+            <a href="../../about/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -296,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/contact/" class="md-nav__link">
+      <a href="../../about/contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -352,7 +357,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../clusters/" class="md-nav__link ">
+            <a href="../../clusters/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -385,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../clusters/wulver/" class="md-nav__link">
+      <a href="../../clusters/wulver/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../clusters/decommissioned/stheno/" class="md-nav__link">
+      <a href="../../clusters/decommissioned/stheno/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -468,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../clusters/decommissioned/lochness/" class="md-nav__link">
+      <a href="../../clusters/decommissioned/lochness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -497,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../clusters/cluster_access/" class="md-nav__link">
+      <a href="../../clusters/cluster_access/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -518,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../clusters/get_started_on_Wulver/" class="md-nav__link">
+      <a href="../../clusters/get_started_on_Wulver/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -539,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../clusters/Wulver_filesystems/" class="md-nav__link">
+      <a href="../../clusters/Wulver_filesystems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +594,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Policies/" class="md-nav__link ">
+            <a href="../../Policies/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -622,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Policies/wulver_policies/" class="md-nav__link">
+      <a href="../../Policies/wulver_policies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Policies/condo_policies/" class="md-nav__link">
+      <a href="../../Policies/condo_policies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../facilities/facilities/" class="md-nav__link">
+      <a href="../../facilities/facilities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Services/hpc-course/" class="md-nav__link">
+      <a href="../../Services/hpc-course/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -889,7 +894,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../HPC_Events_and_Workshops/Calendar/" class="md-nav__link ">
+            <a href="../../HPC_Events_and_Workshops/Calendar/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -975,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2025/1_intro_to_Wulver_I/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2025/1_intro_to_Wulver_I/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -996,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2025/2_intro_to_Wulver_II/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2025/2_intro_to_Wulver_II/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1017,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2025/3_conda_training/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2025/3_conda_training/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1038,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2025/4_intro_to_linux/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2025/4_intro_to_linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1059,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2025/5_parallel_computing_with_matlab/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2025/5_parallel_computing_with_matlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1080,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2025/6_intro_to_OnDemand/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2025/6_intro_to_OnDemand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1101,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2025/7_MATLAB_on_Wulver/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2025/7_MATLAB_on_Wulver/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1122,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2025/8_PSC_Machine_Learning_workshop/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2025/8_PSC_Machine_Learning_workshop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2024/1_slurm/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2024/1_slurm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2024/2_containers/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2024/2_containers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2024/3_slurm_advanced/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2024/3_slurm_advanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2024/4_nvidia/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2024/4_nvidia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2024/5_symposium/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2024/5_symposium/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2024/6_slurm_workshop/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2024/6_slurm_workshop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/2024/7_Intro%20to%20MPI%20Workshop/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/2024/7_Intro%20to%20MPI%20Workshop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1357,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../HPC_Events_and_Workshops/Calendar/past_workshops/" class="md-nav__link">
+      <a href="../../HPC_Events_and_Workshops/Calendar/past_workshops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1409,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../HPC_Events_and_Workshops/Workshop_and_Training_Videos/" class="md-nav__link ">
+            <a href="../../HPC_Events_and_Workshops/Workshop_and_Training_Videos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1444,8 +1449,6 @@
       
   
   
-    
-  
   
   
     
@@ -1478,16 +1481,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../Software/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1504,7 +1507,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Software
@@ -1565,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CFD/ansys/" class="md-nav__link">
+      <a href="../../Software/CFD/ansys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1586,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CFD/comsol/" class="md-nav__link">
+      <a href="../../Software/CFD/comsol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CFD/fluent/" class="md-nav__link">
+      <a href="../../Software/CFD/fluent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1628,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CFD/openfoam/" class="md-nav__link">
+      <a href="../../Software/CFD/openfoam/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1696,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../IDE/VSCode/" class="md-nav__link">
+      <a href="../../Software/IDE/VSCode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1745,7 +1748,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../MATLAB/" class="md-nav__link ">
+            <a href="../../Software/MATLAB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1778,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATLAB/matlab_local/" class="md-nav__link">
+      <a href="../../Software/MATLAB/matlab_local/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1850,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Molecular_Dynamics/gromacs/" class="md-nav__link">
+      <a href="../../Software/Molecular_Dynamics/gromacs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1871,7 +1874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Molecular_Dynamics/lammps/" class="md-nav__link">
+      <a href="../../Software/Molecular_Dynamics/lammps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1892,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Molecular_Dynamics/plumed/" class="md-nav__link">
+      <a href="../../Software/Molecular_Dynamics/plumed/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1968,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../chemistry/cp2k/" class="md-nav__link">
+      <a href="../../Software/chemistry/cp2k/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1989,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../chemistry/gaussian/" class="md-nav__link">
+      <a href="../../Software/chemistry/gaussian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2010,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../chemistry/orca/" class="md-nav__link">
+      <a href="../../Software/chemistry/orca/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2031,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../chemistry/qe/" class="md-nav__link">
+      <a href="../../Software/chemistry/qe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2052,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../chemistry/siesta/" class="md-nav__link">
+      <a href="../../Software/chemistry/siesta/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2120,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming/compilers/" class="md-nav__link">
+      <a href="../../Software/programming/compilers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2146,8 +2149,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2166,16 +2167,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../Software/python/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2192,7 +2193,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_8">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -2208,7 +2209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../conda/" class="md-nav__link">
+      <a href="../../Software/python/conda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2229,7 +2230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jupyter/" class="md-nav__link">
+      <a href="../../Software/python/jupyter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2247,10 +2248,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2275,11 +2274,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8_4" >
         
           
           <label class="md-nav__link" for="__nav_9_8_4" id="__nav_9_8_4_label" tabindex="0">
@@ -2293,7 +2292,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_8_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_8_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_8_4">
             <span class="md-nav__icon md-icon"></span>
             Libraries
@@ -2307,7 +2306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arrow/" class="md-nav__link">
+      <a href="../../Software/python/libraries/arrow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2328,7 +2327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../biopython/" class="md-nav__link">
+      <a href="../../Software/python/libraries/biopython/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2349,7 +2348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h5py/" class="md-nav__link">
+      <a href="../../Software/python/libraries/h5py/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2370,7 +2369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ipython/" class="md-nav__link">
+      <a href="../../Software/python/libraries/ipython/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2391,7 +2390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../matplotlib/" class="md-nav__link">
+      <a href="../../Software/python/libraries/matplotlib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2412,7 +2411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../molmod/" class="md-nav__link">
+      <a href="../../Software/python/libraries/molmod/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2433,7 +2432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scikit-build/" class="md-nav__link">
+      <a href="../../Software/python/libraries/scikit-build/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2451,17 +2450,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Software/python/libraries/scipy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2470,7 +2462,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2483,7 +2474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../spark/" class="md-nav__link">
+      <a href="../../Software/python/libraries/spark/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2559,7 +2550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../slurm/slurm/" class="md-nav__link">
+      <a href="../../Software/slurm/slurm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2631,7 +2622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../utilities/apptainer/" class="md-nav__link">
+      <a href="../../Software/utilities/apptainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2652,7 +2643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../utilities/dmtcp/" class="md-nav__link">
+      <a href="../../Software/utilities/dmtcp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2673,7 +2664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../utilities/parallel/" class="md-nav__link">
+      <a href="../../Software/utilities/parallel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2747,7 +2738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../visualization/ase/" class="md-nav__link">
+      <a href="../../Software/visualization/ase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2768,7 +2759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../visualization/gnuplot/" class="md-nav__link">
+      <a href="../../Software/visualization/gnuplot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2789,7 +2780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../visualization/ovito/" class="md-nav__link">
+      <a href="../../Software/visualization/ovito/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2810,7 +2801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../visualization/paraview/" class="md-nav__link">
+      <a href="../../Software/visualization/paraview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2905,7 +2896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/overview/" class="md-nav__link">
+      <a href="../../Running_jobs/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2926,7 +2917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/job_limitation/" class="md-nav__link">
+      <a href="../../Running_jobs/job_limitation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2947,7 +2938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/node-memory-config/" class="md-nav__link">
+      <a href="../../Running_jobs/node-memory-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2968,7 +2959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/service-units/" class="md-nav__link">
+      <a href="../../Running_jobs/service-units/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2989,7 +2980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/batch-jobs/" class="md-nav__link">
+      <a href="../../Running_jobs/batch-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3010,7 +3001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/interactive-jobs/" class="md-nav__link">
+      <a href="../../Running_jobs/interactive-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3031,7 +3022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/array-jobs/" class="md-nav__link">
+      <a href="../../Running_jobs/array-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3052,7 +3043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/dependency-jobs/" class="md-nav__link">
+      <a href="../../Running_jobs/dependency-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3073,7 +3064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/checkpointing/" class="md-nav__link">
+      <a href="../../Running_jobs/checkpointing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3094,7 +3085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/managing-jobs/" class="md-nav__link">
+      <a href="../../Running_jobs/managing-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3115,7 +3106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Running_jobs/ondemand-jobs/" class="md-nav__link">
+      <a href="../../Running_jobs/ondemand-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3140,6 +3131,8 @@
       
   
   
+    
+  
   
   
     
@@ -3158,16 +3151,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../MIG/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3184,7 +3177,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             MIG
@@ -3200,7 +3193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../MIG/profile-comparison/" class="md-nav__link">
+      <a href="../profile-comparison/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3221,7 +3214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../MIG/job-submission-and-su-charges/" class="md-nav__link">
+      <a href="../job-submission-and-su-charges/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3239,10 +3232,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../MIG/performance_testing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Performance Testing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3251,6 +3264,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#growmacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      GROWMACS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-fine-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Fine-Tuning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mnist-simple-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      MNIST Simple CNN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifar10-deepcnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CIFAR10 DeepCNN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifar10-resnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      CIFAR10 ResNet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3300,7 +3387,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../OnDemand/" class="md-nav__link ">
+            <a href="../../OnDemand/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3357,7 +3444,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../OnDemand/Interactive_Apps/" class="md-nav__link ">
+            <a href="../../OnDemand/Interactive_Apps/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3390,7 +3477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../OnDemand/Interactive_Apps/Matlab/" class="md-nav__link">
+      <a href="../../OnDemand/Interactive_Apps/Matlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3411,7 +3498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../OnDemand/Interactive_Apps/Notebook/" class="md-nav__link">
+      <a href="../../OnDemand/Interactive_Apps/Notebook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3432,7 +3519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../OnDemand/Interactive_Apps/Rstudio/" class="md-nav__link">
+      <a href="../../OnDemand/Interactive_Apps/Rstudio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3461,7 +3548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../OnDemand/2_files/" class="md-nav__link">
+      <a href="../../OnDemand/2_files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3482,7 +3569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../OnDemand/3_clusters/" class="md-nav__link">
+      <a href="../../OnDemand/3_clusters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3503,7 +3590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../OnDemand/4_tools/" class="md-nav__link">
+      <a href="../../OnDemand/4_tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3524,7 +3611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../OnDemand/5_My_Interactive_Sessions/" class="md-nav__link">
+      <a href="../../OnDemand/5_My_Interactive_Sessions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3545,7 +3632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../OnDemand/6_jobs/" class="md-nav__link">
+      <a href="../../OnDemand/6_jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3573,7 +3660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../faq/rhel_9_faq/" class="md-nav__link">
+      <a href="../../faq/rhel_9_faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3593,7 +3680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../faq/faq/" class="md-nav__link">
+      <a href="../../faq/faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3615,7 +3702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../news/" class="md-nav__link">
+      <a href="../../news/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3635,7 +3722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../website_version.txt" class="md-nav__link">
+      <a href="../../website_version.txt" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3655,7 +3742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../migration/" class="md-nav__link">
+      <a href="../../migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3675,7 +3762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../migration/faqs/" class="md-nav__link">
+      <a href="../../migration/faqs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3695,7 +3782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../migration/lochness_filesystem/" class="md-nav__link">
+      <a href="../../migration/lochness_filesystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3715,7 +3802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../migration/Lochness_node_owners/" class="md-nav__link">
+      <a href="../../migration/Lochness_node_owners/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3735,7 +3822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archived/lochness_policies/" class="md-nav__link">
+      <a href="../../archived/lochness_policies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3765,6 +3852,70 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#growmacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      GROWMACS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-fine-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Fine-Tuning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mnist-simple-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      MNIST Simple CNN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifar10-deepcnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CIFAR10 DeepCNN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifar10-resnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      CIFAR10 ResNet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3782,9 +3933,303 @@
   
 
 
-  <h1>Scipy</h1>
-
-
+<h1 id="performance-testing-overview">Performance Testing Overview<a class="headerlink" href="#performance-testing-overview" title="Permanent link">&para;</a></h1>
+<p>To help users select the appropriate MIG profile for their workloads, we conducted benchmark tests using LLM fine-tuning, PyTorch training, and GROMACS molecular dynamics simulations. Tests were run on the NVIDIA A100 GPUs (full 80 GB and MIG profiles) available on Wulver.</p>
+<p>The results below show differences in runtime, accuracy, memory usage, and service unit (SU) cost across profiles. Observations and notes are included to explain unexpected results.</p>
+<h3 id="growmacs">GROWMACS<a class="headerlink" href="#growmacs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">GPU Profile</th>
+<th style="text-align: right;">Nodes</th>
+<th style="text-align: right;">Cores</th>
+<th style="text-align: right;">Threads</th>
+<th style="text-align: right;">SU Usage Factor</th>
+<th style="text-align: right;">Performance (ns/day)</th>
+<th style="text-align: right;">Walltime (s)</th>
+<th style="text-align: right;">SU</th>
+<th style="text-align: right;">Cost/Performance</th>
+<th style="text-align: left;">Node Type</th>
+<th style="text-align: left;">Test Script Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">A100:1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">118.59</td>
+<td style="text-align: right;">182.142</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">4.04756</td>
+<td style="text-align: left;">Intel Node</td>
+<td style="text-align: left;">/project/hpcadmins/am2455/mig_test</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_40g</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">115.507</td>
+<td style="text-align: right;">187.003</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">2.49336</td>
+<td style="text-align: left;">Intel Node</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_20g</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">81.205</td>
+<td style="text-align: right;">265.995</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2.36439</td>
+<td style="text-align: left;">Intel Node</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_10g</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">43.28</td>
+<td style="text-align: right;">499.131</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3.32717</td>
+<td style="text-align: left;">Intel Node</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="llm-fine-tuning">LLM Fine-Tuning<a class="headerlink" href="#llm-fine-tuning" title="Permanent link">&para;</a></h3>
+<p>A minimal QLoRA fine-tuning run was performed on the Qwen/Qwen2.5-1.5B-Instruct model using the public yahma/alpaca-cleaned dataset (1,000 samples, 1 epoch) across different MIG profiles and a full A100 80 GB GPU. Runtime, GPU/CPU memory usage, and service unit (SU) cost were recorded to compare resource efficiency and performance.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">GPU Profile</th>
+<th style="text-align: left;">Walltime (s)</th>
+<th style="text-align: left;">Memory Used (GB)</th>
+<th style="text-align: left;">SU</th>
+<th style="text-align: left;">SU Formula</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">3g.40gb:1</td>
+<td style="text-align: left;">100.58</td>
+<td style="text-align: left;">33.08</td>
+<td style="text-align: left;">0.251</td>
+<td style="text-align: left;">(Max(1, 4/4) + 16 × (40/80)) × hours</td>
+<td style="text-align: left;">Larger MIGs reserve more CUDA allocator buffers; higher memory usage is normal.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2g.20gb:1</td>
+<td style="text-align: left;">151.99</td>
+<td style="text-align: left;">18.21</td>
+<td style="text-align: left;">0.211</td>
+<td style="text-align: left;">(Max(1, 4/4) + 16 × (20/80)) × hours</td>
+<td style="text-align: left;">Lower memory usage due to smaller MIG size.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1g.10gb:1</td>
+<td style="text-align: left;">OOM</td>
+<td style="text-align: left;">OOM</td>
+<td style="text-align: left;">OOM</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Model too large for this profile.</td>
+</tr>
+<tr>
+<td style="text-align: left;">80gb (full)</td>
+<td style="text-align: left;">180.81</td>
+<td style="text-align: left;">33.35</td>
+<td style="text-align: left;">0.383</td>
+<td style="text-align: left;">(Max(1, 4/4) + 16 × (80/80)) × hours</td>
+<td style="text-align: left;">Run dominated by fixed overhead; GPU capacity not fully utilized.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mnist-simple-cnn">MNIST Simple CNN<a class="headerlink" href="#mnist-simple-cnn" title="Permanent link">&para;</a></h3>
+<p>Trains a lightweight convolutional network on the MNIST handwritten digit dataset (grayscale, 28×28) for a small number of epochs. This benchmark measures training time, accuracy, and GPU memory usage to show how smaller MIG profiles handle low-compute, low-memory workloads</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">MIG Profile</th>
+<th style="text-align: right;">Training Time (s)</th>
+<th style="text-align: right;">Test Accuracy (%)</th>
+<th style="text-align: right;">Memory Used (GB)</th>
+<th style="text-align: right;">SU Rate (/hr)</th>
+<th style="text-align: right;">SU</th>
+<th style="text-align: right;">Cost/Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">A100_40GB</td>
+<td style="text-align: right;">63.44</td>
+<td style="text-align: right;">99.14</td>
+<td style="text-align: right;">0.024</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0.159</td>
+<td style="text-align: right;">0.0016</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_20GB</td>
+<td style="text-align: right;">70.7</td>
+<td style="text-align: right;">99.2</td>
+<td style="text-align: right;">0.024</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.098</td>
+<td style="text-align: right;">0.00099</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_10GB</td>
+<td style="text-align: right;">83.65</td>
+<td style="text-align: right;">98.9</td>
+<td style="text-align: right;">0.024</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">0.0007</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cifar10-deepcnn">CIFAR10 DeepCNN<a class="headerlink" href="#cifar10-deepcnn" title="Permanent link">&para;</a></h3>
+<p>A custom deep convolutional network with multiple convolution–batch normalization–ReLU blocks was trained on CIFAR-10 (RGB, 32×32). This architecture has a higher parameter count and more convolutional layers than the MNIST test, making it more GPU-compute intensive. It is designed to test how MIG profiles handle deeper feature extraction workloads, where convolutional throughput and memory bandwidth significantly affect performance.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">MIG Profile</th>
+<th style="text-align: right;">Training Time (s)</th>
+<th style="text-align: right;">Test Accuracy (%)</th>
+<th style="text-align: right;">Memory Used (GB)</th>
+<th style="text-align: right;">SU Rate (/hr)</th>
+<th style="text-align: right;">SU</th>
+<th style="text-align: right;">Cost/Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">A100_40GB</td>
+<td style="text-align: right;">158.72</td>
+<td style="text-align: right;">81.62</td>
+<td style="text-align: right;">0.511</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0.397</td>
+<td style="text-align: right;">0.00486</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_20GB</td>
+<td style="text-align: right;">195.11</td>
+<td style="text-align: right;">79.48</td>
+<td style="text-align: right;">0.511</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.271</td>
+<td style="text-align: right;">0.00341</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_10GB</td>
+<td style="text-align: right;">295.44</td>
+<td style="text-align: right;">77.22</td>
+<td style="text-align: right;">0.511</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.246</td>
+<td style="text-align: right;">0.00319</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cifar10-resnet">CIFAR10 ResNet<a class="headerlink" href="#cifar10-resnet" title="Permanent link">&para;</a></h3>
+<p>A custom ResNet-style architecture with residual connections was trained on CIFAR-10 (RGB, 32×32). Skip connections help preserve gradient flow in deep networks, enabling effective training with more layers. This test emphasizes how MIG partitions perform on workloads with irregular memory access patterns and additional elementwise operations, compared to the sequential convolution-heavy DeepCNN.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">MIG Profile</th>
+<th style="text-align: right;">Training Time (s)</th>
+<th style="text-align: right;">Test Accuracy (%)</th>
+<th style="text-align: right;">Memory Used (GB)</th>
+<th style="text-align: right;">SU Rate (/hr)</th>
+<th style="text-align: right;">SU</th>
+<th style="text-align: right;">Cost/Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">A100_40GB</td>
+<td style="text-align: right;">124.61</td>
+<td style="text-align: right;">76.18</td>
+<td style="text-align: right;">0.585</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0.312</td>
+<td style="text-align: right;">0.00409</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_20GB</td>
+<td style="text-align: right;">140.25</td>
+<td style="text-align: right;">76.84</td>
+<td style="text-align: right;">0.585</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.195</td>
+<td style="text-align: right;">0.00254</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_10GB</td>
+<td style="text-align: right;">182.62</td>
+<td style="text-align: right;">76.54</td>
+<td style="text-align: right;">0.585</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.152</td>
+<td style="text-align: right;">0.00199</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SU values are calculated as:<br />
+<code>SU = (max(CPUs, RAM/4GB) + 16 × (GPU_mem/80)) × hours</code>  </p>
+<p><strong>Example</strong> (A100_20GB, 70.70 s runtime, 1 CPU, 4 GB RAM, 20 GB GPU):<br />
+<div class="highlight"><pre><span></span><code>SU = (max(1, 4/4) + 16 × (20/80)) × (70.70 / 3600)
+   = (1 + 4) × 0.01964 ≈ 0.098
+Cost/Performance = SU / Accuracy = 0.098 / 99.20 ≈ 0.00099
+</code></pre></div></p>
+</div>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Performance scales with MIG size—but not always linearly</strong>: Larger MIG profiles generally train faster and simulate more nanoseconds/day in GROMACS, but the speedup is often less than proportional to the increase in allocated GPU memory or compute units.</p>
+</li>
+<li>
+<p><strong>Memory footprint depends on model size and MIG profile</strong>: CUDA allocators and kernel workspaces scale with available GPU resources, so bigger MIGs may report higher memory usage even when running the same workload. This is expected and not necessarily wasteful.</p>
+</li>
+<li>
+<p><strong>Workload type matters</strong>:</p>
+<ul>
+<li>
+<p>Compute-heavy, parallelizable workloads (e.g., deep CNNs, GROMACS) benefit more from larger MIG profiles.</p>
+</li>
+<li>
+<p>Smaller models or short jobs (e.g., MNIST, small LLMs) may see little to no gain in runtime from a full GPU compared to a well-sized MIG.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Service Unit (SU) efficiency varies</strong>: In some cases, smaller MIG profiles deliver better SU cost per unit of work (e.g., SU/ns in GROMACS) because they avoid underutilizing unused GPU capacity.</p>
+</li>
+<li>
+<p><strong>Avoid over-provisioning</strong>: Select the smallest MIG profile that meets your workload’s memory and performance requirements—this improves overall cluster utilization and reduces queue wait times.</p>
+</li>
+<li>
+<p><strong>OOM is a real constraint</strong>: Some workloads (e.g., LLM fine-tuning) may simply not fit on smaller MIG profiles, making larger profiles a requirement, not a preference.</p>
+</li>
+<li>
+<p><strong>Parallel isolation benefits</strong>: MIG partitions prevent interference between concurrent users, making performance more predictable in shared environments compared to time-sliced GPUs.</p>
+</li>
+</ul>
 
 
 
@@ -3874,12 +4319,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link", "announce.dismiss", "content.tooltips", "header.autohide"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link", "announce.dismiss", "content.tooltips", "header.autohide"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
-        <script src="../../../../assets/_markdown_exec_pyodide.js"></script>
+        <script src="../../assets/_markdown_exec_pyodide.js"></script>
       
     
   </body>

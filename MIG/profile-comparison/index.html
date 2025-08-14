@@ -3146,6 +3146,8 @@
       
         
       
+        
+      
     
     
     
@@ -3200,17 +3202,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Profile Comparison
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3220,43 +3211,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-does-xgygb-mean" class="md-nav__link">
-    <span class="md-ellipsis">
-      What does Xg.Ygb mean?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-difference-between-3g40gb-and-1g10gb3" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is the difference between 3g.40gb and 1g.10gb:3?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3275,6 +3229,27 @@
   
   <span class="md-ellipsis">
     Job Submission and SU Charges
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance_testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Testing
   </span>
   
 
@@ -3796,32 +3771,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-does-xgygb-mean" class="md-nav__link">
-    <span class="md-ellipsis">
-      What does Xg.Ygb mean?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-difference-between-3g40gb-and-1g10gb3" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is the difference between 3g.40gb and 1g.10gb:3?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3842,11 +3791,18 @@
 <p>MIG profiles represent different partitions of a physical NVIDIA A100 80GB GPU. Each profile gives users a slice of compute and memory resources while maintaining full isolation from other workloads running on the same GPU.</p>
 <p>On Wulver, the following MIG profiles are supported:</p>
 <ul>
-<li><code>1g.10gb</code> – 10 GB memory ; 14 compute units</li>
-<li><code>2g.20gb</code> – 20 GB memory ; 28 compute units</li>
-<li><code>3g.40gb</code> – 40 GB memory ; 42 compute units</li>
-<li><code>Full 80GB GPU</code> – No MIG (for jobs that require complete GPU access)</li>
+<li><code>10gb</code> – 10 GB memory</li>
+<li><code>20gb</code> – 20 GB memory</li>
+<li><code>40gb</code> – 40 GB memory</li>
 </ul>
+<!--
+- `1g.10gb` – 10 GB memory ; 14 compute units
+- `2g.20gb` – 20 GB memory ; 28 compute units
+- `3g.40gb` – 40 GB memory ; 42 compute units
+- `Full 80GB GPU` – No MIG (for jobs that require complete GPU access)
+-->
+
+<p>The table below summarizes the hardware characteristics of each MIG profile available on Wulver, alongside the full NVIDIA A100 80 GB GPU. It lists memory capacity, compute resources, and other architectural limits so users can quickly compare performance and capability across profiles.</p>
 <table>
 <thead>
 <tr>
@@ -4045,45 +4001,48 @@
 </tr>
 </tbody>
 </table>
-<h2 id="what-does-xgygb-mean">What does <code>Xg.Ygb</code> mean?<a class="headerlink" href="#what-does-xgygb-mean" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>Xg</code> = X GPU slice (partition of compute cores)</li>
-<li><code>Ygb</code> = Y GB of dedicated GPU memory (slightly less is usable)</li>
-<li>Each larger profile uses more compute slices and memory, giving higher performance at higher SU cost.</li>
-</ul>
-<h2 id="what-is-the-difference-between-3g40gb-and-1g10gb3">What is the difference between <code>3g.40gb</code> and <code>1g.10gb:3</code>?<a class="headerlink" href="#what-is-the-difference-between-3g40gb-and-1g10gb3" title="Permanent link">&para;</a></h2>
-<p>Here is an overview of how one <code>3g.40gb</code> instance compares to three instances of <code>1g.10gb</code>.</p>
-<p><strong>Parallel overhead</strong>:<br>
-With <code>1g.10gb:3</code>, you are likely running 3 independent processes (or jobs). You have to manage:</p>
-<ul>
-<li>Scheduling</li>
-<li>Data sharding</li>
-<li>Process startup overhead</li>
-<li>Aggregation (if needed)</li>
-<li>This introduces coordination overhead compared to a single job on 3g.40gb.</li>
-</ul>
-<p><strong>Memory bandwidth and cache</strong>:<br></p>
-<ul>
-<li><code>3g.40gb</code> will likely have higher peak memory bandwidth, since it's allocated as one larger slice.</li>
-<li>It can share L2 cache and copy engines more efficiently within the slice.</li>
-</ul>
-<p><strong>Context Switching and Isolation</strong>:<br></p>
-<ul>
-<li>With <code>1g.10gb:3</code>, the slices are completely isolated, each with its own context and scheduler.</li>
-<li>With <code>3g.40gb</code>, there’s less context switching overhead, and you get better intra-GPC utilization.</li>
-</ul>
-<p><strong>When 1g.10gb × 3 is better</strong>:<br></p>
-<ul>
-<li>You're running independent batch inference jobs</li>
-<li>You’re maximizing utilization across many users</li>
-<li>You don’t need cross-slice communication</li>
-</ul>
-<p><strong>When 3g.40gb is better</strong>:<br></p>
-<ul>
-<li>You're training or fine-tuning a model that benefits from larger memory/cache</li>
-<li>You're running a single larger model or data batch</li>
-<li>You want simpler code and fewer moving parts</li>
-</ul>
+<!--
+## What does `Xg.Ygb` mean?
+
+- `Xg` = X GPU slice (partition of compute cores)
+- `Ygb` = Y GB of dedicated GPU memory (slightly less is usable)
+- Each larger profile uses more compute slices and memory, giving higher performance at higher SU cost.
+
+## What is the difference between `3g.40gb` and `1g.10gb:3`?
+
+Here is an overview of how one `3g.40gb` instance compares to three instances of `1g.10gb`.
+
+**Parallel overhead**:<br>
+With `1g.10gb:3`, you are likely running 3 independent processes (or jobs). You have to manage:
+
+- Scheduling
+- Data sharding
+- Process startup overhead
+- Aggregation (if needed)
+- This introduces coordination overhead compared to a single job on 3g.40gb.
+
+**Memory bandwidth and cache**:<br>
+
+- `3g.40gb` will likely have higher peak memory bandwidth, since it's allocated as one larger slice.
+- It can share L2 cache and copy engines more efficiently within the slice.
+
+**Context Switching and Isolation**:<br>
+
+- With `1g.10gb:3`, the slices are completely isolated, each with its own context and scheduler.
+- With `3g.40gb`, there’s less context switching overhead, and you get better intra-GPC utilization.
+
+**When 1g.10gb × 3 is better**:<br>
+
+- You're running independent batch inference jobs
+- You’re maximizing utilization across many users
+- You don’t need cross-slice communication
+
+**When 3g.40gb is better**:<br>
+
+- You're training or fine-tuning a model that benefits from larger memory/cache
+- You're running a single larger model or data batch
+- You want simpler code and fewer moving parts
+-->
 
 
 
