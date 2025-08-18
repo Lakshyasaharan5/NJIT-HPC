@@ -3927,15 +3927,19 @@
 </table>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For an 80G MIG, it is considered a full GPU. In that case, you can alternatively specify <code>--gres=gpu:1</code> in your job script. If you want to see a job script example of requesting a full GPU, please refer to the sample <a href="../../Running_jobs/batch-jobs/#submitting-jobs-on-gpu-nodes">GPU job scripts</a>.</p>
+<p>For an 80G MIG, it is considered a full GPU. In that case, you can alternatively specify <code>--gres=gpu:1</code> in your job script. If you want to see a job script example of requesting a full GPU, please refer to the sample <a href="../../Software/slurm/slurm/#submitting-jobs-on-gpu-nodes">GPU job scripts</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that MIGs are available in partition=<code>debug_gpu</code> and qos=<code>debug</code></p>
 </div>
 <h3 id="sample-slurm-script-for-a-mig-job">Sample SLURM Script for a MIG Job<a class="headerlink" href="#sample-slurm-script-for-a-mig-job" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
 <span class="c1">#SBATCH --job-name=gpu_job</span>
 <span class="c1">#SBATCH --output=%x.%j.out</span>
 <span class="c1">#SBATCH --error=%x.%j.err</span>
-<span class="c1">#SBATCH --partition=gpu</span>
-<span class="c1">#SBATCH --qos=standard</span>
+<span class="c1">#SBATCH --partition=debug_gpu</span>
+<span class="c1">#SBATCH --qos=debug</span>
 <span class="c1">#SBATCH --account=$PI_ucid         # Replace with PI&#39;s UCID</span>
 <span class="c1">#SBATCH --nodes=1</span>
 <span class="c1">#SBATCH --ntasks-per-node=8</span>
@@ -3946,9 +3950,9 @@
 srun<span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;
 </code></pre></div>
 <h3 id="interactive-session-with-mig">Interactive session with MIG<a class="headerlink" href="#interactive-session-with-mig" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nv">$srun</span><span class="w"> </span>--partition<span class="o">=</span>gpu<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code><span class="nv">$srun</span><span class="w"> </span>--partition<span class="o">=</span>debug_gpu<span class="w"> </span><span class="se">\</span>
 --account<span class="o">=</span><span class="nv">$PI_ucid</span><span class="w"> </span><span class="se">\</span>
---qos<span class="o">=</span>standard<span class="w"> </span><span class="se">\</span>
+--qos<span class="o">=</span>debug<span class="w"> </span><span class="se">\</span>
 --gres<span class="o">=</span>gpu:a100_10g:1<span class="w"> </span><span class="se">\</span>
 --time<span class="o">=</span><span class="m">00</span>:59:00<span class="w"> </span><span class="se">\</span>
 --pty<span class="w"> </span>bash
