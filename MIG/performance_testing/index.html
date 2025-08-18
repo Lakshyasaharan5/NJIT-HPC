@@ -3299,36 +3299,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mnist-simple-cnn" class="md-nav__link">
+  <a href="#matrix-multiplication-benchmarks" class="md-nav__link">
     <span class="md-ellipsis">
-      MNIST Simple CNN
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cifar10-deepcnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      CIFAR10 DeepCNN
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cifar10-resnet" class="md-nav__link">
-    <span class="md-ellipsis">
-      CIFAR10 ResNet
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-takeaways" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Takeaways
+      Matrix Multiplication Benchmarks
     </span>
   </a>
   
@@ -3880,36 +3853,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mnist-simple-cnn" class="md-nav__link">
+  <a href="#matrix-multiplication-benchmarks" class="md-nav__link">
     <span class="md-ellipsis">
-      MNIST Simple CNN
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cifar10-deepcnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      CIFAR10 DeepCNN
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cifar10-resnet" class="md-nav__link">
-    <span class="md-ellipsis">
-      CIFAR10 ResNet
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-takeaways" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Takeaways
+      Matrix Multiplication Benchmarks
     </span>
   </a>
   
@@ -3935,7 +3881,7 @@
 
 <h1 id="performance-testing-overview">Performance Testing Overview<a class="headerlink" href="#performance-testing-overview" title="Permanent link">&para;</a></h1>
 <p>To help users select the appropriate MIG profile for their workloads, we conducted benchmark tests using LLM fine-tuning, PyTorch training, and GROMACS molecular dynamics simulations. Tests were run on the NVIDIA A100 GPUs (full 80 GB and MIG profiles) available on Wulver.</p>
-<p>The results below show differences in runtime, accuracy, memory usage, and service unit (SU) cost across profiles. Observations and notes are included to explain unexpected results.</p>
+<p>The results below show differences in runtime, accuracy, memory usage, and service unit (SU) cost across profiles. Observations and notes are included to explain results.</p>
 <h3 id="gromacs">GROMACS<a class="headerlink" href="#gromacs" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -3944,292 +3890,203 @@
 <th style="text-align: right;">Nodes</th>
 <th style="text-align: right;">Cores</th>
 <th style="text-align: right;">Threads</th>
-<th style="text-align: right;">SU Usage Factor</th>
 <th style="text-align: right;">Performance (ns/day)</th>
 <th style="text-align: right;">Walltime (s)</th>
-<th style="text-align: right;">SU</th>
+<th style="text-align: right;">SU Consumption</th>
 <th style="text-align: right;">Cost/Performance</th>
-<th style="text-align: left;">Node Type</th>
-<th style="text-align: left;">Test Script Path</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">A100:1</td>
+<td style="text-align: left;">A100_10gb</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">4</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">118.59</td>
-<td style="text-align: right;">182.142</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">4.04756</td>
-<td style="text-align: left;">Intel Node</td>
-<td style="text-align: left;">/project/hpcadmins/am2455/mig_test</td>
+<td style="text-align: right;">43.28</td>
+<td style="text-align: right;">499.131</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3.32717</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_40g</td>
+<td style="text-align: left;">A100_20gb</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">115.507</td>
-<td style="text-align: right;">187.003</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">2.49336</td>
-<td style="text-align: left;">Intel Node</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr>
-<td style="text-align: left;">A100_20g</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">81.205</td>
 <td style="text-align: right;">265.995</td>
 <td style="text-align: right;">8</td>
 <td style="text-align: right;">2.36439</td>
-<td style="text-align: left;">Intel Node</td>
-<td style="text-align: left;">—</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_10g</td>
+<td style="text-align: left;">A100_40gb</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">43.28</td>
-<td style="text-align: right;">499.131</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">3.32717</td>
-<td style="text-align: left;">Intel Node</td>
-<td style="text-align: left;">—</td>
+<td style="text-align: right;">115.507</td>
+<td style="text-align: right;">187.003</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">2.49336</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_80gb full GPU</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">118.59</td>
+<td style="text-align: right;">182.142</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">4.04756</td>
 </tr>
 </tbody>
 </table>
 <h3 id="llm-fine-tuning">LLM Fine-Tuning<a class="headerlink" href="#llm-fine-tuning" title="Permanent link">&para;</a></h3>
-<p>A minimal QLoRA fine-tuning run was performed on the Qwen/Qwen2.5-1.5B-Instruct model using the public yahma/alpaca-cleaned dataset (1,000 samples, 1 epoch) across different MIG profiles and a full A100 80 GB GPU. Runtime, GPU/CPU memory usage, and service unit (SU) cost were recorded to compare resource efficiency and performance.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">GPU Profile</th>
-<th style="text-align: left;">Walltime (s)</th>
-<th style="text-align: left;">Memory Used (GB)</th>
-<th style="text-align: left;">SU</th>
-<th style="text-align: left;">SU Formula</th>
-<th style="text-align: left;">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">3g.40gb:1</td>
-<td style="text-align: left;">100.58</td>
-<td style="text-align: left;">33.08</td>
-<td style="text-align: left;">0.251</td>
-<td style="text-align: left;">(Max(1, 4/4) + 16 × (40/80)) × hours</td>
-<td style="text-align: left;">Larger MIGs reserve more CUDA allocator buffers; higher memory usage is normal.</td>
-</tr>
-<tr>
-<td style="text-align: left;">2g.20gb:1</td>
-<td style="text-align: left;">151.99</td>
-<td style="text-align: left;">18.21</td>
-<td style="text-align: left;">0.211</td>
-<td style="text-align: left;">(Max(1, 4/4) + 16 × (20/80)) × hours</td>
-<td style="text-align: left;">Lower memory usage due to smaller MIG size.</td>
-</tr>
-<tr>
-<td style="text-align: left;">1g.10gb:1</td>
-<td style="text-align: left;">OOM</td>
-<td style="text-align: left;">OOM</td>
-<td style="text-align: left;">OOM</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Model too large for this profile.</td>
-</tr>
-<tr>
-<td style="text-align: left;">80gb (full)</td>
-<td style="text-align: left;">180.81</td>
-<td style="text-align: left;">33.35</td>
-<td style="text-align: left;">0.383</td>
-<td style="text-align: left;">(Max(1, 4/4) + 16 × (80/80)) × hours</td>
-<td style="text-align: left;">Run dominated by fixed overhead; GPU capacity not fully utilized.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="mnist-simple-cnn">MNIST Simple CNN<a class="headerlink" href="#mnist-simple-cnn" title="Permanent link">&para;</a></h3>
-<p>Trains a lightweight convolutional network on the MNIST handwritten digit dataset (grayscale, 28×28) for a small number of epochs. This benchmark measures training time, accuracy, and GPU memory usage to show how smaller MIG profiles handle low-compute, low-memory workloads</p>
+<p>The benchmark script fine-tunes the Qwen 1.5B Instruct model on the Alpaca-cleaned dataset using QLoRA. Training is done with 4-bit quantization to save memory and LoRA adapters so that only a small set of parameters are updated. The Hugging Face TRL <code>SFTTrainer</code> handles training, while the script also logs runtime, GPU/CPU memory, and tokens processed per second. The setup runs consistently on both full NVIDIA's A100 80GB GPU and different MIG slices (10 GB, 20 GB, 40 GB), making it useful for comparing speed and cost across profiles.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">MIG Profile</th>
-<th style="text-align: right;">Training Time (s)</th>
-<th style="text-align: right;">Test Accuracy (%)</th>
-<th style="text-align: right;">Memory Used (GB)</th>
-<th style="text-align: right;">SU Rate (/hr)</th>
-<th style="text-align: right;">SU</th>
-<th style="text-align: right;">Cost/Performance</th>
+<th style="text-align: right;">Walltime (h)</th>
+<th style="text-align: right;">SU Total</th>
+<th style="text-align: right;">Tokens Processed</th>
+<th style="text-align: right;">Tokens/s</th>
+<th style="text-align: right;">Peak Allocated (GB)</th>
+<th style="text-align: right;">Peak Reserved (GB)</th>
+<th style="text-align: right;">SU per 1M Tokens</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">A100_40GB</td>
-<td style="text-align: right;">63.44</td>
-<td style="text-align: right;">99.14</td>
-<td style="text-align: right;">0.024</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.159</td>
-<td style="text-align: right;">0.0016</td>
+<td style="text-align: left;">A100_10gb</td>
+<td style="text-align: right;">1.092</td>
+<td style="text-align: right;">3.28</td>
+<td style="text-align: right;">166327</td>
+<td style="text-align: right;">42.3</td>
+<td style="text-align: right;">5.68</td>
+<td style="text-align: right;">8.97</td>
+<td style="text-align: right;">19.05</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_20GB</td>
-<td style="text-align: right;">70.7</td>
-<td style="text-align: right;">99.2</td>
-<td style="text-align: right;">0.024</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">0.098</td>
-<td style="text-align: right;">0.00099</td>
+<td style="text-align: left;">A100_20gb</td>
+<td style="text-align: right;">0.556</td>
+<td style="text-align: right;">2.78</td>
+<td style="text-align: right;">166327</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">5.68</td>
+<td style="text-align: right;">18.3</td>
+<td style="text-align: right;">16.39</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_10GB</td>
-<td style="text-align: right;">83.65</td>
-<td style="text-align: right;">98.9</td>
-<td style="text-align: right;">0.024</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0.07</td>
-<td style="text-align: right;">0.0007</td>
+<td style="text-align: left;">A100_40gb</td>
+<td style="text-align: right;">0.353</td>
+<td style="text-align: right;">3.18</td>
+<td style="text-align: right;">166327</td>
+<td style="text-align: right;">130.9</td>
+<td style="text-align: right;">5.68</td>
+<td style="text-align: right;">23.55</td>
+<td style="text-align: right;">18.88</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_80gb full GPU</td>
+<td style="text-align: right;">0.267</td>
+<td style="text-align: right;">4.53</td>
+<td style="text-align: right;">166327</td>
+<td style="text-align: right;">173.2</td>
+<td style="text-align: right;">5.68</td>
+<td style="text-align: right;">23.55</td>
+<td style="text-align: right;">27.04</td>
 </tr>
 </tbody>
 </table>
-<h3 id="cifar10-deepcnn">CIFAR10 DeepCNN<a class="headerlink" href="#cifar10-deepcnn" title="Permanent link">&para;</a></h3>
-<p>A custom deep convolutional network with multiple convolution–batch normalization–ReLU blocks was trained on CIFAR-10 (RGB, 32×32). This architecture has a higher parameter count and more convolutional layers than the MNIST test, making it more GPU-compute intensive. It is designed to test how MIG profiles handle deeper feature extraction workloads, where convolutional throughput and memory bandwidth significantly affect performance.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">MIG Profile</th>
-<th style="text-align: right;">Training Time (s)</th>
-<th style="text-align: right;">Test Accuracy (%)</th>
-<th style="text-align: right;">Memory Used (GB)</th>
-<th style="text-align: right;">SU Rate (/hr)</th>
-<th style="text-align: right;">SU</th>
-<th style="text-align: right;">Cost/Performance</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">A100_40GB</td>
-<td style="text-align: right;">158.72</td>
-<td style="text-align: right;">81.62</td>
-<td style="text-align: right;">0.511</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.397</td>
-<td style="text-align: right;">0.00486</td>
-</tr>
-<tr>
-<td style="text-align: left;">A100_20GB</td>
-<td style="text-align: right;">195.11</td>
-<td style="text-align: right;">79.48</td>
-<td style="text-align: right;">0.511</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">0.271</td>
-<td style="text-align: right;">0.00341</td>
-</tr>
-<tr>
-<td style="text-align: left;">A100_10GB</td>
-<td style="text-align: right;">295.44</td>
-<td style="text-align: right;">77.22</td>
-<td style="text-align: right;">0.511</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0.246</td>
-<td style="text-align: right;">0.00319</td>
-</tr>
-</tbody>
-</table>
-<h3 id="cifar10-resnet">CIFAR10 ResNet<a class="headerlink" href="#cifar10-resnet" title="Permanent link">&para;</a></h3>
-<p>A custom ResNet-style architecture with residual connections was trained on CIFAR-10 (RGB, 32×32). Skip connections help preserve gradient flow in deep networks, enabling effective training with more layers. This test emphasizes how MIG partitions perform on workloads with irregular memory access patterns and additional elementwise operations, compared to the sequential convolution-heavy DeepCNN.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">MIG Profile</th>
-<th style="text-align: right;">Training Time (s)</th>
-<th style="text-align: right;">Test Accuracy (%)</th>
-<th style="text-align: right;">Memory Used (GB)</th>
-<th style="text-align: right;">SU Rate (/hr)</th>
-<th style="text-align: right;">SU</th>
-<th style="text-align: right;">Cost/Performance</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">A100_40GB</td>
-<td style="text-align: right;">124.61</td>
-<td style="text-align: right;">76.18</td>
-<td style="text-align: right;">0.585</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.312</td>
-<td style="text-align: right;">0.00409</td>
-</tr>
-<tr>
-<td style="text-align: left;">A100_20GB</td>
-<td style="text-align: right;">140.25</td>
-<td style="text-align: right;">76.84</td>
-<td style="text-align: right;">0.585</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">0.195</td>
-<td style="text-align: right;">0.00254</td>
-</tr>
-<tr>
-<td style="text-align: left;">A100_10GB</td>
-<td style="text-align: right;">182.62</td>
-<td style="text-align: right;">76.54</td>
-<td style="text-align: right;">0.585</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0.152</td>
-<td style="text-align: right;">0.00199</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>
+<p><strong>Peak Allocated ≈ 5.7 GB across all runs</strong>: The model + LoRA fine-tune has a fixed memory demand, regardless of MIG size.</p>
+</li>
+<li>
+<p><strong>Peak Reserved varies</strong> (8.9 → 23.5 GB): PyTorch’s caching allocator grabs bigger chunks when more GPU memory is available, but this doesn’t change training feasibility.</p>
+</li>
+<li>
+<p><strong>Efficiency vs. Speed</strong>: Smaller MIGs (e.g., 10 GB, 20 GB) can be more cost-efficient per token, while larger MIGs or the full 80 GB GPU finish training faster.</p>
+</li>
+<li>
+<p><strong>Choosing a profile</strong>: The right option depends on priorities — use smaller MIGs to save SUs on long jobs, or larger MIGs when wall-time (speed) is more important.</p>
+</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>SU values are calculated as:<br />
-<code>SU = (max(CPUs, RAM/4GB) + 16 × (GPU_mem/80)) × hours</code>  </p>
-<p><strong>Example</strong> (A100_20GB, 70.70 s runtime, 1 CPU, 4 GB RAM, 20 GB GPU):<br />
-<div class="highlight"><pre><span></span><code>SU = (max(1, 4/4) + 16 × (20/80)) × (70.70 / 3600)
-   = (1 + 4) × 0.01964 ≈ 0.098
-Cost/Performance = SU / Accuracy = 0.098 / 99.20 ≈ 0.00099
+<code>SU = (max(#CPUs, #RAM/4GB) + 16 × (GPU_mem/80)) × hours</code>  </p>
+<p><strong>Example</strong> (A100_20GB, 0.556 hr walltime, 1 CPU, 4 GB RAM, 20 GB GPU):<br />
+<div class="highlight"><pre><span></span><code>SU = (max(1, 4/4) + 16 × (20/80)) × 0.556
+   = (1 + 4) * 0.556 = 2.78
 </code></pre></div></p>
 </div>
-<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<h3 id="matrix-multiplication-benchmarks">Matrix Multiplication Benchmarks<a class="headerlink" href="#matrix-multiplication-benchmarks" title="Permanent link">&para;</a></h3>
+<p>We ran a <strong>matrix multiplication benchmark</strong> on different NVIDIA A100 MIG profiles and the full GPU. The test multiplies large square matrices (sizes like 4096×4096 up to 49k×49k) using PyTorch and CUDA.</p>
+<p>Matrix multiplication is the <strong>core operation in deep learning</strong> — it’s what neural networks spend most of their time doing. Measuring how many <strong>TFLOPs (trillion floating point operations per second)</strong> each MIG slice achieves gives a good picture of its raw compute power.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">MIG Profile</th>
+<th style="text-align: right;">SMs</th>
+<th style="text-align: right;">Memory (GB)</th>
+<th style="text-align: right;">Peak FP16 TFLOPs</th>
+<th style="text-align: right;">Peak FP32 (TF32) TFLOPs</th>
+<th style="text-align: left;">Peak Matrix Size (n)</th>
+<th style="text-align: right;">Peak GPU Mem Used (GB)</th>
+<th style="text-align: right;">SU Usage Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">A100_10gb</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">9.5</td>
+<td style="text-align: right;">38.694</td>
+<td style="text-align: right;">18.985</td>
+<td style="text-align: left;">12288 (FP16), 22528 (FP32)</td>
+<td style="text-align: right;">7.57</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_20gb</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">19.5</td>
+<td style="text-align: right;">79.304</td>
+<td style="text-align: right;">37.887</td>
+<td style="text-align: left;">20480 (FP16), 32256 (FP32)</td>
+<td style="text-align: right;">15.52</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_40gb</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">39.5</td>
+<td style="text-align: right;">118.924</td>
+<td style="text-align: right;">55.576</td>
+<td style="text-align: left;">49152 (FP16), 32768 (FP32)</td>
+<td style="text-align: right;">18.01</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td style="text-align: left;">A100_80gb full GPU</td>
+<td style="text-align: right;">108</td>
+<td style="text-align: right;">79.3</td>
+<td style="text-align: right;">286.185</td>
+<td style="text-align: right;">135.676</td>
+<td style="text-align: left;">16384 (FP16), 16384 (FP32)</td>
+<td style="text-align: right;">18.01</td>
+<td style="text-align: right;">16</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>
-<p><strong>Performance scales with MIG size—but not always linearly</strong>: Larger MIG profiles generally train faster and simulate more nanoseconds/day in GROMACS, but the speedup is often less than proportional to the increase in allocated GPU memory or compute units.</p>
-</li>
-<li>
-<p><strong>Memory footprint depends on model size and MIG profile</strong>: CUDA allocators and kernel workspaces scale with available GPU resources, so bigger MIGs may report higher memory usage even when running the same workload. This is expected and not necessarily wasteful.</p>
-</li>
-<li>
-<p><strong>Workload type matters</strong>:</p>
-<ul>
-<li>
-<p>Compute-heavy, parallelizable workloads (e.g., deep CNNs, GROMACS) benefit more from larger MIG profiles.</p>
-</li>
-<li>
-<p>Smaller models or short jobs (e.g., MNIST, small LLMs) may see little to no gain in runtime from a full GPU compared to a well-sized MIG.</p>
-</li>
+<li><strong>Peak FP16 performance</strong> (fast half-precision mode used in AI training).</li>
+<li><strong>Peak FP32 performance</strong> (single precision with TF32 tensor cores, higher accuracy but slower).</li>
+<li><strong>Largest tested matrix size (n)</strong> where peak performance was observed.</li>
+<li><strong>Peak GPU memory usage</strong>, to see whether memory or compute was the bottleneck.</li>
+<li><strong>SU usage factor</strong>, to tie performance back to billing.</li>
 </ul>
-</li>
-<li>
-<p><strong>Service Unit (SU) efficiency varies</strong>: In some cases, smaller MIG profiles deliver better SU cost per unit of work (e.g., SU/ns in GROMACS) because they avoid underutilizing unused GPU capacity.</p>
-</li>
-<li>
-<p><strong>Avoid over-provisioning</strong>: Select the smallest MIG profile that meets your workload’s memory and performance requirements—this improves overall cluster utilization and reduces queue wait times.</p>
-</li>
-<li>
-<p><strong>OOM is a real constraint</strong>: Some workloads (e.g., LLM fine-tuning) may simply not fit on smaller MIG profiles, making larger profiles a requirement, not a preference.</p>
-</li>
-<li>
-<p><strong>Parallel isolation benefits</strong>: MIG partitions prevent interference between concurrent users, making performance more predictable in shared environments compared to time-sliced GPUs.</p>
-</li>
-</ul>
+<p>The results show that <strong>performance scales almost linearly with MIG size (number of SMs)</strong>, while memory never became the limiting factor. This means compute capacity is the main driver of speed, and users can choose between smaller slices (cheaper, slower) or larger slices (faster, higher SU rate) depending on their workload needs.</p>
 
 
 
