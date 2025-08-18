@@ -2842,6 +2842,8 @@
     
       
         
+          
+        
       
         
       
@@ -2873,16 +2875,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Running Jobs
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
@@ -2891,25 +2901,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -3047,24 +3038,6 @@
   <a href="#submitting-jobs-on-cpu-nodes" class="md-nav__link">
     <span class="md-ellipsis">
       Submitting Jobs on CPU Nodes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#submitting-jobs-on-gpu-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Submitting Jobs on GPU Nodes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#submitting-jobs-on-debug" class="md-nav__link">
-    <span class="md-ellipsis">
-      Submitting Jobs on debug
     </span>
   </a>
   
@@ -3887,24 +3860,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#submitting-jobs-on-gpu-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Submitting Jobs on GPU Nodes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#submitting-jobs-on-debug" class="md-nav__link">
-    <span class="md-ellipsis">
-      Submitting Jobs on debug
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3946,9 +3901,12 @@
 </ul>
 <h3 id="example-of-batch-job-slurm-script">Example of batch job slurm script<a class="headerlink" href="#example-of-batch-job-slurm-script" title="Permanent link">&para;</a></h3>
 <h4 id="submitting-jobs-on-cpu-nodes">Submitting Jobs on CPU Nodes<a class="headerlink" href="#submitting-jobs-on-cpu-nodes" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="submitting-jobs-on-cpu-nodes-cpu-nodes" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-gpu-nodes" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-debug-node" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-cpu-nodes-cpu-nodes">CPU Nodes</label><label for="submitting-jobs-on-cpu-nodes-gpu-nodes">GPU Nodes</label><label for="submitting-jobs-on-cpu-nodes-debug-node">Debug Node</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <details class="example">
 <summary>Sample Job Script to use: submit.sh</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="submitting-jobs-on-cpu-nodes-using-1-core" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-threads" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores-and-threads" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-cpu-nodes-using-1-core">Using 1 core</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores">Using multiple cores</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-threads">Using multiple threads</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores-and-threads">Using multiple cores and threads</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="submitting-jobs-on-cpu-nodes-using-1-core" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-threads" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores-and-threads" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-cpu-nodes-using-1-core">Using 1 core</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores">Using multiple cores</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-threads">Using multiple threads</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores-and-threads">Using multiple cores and threads</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
@@ -4030,16 +3988,17 @@ This is the example script of <a href="../../Software/Molecular_Dynamics/gromacs
 <li>In this above script <code>--time</code> indicates the wall time which is used to specify the maximum amount of time that a job is allowed to run. The maximum allowable wall time depends on SLURM QoS, which you can find in <a href="../../Software/slurm/slurm/#using-slurm-on-cluster">QoS</a>. </li>
 <li>To submit the job, use <code>sbatch submit.sh</code> where the <code>submit.sh</code> is the job script. Once the job has been submitted, the jobs will be in the queue, which will be executed based on priority-based scheduling. </li>
 <li>To check the status of the job use <code>squeue -u $LOGNAME</code> and you should see the following 
-<div class="highlight"><pre><span></span><code><span class="w">  </span>JOBID<span class="w"> </span>PARTITION<span class="w">     </span>NAME<span class="w">     </span>USER<span class="w">  </span>ST<span class="w">    </span>TIME<span class="w">    </span>NODES<span class="w">  </span>NODELIST<span class="o">(</span>REASON<span class="o">)</span>
-<span class="w">   </span><span class="m">635</span><span class="w">   </span>general<span class="w">     </span>job_nme<span class="w">   </span>ucid<span class="w">   </span>R<span class="w">   </span><span class="m">00</span>:02:19<span class="w">    </span><span class="m">1</span><span class="w">      </span>n0088
+<div class="highlight"><pre><span></span><code>JOBID<span class="w"> </span>PARTITION<span class="w">     </span>NAME<span class="w">     </span>USER<span class="w">  </span>ST<span class="w">    </span>TIME<span class="w">    </span>NODES<span class="w">  </span>NODELIST<span class="o">(</span>REASON<span class="o">)</span>
+<span class="m">635</span><span class="w">   </span>general<span class="w">     </span>job_nme<span class="w">   </span>ucid<span class="w">   </span>R<span class="w">   </span><span class="m">00</span>:02:19<span class="w">    </span><span class="m">1</span><span class="w">      </span>n0088
 </code></pre></div>
 Here, the <code>ST</code> stands for the status of the job. You may see the status of the job <code>ST</code> as <code>PD</code> which means the job is pending and has not been assigned yet. The status change depends upon the number of users using the partition and resources requested in the job. Once the job starts, you will see the output file with an extension of <code>.out</code>. If the job causes any errors, you can check the details of the error in the file with the <code>.err</code> extension.</li>
 </ul>
-<h4 id="submitting-jobs-on-gpu-nodes">Submitting Jobs on GPU Nodes<a class="headerlink" href="#submitting-jobs-on-gpu-nodes" title="Permanent link">&para;</a></h4>
+</div>
+<div class="tabbed-block">
 <p>In case of submitting the jobs on GPU, you can use the following SLURM script </p>
 <details class="example">
 <summary>Sample Job Script to use: gpu_submit.sh</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="submitting-jobs-on-gpu-nodes-using-1-core-1-gpu" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-gpu-nodes-using-multiple-cores-1-gpu" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-gpu-nodes-using-multiple-cores-gpus" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-gpu-nodes-using-migs" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-gpu-nodes-using-1-core-1-gpu">Using 1 core, 1 GPU</label><label for="submitting-jobs-on-gpu-nodes-using-multiple-cores-1-gpu">Using multiple cores, 1 GPU</label><label for="submitting-jobs-on-gpu-nodes-using-multiple-cores-gpus">Using multiple cores, GPUs</label><label for="submitting-jobs-on-gpu-nodes-using-migs">Using MIGs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="submitting-jobs-on-cpu-nodes-using-1-core-1-gpu" name="__tabbed_3" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores-1-gpu" name="__tabbed_3" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores-gpus" name="__tabbed_3" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-migs" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-cpu-nodes-using-1-core-1-gpu">Using 1 core, 1 GPU</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores-1-gpu">Using multiple cores, 1 GPU</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores-gpus">Using multiple cores, GPUs</label><label for="submitting-jobs-on-cpu-nodes-using-migs">Using MIGs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
@@ -4116,7 +4075,8 @@ Here, the <code>ST</code> stands for the status of the job. You may see the stat
 <p class="admonition-title">Warning</p>
 <p>Do not use multiple GPUs unless you are certain that your job's performance will benefit from them. Most GPU jobs do not require multiple CPUs either. Please remember that unnecessarily requesting additional resources can negatively impact job performance and will also consume more service units (SUs).  </p>
 </div>
-<h4 id="submitting-jobs-on-debug">Submitting Jobs on <code>debug</code><a class="headerlink" href="#submitting-jobs-on-debug" title="Permanent link">&para;</a></h4>
+</div>
+<div class="tabbed-block">
 <p>The <code>debug</code> QoS in Slurm is intended for debugging and testing jobs. It usually provides a shorter queue wait time and quicker job turnaround. Jobs submitted with the <code>debug</code> QoS have access to a limited set of resources (Only 4 CPUS on Wulver), making it suitable for rapid testing and debugging of applications without tying up cluster resources for extended periods. </p>
 <details class="example">
 <summary>Sample Job Script to use: debug_submit.sh</summary>
@@ -4135,6 +4095,9 @@ Here, the <code>ST</code> stands for the status of the job. You may see the stat
 ./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;
 </code></pre></div>
 </details>
+</div>
+</div>
+</div>
 <p>To submit the jobs, <code>sbatch</code> command.</p>
 
 

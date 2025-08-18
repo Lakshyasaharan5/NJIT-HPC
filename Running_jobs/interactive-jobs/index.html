@@ -2842,6 +2842,8 @@
     
       
         
+          
+        
       
         
       
@@ -2873,16 +2875,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Running Jobs
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
@@ -2891,25 +2901,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -3926,52 +3917,33 @@ Use<span class="w"> </span><span class="s1">&#39;-h&#39;</span><span class="w"> 
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="the-interactive-command-cpu-nodes" name="__tabbed_1" type="radio" /><input id="the-interactive-command-gpu-nodes" name="__tabbed_1" type="radio" /><input id="the-interactive-command-debug-nodes" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="the-interactive-command-cpu-nodes">CPU Nodes</label><label for="the-interactive-command-gpu-nodes">GPU Nodes</label><label for="the-interactive-command-debug-nodes">Debug Nodes</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>interactive<span class="w"> </span>-a<span class="w"> </span><span class="nv">$PI_UCID</span><span class="w"> </span>-q<span class="w"> </span>standard<span class="w"> </span>-j<span class="w"> </span>cpu
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>interactive<span class="w"> </span>-a<span class="w"> </span><span class="nv">$PI_UCID</span><span class="w"> </span>-q<span class="w"> </span>standard<span class="w"> </span>-j<span class="w"> </span>cpu
+Job<span class="w"> </span>Type:<span class="w"> </span>cpu
 Starting<span class="w"> </span>an<span class="w"> </span>interactive<span class="w"> </span>session<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>general<span class="w"> </span>partition<span class="w"> </span>and<span class="w"> </span><span class="m">1</span><span class="w"> </span>core<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="m">01</span>:00:00<span class="w"> </span>of<span class="w"> </span>walltime<span class="w"> </span><span class="k">in</span><span class="w"> </span>standard<span class="w"> </span>priority
-salloc:<span class="w"> </span>Pending<span class="w"> </span>job<span class="w"> </span>allocation<span class="w"> </span><span class="m">466577</span>
-salloc:<span class="w"> </span>job<span class="w"> </span><span class="m">466577</span><span class="w"> </span>queued<span class="w"> </span>and<span class="w"> </span>waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>resources
-salloc:<span class="w"> </span>job<span class="w"> </span><span class="m">466577</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>allocated<span class="w"> </span>resources
-salloc:<span class="w"> </span>Granted<span class="w"> </span>job<span class="w"> </span>allocation<span class="w"> </span><span class="m">466577</span>
-salloc:<span class="w"> </span>Nodes<span class="w"> </span>n0103<span class="w"> </span>are<span class="w"> </span>ready<span class="w"> </span><span class="k">for</span><span class="w"> </span>job
+srun:<span class="w"> </span>job<span class="w"> </span><span class="m">584280</span><span class="w"> </span>queued<span class="w"> </span>and<span class="w"> </span>waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>resources
+srun:<span class="w"> </span>job<span class="w"> </span><span class="m">584280</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>allocated<span class="w"> </span>resources
 </code></pre></div>
- Use <code>ssh</code> or <code>srun</code> </p>
-<p><code>srun ./myexe &lt;input/output options&gt;</code> 
- or
- <code>ssh n0103</code></p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>interactive<span class="w"> </span>-a<span class="w"> </span><span class="nv">$PI_UCID</span><span class="w"> </span>-q<span class="w"> </span>standard<span class="w"> </span>-j<span class="w"> </span>gpu
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>interactive<span class="w"> </span>-a<span class="w"> </span><span class="nv">$PI_UCID</span><span class="w"> </span>-q<span class="w"> </span>standard<span class="w"> </span>-j<span class="w"> </span>gpu
+Job<span class="w"> </span>Type:<span class="w"> </span>gpu
 Starting<span class="w"> </span>an<span class="w"> </span>interactive<span class="w"> </span>session<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>GPU<span class="w"> </span>partition,<span class="w"> </span><span class="m">1</span><span class="w"> </span>core<span class="w"> </span>and<span class="w"> </span><span class="m">1</span><span class="w"> </span>GPU<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="m">01</span>:00:00<span class="w"> </span>of<span class="w"> </span>walltime<span class="w"> </span><span class="k">in</span><span class="w"> </span>standard<span class="w"> </span>priority
-salloc:<span class="w"> </span>Pending<span class="w"> </span>job<span class="w"> </span>allocation<span class="w"> </span><span class="m">466579</span>
-salloc:<span class="w"> </span>job<span class="w"> </span><span class="m">466579</span><span class="w"> </span>queued<span class="w"> </span>and<span class="w"> </span>waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>resources
-salloc:<span class="w"> </span>job<span class="w"> </span><span class="m">466579</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>allocated<span class="w"> </span>resources
-salloc:<span class="w"> </span>Granted<span class="w"> </span>job<span class="w"> </span>allocation<span class="w"> </span><span class="m">466579</span>
-salloc:<span class="w"> </span>Nodes<span class="w"> </span>n0048<span class="w"> </span>are<span class="w"> </span>ready<span class="w"> </span><span class="k">for</span><span class="w"> </span>job
+srun:<span class="w"> </span>job<span class="w"> </span><span class="m">584279</span><span class="w"> </span>queued<span class="w"> </span>and<span class="w"> </span>waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>resources
+srun:<span class="w"> </span>job<span class="w"> </span><span class="m">584279</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>allocated<span class="w"> </span>resources
 </code></pre></div>
- Use <code>ssh</code> or <code>srun</code> </p>
-<p><code>srun ./myexe &lt;input/output options&gt;</code> 
- or
- <code>ssh n0048</code></p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>interactive<span class="w"> </span>-a<span class="w"> </span><span class="nv">$PI_UCID</span><span class="w"> </span>-q<span class="w"> </span>debug<span class="w"> </span>-j<span class="w"> </span>cpu<span class="w"> </span>-p<span class="w"> </span>debug
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>interactive<span class="w"> </span>-a<span class="w"> </span><span class="nv">$PI_UCID</span><span class="w"> </span>-q<span class="w"> </span>debug<span class="w"> </span>-j<span class="w"> </span>cpu<span class="w"> </span>-p<span class="w"> </span>debug
+Job<span class="w"> </span>Type:<span class="w"> </span>cpu
 Starting<span class="w"> </span>an<span class="w"> </span>interactive<span class="w"> </span>session<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>debug<span class="w"> </span>partition<span class="w"> </span>and<span class="w"> </span><span class="m">1</span><span class="w"> </span>core<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="m">01</span>:00:00<span class="w"> </span>of<span class="w"> </span>walltime<span class="w"> </span><span class="k">in</span><span class="w"> </span>debug<span class="w"> </span>priority
-salloc:<span class="w"> </span>Pending<span class="w"> </span>job<span class="w"> </span>allocation<span class="w"> </span><span class="m">466581</span>
-salloc:<span class="w"> </span>job<span class="w"> </span><span class="m">466581</span><span class="w"> </span>queued<span class="w"> </span>and<span class="w"> </span>waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>resources
-salloc:<span class="w"> </span>job<span class="w"> </span><span class="m">466581</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>allocated<span class="w"> </span>resources
-salloc:<span class="w"> </span>Granted<span class="w"> </span>job<span class="w"> </span>allocation<span class="w"> </span><span class="m">466581</span>
-salloc:<span class="w"> </span>Waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>resource<span class="w"> </span>configuration
-salloc:<span class="w"> </span>Nodes<span class="w"> </span>n0127<span class="w"> </span>are<span class="w"> </span>ready<span class="w"> </span><span class="k">for</span><span class="w"> </span>job
+srun:<span class="w"> </span>job<span class="w"> </span><span class="m">584281</span><span class="w"> </span>queued<span class="w"> </span>and<span class="w"> </span>waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>resources
+srun:<span class="w"> </span>job<span class="w"> </span><span class="m">584281</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>allocated<span class="w"> </span>resources
 </code></pre></div>
- Use <code>ssh</code> or <code>srun</code>.</p>
-<p><code>srun ./myexe &lt;input/output options&gt;</code> 
- or
- <code>ssh n0127</code></p>
 </div>
 </div>
 </div>
 <p>Replace <code>$PI_UCID</code> with PI's NJIT UCID. 
-Now, once you get the confirmation of job allocation, you can either use <code>srun</code> or <code>ssh</code> to access the particular node allocated to the job. </p>
+Now, once you get the confirmation of job allocation, you will be assigned to a compute node.</p>
 <h4 id="customizing-your-resources">Customizing Your Resources<a class="headerlink" href="#customizing-your-resources" title="Permanent link">&para;</a></h4>
 <p>Please note that, by default, this interactive session will request 1 core (for CPU jobs), 1 GPU (for GPU jobs), with a 1-hour walltime. To customize the resources, use the <code>-h</code> option for help. Run <code>interactive -h</code> for more details. Here is an explanation of each flag given below.</p>
 <table>
