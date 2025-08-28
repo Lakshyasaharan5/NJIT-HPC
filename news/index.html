@@ -84,6 +84,28 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+<p style="font-size: 15px; color: white;">
+  <b>Wulver will be unavailable starting at 8:00 AM on Friday, August 29</b><br>
+Please check the details at <a href="https://hpc.njit.edu/news/" style="color: white; text-decoration: underline;">News and Announcements.</a>
+If you have any questions or need further assistance, please do not hesitate to reach out at <a href="mailto:hpc@njit.edu" style="color: white;">hpc@njit.edu</a>.
+
+</p>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
     </div>
     
     
@@ -112,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              News
+              News and Announcements
             
           </span>
         </div>
@@ -2863,6 +2885,8 @@
       
         
       
+        
+      
     
     
     
@@ -2899,27 +2923,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Running_jobs/job_limitation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Job Limitations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -3097,11 +3100,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../Running_jobs/job_limitation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Running_jobs/problems-and-misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Problems and Misconceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Running_jobs/ondemand-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Jobs on Ondemand
+    Jobs on OnDemand
   </span>
   
 
@@ -3612,7 +3657,7 @@
         
   
   <span class="md-ellipsis">
-    News
+    News and Announcements
   </span>
   
 
@@ -3774,6 +3819,44 @@
       <header class="md-typeset">
         <h1 id="cluster-maintenance-updates-and-news">Cluster Maintenance Updates and News<a class="headerlink" href="#cluster-maintenance-updates-and-news" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-08-22 00:00:00+00:00">August 22, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="wulver-outage"><a class="toclink" href="2025/08/22/wulver-outage/">Wulver Outage</a></h2>
+<p>As part of NJIT's migration to a new Virtual Machine (VM) platform, Nutanix from (now ultra expensive) VMWare, Wulver will undergo an unplanned but required downtime to migrate critical virtual infrastructure hosting head, login, Open OnDemand and Slurm nodes starting at 8:00 AM on Friday, August 29. The cluster will be unavailable until all migration work is completed.</p>
+<ul>
+<li>Expected duration: Up to 12 hours (work may finish sooner)</li>
+<li>Reason: Migration to the Nutanix VM platform</li>
+</ul>
+<h3 id="important-information"><a class="toclink" href="2025/08/22/wulver-outage/#important-information">Important Information:</a></h3>
+<ul>
+<li>Any jobs submitted before the outage that would not finish in time will be held in the queue and will resume after the cluster is back online. Please plan your usage and submissions accordingly.</li>
+<li>There is a minor risk that <strong>queued jobs will be lost</strong> during migration. We will monitor this and inform affected users, if necessary.</li>
+<li>Updates will be provided if there is any change to the expected downtime window.</li>
+</ul>
+<p>We apologize for any inconvenience and appreciate your understanding as we make this important upgrade.</p>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -4163,50 +4246,6 @@
   </div>
 </article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-10-06 00:00:00+00:00">October 6, 2023</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="relocation-of-lochness-to-databank-datacenter"><a class="toclink" href="2023/10/06/relocation-of-lochness-to-databank-datacenter/">Relocation of Lochness to Databank Datacenter</a></h2>
-<p>Dear Lochness Users,</p>
-<p>We hope this message finds you well. We want to inform you of an upcoming significant event regarding our HPC (High-Performance Computing) cluster, lochness.njit.edu. The GITC datacenter is scheduled for demolition on November 1, 2023. In order to maintain the operation of our computing infrastructure, we will be relocating the cluster to the Databank colocation facility in Piscataway.</p>
-<h3 id="key-details"><a class="toclink" href="2023/10/06/relocation-of-lochness-to-databank-datacenter/#key-details">Key Details:</a></h3>
-<ul>
-<li>Cluster Shutdown Date: October 6<sup>th</sup>, 2023 at Noon</li>
-<li>Anticipated Duration: Up to Seven Days</li>
-<li>Operational Continuity: After the move the cluster will remain operational until the end of the semester.</li>
-<li>User Migration: We are actively working on migrating all users to the new cluster, wulver.njit.edu, before the end of the semester.</li>
-</ul>
-<h3 id="cluster-relocation-details"><a class="toclink" href="2023/10/06/relocation-of-lochness-to-databank-datacenter/#cluster-relocation-details">Cluster Relocation Details:</a></h3>
-<p>The scheduled shutdown of the lochness.njit.edu cluster will take place on October 6<sup>th</sup>, 2023. We have estimated that the relocation process will require no longer than five days to complete. During this time, the cluster will not be accessible. We understand the importance of uninterrupted access to computational resources, and we will make every effort to minimize downtime.</p>
-<h3 id="operational-continuity"><a class="toclink" href="2023/10/06/relocation-of-lochness-to-databank-datacenter/#operational-continuity">Operational Continuity:</a></h3>
-<p>Rest assured that we are committed to maintaining cluster availability for your research and academic needs. The lochness.njit.edu cluster will remain operational until the end of the current semester. This means that you will have access to its computing power throughout your ongoing projects and coursework.</p>
-<h3 id="user-migration"><a class="toclink" href="2023/10/06/relocation-of-lochness-to-databank-datacenter/#user-migration">User Migration:</a></h3>
-<p>Our team is actively working on the migration process to ensure a smooth transition for all users. We plan to migrate all users to the new cluster, wulver.njit.edu, well before the end of the semester. Detailed instructions and support will be provided to facilitate this transition, and we will keep you updated on the migration progress.</p>
-<p>We understand that this relocation may raise questions or concerns, and we are here to address them. Please feel free to reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;">&#104;&#112;&#99;&#64;&#110;&#106;&#105;&#116;&#46;&#101;&#100;&#117;</a> you have any specific inquiries or require further information.</p>
-<p>We appreciate your understanding and cooperation during this transitional period. The relocation of our HPC cluster is aimed at providing you with an improved and more reliable computing environment.</p>
-<p>Thank you for your ongoing support and contributions to our research community.</p>
-    
-  </div>
-</article>
-      
       
         
           
@@ -4214,7 +4253,7 @@
 
 
 <nav class="md-pagination">
-  
+  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a>
 </nav>
         
       

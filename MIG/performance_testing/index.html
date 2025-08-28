@@ -84,6 +84,28 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+<p style="font-size: 15px; color: white;">
+  <b>Wulver will be unavailable starting at 8:00 AM on Friday, August 29</b><br>
+Please check the details at <a href="https://hpc.njit.edu/news/" style="color: white; text-decoration: underline;">News and Announcements.</a>
+If you have any questions or need further assistance, please do not hesitate to reach out at <a href="mailto:hpc@njit.edu" style="color: white;">hpc@njit.edu</a>.
+
+</p>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
     </div>
     
     
@@ -2863,6 +2885,8 @@
       
         
       
+        
+      
     
     
     
@@ -2899,27 +2923,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Running_jobs/job_limitation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Job Limitations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -3097,11 +3100,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Running_jobs/job_limitation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Running_jobs/problems-and-misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Problems and Misconceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Running_jobs/ondemand-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Jobs on Ondemand
+    Jobs on OnDemand
   </span>
   
 
@@ -3272,27 +3317,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gromacs" class="md-nav__link">
+  <a href="#list-of-benchmark-tests" class="md-nav__link">
     <span class="md-ellipsis">
-      GROMACS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      LLM Fine-Tuning
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#matrix-multiplication-benchmarks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Matrix Multiplication Benchmarks
+      List of Benchmark Tests
     </span>
   </a>
   
@@ -3670,7 +3697,7 @@
         
   
   <span class="md-ellipsis">
-    News
+    News and Announcements
   </span>
   
 
@@ -3826,27 +3853,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gromacs" class="md-nav__link">
+  <a href="#list-of-benchmark-tests" class="md-nav__link">
     <span class="md-ellipsis">
-      GROMACS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      LLM Fine-Tuning
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#matrix-multiplication-benchmarks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Matrix Multiplication Benchmarks
+      List of Benchmark Tests
     </span>
   </a>
   
@@ -3873,8 +3882,12 @@
 <h1 id="performance-testing-overview">Performance Testing Overview<a class="headerlink" href="#performance-testing-overview" title="Permanent link">&para;</a></h1>
 <p>To help users select the appropriate MIG profile for their workloads, we conducted benchmark tests using LLM fine-tuning, PyTorch training, and GROMACS molecular dynamics simulations. Tests were run on the NVIDIA A100 GPUs (full 80 GB and MIG profiles) available on Wulver.</p>
 <p>The results below show differences in runtime, accuracy, memory usage, and service unit (SU) cost across profiles. Observations and notes are included to explain results.</p>
-<h3 id="gromacs">GROMACS<a class="headerlink" href="#gromacs" title="Permanent link">&para;</a></h3>
-<table>
+<h2 id="list-of-benchmark-tests">List of Benchmark Tests<a class="headerlink" href="#list-of-benchmark-tests" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="list-of-benchmark-tests-gromacs" name="__tabbed_1" type="radio" /><input id="list-of-benchmark-tests-llm-fine-tuning" name="__tabbed_1" type="radio" /><input id="list-of-benchmark-tests-matrix-multiplication-benchmarks" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="list-of-benchmark-tests-gromacs">GROMACS</label><label for="list-of-benchmark-tests-llm-fine-tuning">LLM Fine-Tuning</label><label for="list-of-benchmark-tests-matrix-multiplication-benchmarks">Matrix Multiplication Benchmarks</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The GROMACS benchmark test was conducted for different MIG profiles and a full GPU. The results suggest that the 40G MIG shows better performance compared to a full 80G GPU. We also calculated the cost/performance parameter, which is obtained by taking the ratio of SU consumption to performance. Based on this parameter, the 20G MIG is the best choice. However, if users prefer performance over cost/performance, then the 40G MIG would be the recommended option.</p>
+<p><table>
 <thead>
 <tr>
 <th style="text-align: left;">GPU Profile</th>
@@ -3889,7 +3902,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">A100_10gb</td>
+<td style="text-align: left;">A100_10gb MIG</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">4</td>
@@ -3899,7 +3912,7 @@
 <td style="text-align: right;">3.32717</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_20gb</td>
+<td style="text-align: left;">A100_20gb MIG</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">4</td>
@@ -3909,7 +3922,7 @@
 <td style="text-align: right;">2.36439</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_40gb</td>
+<td style="text-align: left;">A100_40gb MIG</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">4</td>
@@ -3929,13 +3942,15 @@
 <td style="text-align: right;">4.04756</td>
 </tr>
 </tbody>
-</table>
-<h3 id="llm-fine-tuning">LLM Fine-Tuning<a class="headerlink" href="#llm-fine-tuning" title="Permanent link">&para;</a></h3>
+</table><div class="markdown-exec"></div>
+</p>
+</div>
+<div class="tabbed-block">
 <p>The benchmark script fine-tunes the Qwen 1.5B Instruct model on the Alpaca-cleaned dataset using QLoRA. Training is done with 4-bit quantization to save memory and LoRA adapters so that only a small set of parameters are updated. The Hugging Face TRL <code>SFTTrainer</code> handles training, while the script also logs runtime, GPU/CPU memory, and tokens processed per second. The setup runs consistently on both full NVIDIA's A100 80GB GPU and different MIG slices (10 GB, 20 GB, 40 GB), making it useful for comparing speed and cost across profiles.</p>
-<table>
+<p><table>
 <thead>
 <tr>
-<th style="text-align: left;">MIG Profile</th>
+<th style="text-align: left;">GPU Profile</th>
 <th style="text-align: right;">Walltime (h)</th>
 <th style="text-align: right;">SU Total</th>
 <th style="text-align: right;">Tokens Processed</th>
@@ -3947,7 +3962,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">A100_10gb</td>
+<td style="text-align: left;">A100_10gb MIG</td>
 <td style="text-align: right;">1.092</td>
 <td style="text-align: right;">3.28</td>
 <td style="text-align: right;">166327</td>
@@ -3957,7 +3972,7 @@
 <td style="text-align: right;">19.05</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_20gb</td>
+<td style="text-align: left;">A100_20gb MIG</td>
 <td style="text-align: right;">0.556</td>
 <td style="text-align: right;">2.78</td>
 <td style="text-align: right;">166327</td>
@@ -3967,7 +3982,7 @@
 <td style="text-align: right;">16.39</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_40gb</td>
+<td style="text-align: left;">A100_40gb MIG</td>
 <td style="text-align: right;">0.353</td>
 <td style="text-align: right;">3.18</td>
 <td style="text-align: right;">166327</td>
@@ -3987,7 +4002,8 @@
 <td style="text-align: right;">27.04</td>
 </tr>
 </tbody>
-</table>
+</table><div class="markdown-exec"></div>
+</p>
 <ul>
 <li>
 <p><strong>Peak Allocated ≈ 5.7 GB across all runs</strong>: The model + LoRA fine-tune has a fixed memory demand, regardless of MIG size.</p>
@@ -4002,8 +4018,8 @@
 <p><strong>Choosing a profile</strong>: The right option depends on priorities — use smaller MIGs to save SUs on long jobs, or larger MIGs when wall-time (speed) is more important.</p>
 </li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>SU values are calculated as:<br />
 <code>SU = (max(#CPUs, #RAM/4GB) + 16 × (GPU_mem/80)) × hours</code>  </p>
 <p><strong>Example</strong> (A100_20GB, 0.556 hr walltime, 1 CPU, 4 GB RAM, 20 GB GPU):<br />
@@ -4011,13 +4027,14 @@
    = (1 + 4) * 0.556 = 2.78
 </code></pre></div></p>
 </div>
-<h3 id="matrix-multiplication-benchmarks">Matrix Multiplication Benchmarks<a class="headerlink" href="#matrix-multiplication-benchmarks" title="Permanent link">&para;</a></h3>
+</div>
+<div class="tabbed-block">
 <p>We ran a <strong>matrix multiplication benchmark</strong> on different NVIDIA A100 MIG profiles and the full GPU. The test multiplies large square matrices (sizes like 4096×4096 up to 49k×49k) using PyTorch and CUDA.</p>
 <p>Matrix multiplication is the <strong>core operation in deep learning</strong> — it’s what neural networks spend most of their time doing. Measuring how many <strong>TFLOPs (trillion floating point operations per second)</strong> each MIG slice achieves gives a good picture of its raw compute power.</p>
-<table>
+<p><table>
 <thead>
 <tr>
-<th style="text-align: left;">MIG Profile</th>
+<th style="text-align: left;">GPU Profile</th>
 <th style="text-align: right;">SMs</th>
 <th style="text-align: right;">Memory (GB)</th>
 <th style="text-align: right;">Peak FP16 TFLOPs</th>
@@ -4029,7 +4046,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">A100_10gb</td>
+<td style="text-align: left;">A100_10gb MIG</td>
 <td style="text-align: right;">14</td>
 <td style="text-align: right;">9.5</td>
 <td style="text-align: right;">38.694</td>
@@ -4039,7 +4056,7 @@
 <td style="text-align: right;">2</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_20gb</td>
+<td style="text-align: left;">A100_20gb MIG</td>
 <td style="text-align: right;">28</td>
 <td style="text-align: right;">19.5</td>
 <td style="text-align: right;">79.304</td>
@@ -4049,7 +4066,7 @@
 <td style="text-align: right;">4</td>
 </tr>
 <tr>
-<td style="text-align: left;">A100_40gb</td>
+<td style="text-align: left;">A100_40gb MIG</td>
 <td style="text-align: right;">42</td>
 <td style="text-align: right;">39.5</td>
 <td style="text-align: right;">118.924</td>
@@ -4069,7 +4086,8 @@
 <td style="text-align: right;">16</td>
 </tr>
 </tbody>
-</table>
+</table><div class="markdown-exec"></div>
+</p>
 <ul>
 <li><strong>Peak FP16 performance</strong> (fast half-precision mode used in AI training).</li>
 <li><strong>Peak FP32 performance</strong> (single precision with TF32 tensor cores, higher accuracy but slower).</li>
@@ -4078,6 +4096,9 @@
 <li><strong>SU usage factor</strong>, to tie performance back to billing.</li>
 </ul>
 <p>The results show that <strong>performance scales almost linearly with MIG size (number of SMs)</strong>, while memory never became the limiting factor. This means compute capacity is the main driver of speed, and users can choose between smaller slices (cheaper, slower) or larger slices (faster, higher SU rate) depending on their workload needs.</p>
+</div>
+</div>
+</div>
 
 
 

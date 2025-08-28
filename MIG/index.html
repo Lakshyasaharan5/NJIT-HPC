@@ -84,6 +84,28 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+<p style="font-size: 15px; color: white;">
+  <b>Wulver will be unavailable starting at 8:00 AM on Friday, August 29</b><br>
+Please check the details at <a href="https://hpc.njit.edu/news/" style="color: white; text-decoration: underline;">News and Announcements.</a>
+If you have any questions or need further assistance, please do not hesitate to reach out at <a href="mailto:hpc@njit.edu" style="color: white;">hpc@njit.edu</a>.
+
+</p>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
     </div>
     
     
@@ -2863,6 +2885,8 @@
       
         
       
+        
+      
     
     
     
@@ -2899,27 +2923,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Running_jobs/job_limitation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Job Limitations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -3097,11 +3100,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../Running_jobs/job_limitation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Running_jobs/problems-and-misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Problems and Misconceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Running_jobs/ondemand-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Jobs on Ondemand
+    Jobs on OnDemand
   </span>
   
 
@@ -3603,7 +3648,7 @@
         
   
   <span class="md-ellipsis">
-    News
+    News and Announcements
   </span>
   
 
@@ -3809,11 +3854,11 @@
 <h2 id="why-mig-on-wulver">Why MIG on Wulver<a class="headerlink" href="#why-mig-on-wulver" title="Permanent link">&para;</a></h2>
 <!-- Using HTML to display images side by side -->
 <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="../assets/images/MIG/gpu-mem-util-3mo.png" alt="GPU memory utilization (3 months)" width="48%">
     <img src="../assets/images/MIG/gpu-alloc-vs-util-3mo.png" alt="GPUs allocated vs. utilized (3 months)" width="48%">
+    <img src="../assets/images/MIG/gpu-mem-util-3mo.png" alt="GPU memory utilization (3 months)" width="48%">
 </div>
 
-<p>The plots below show cluster-wide usage of the A100 GPUs over the last 3 months. In short: GPUs were <strong>heavily allocated</strong> but <strong>lightly utilized</strong>, which means lots of capacity sat idle behind single jobs.</p>
+<p>The plots above show cluster-wide usage of the A100 GPUs over the last 3 months. In short: GPUs were <strong>heavily allocated</strong> but <strong>lightly utilized</strong>, which means lots of capacity sat idle behind single jobs.</p>
 <ul>
 <li>
 <p><strong>Allocated vs. used</strong>: GPUs were reserved ~85–95% of the time, while average compute utilization was ~25–50% and memory utilization stayed mostly under 20%.</p>
@@ -3826,15 +3871,14 @@
 </li>
 </ul>
 <h2 id="mig-implementation-in-wulver">MIG Implementation in Wulver<a class="headerlink" href="#mig-implementation-in-wulver" title="Permanent link">&para;</a></h2>
-<p>MIG is implemented on selected NVIDIA A100 80GB GPUs. Wulver currently supports the following MIG configurations:</p>
+<p>MIG is implemented on selected <strong>NVIDIA A100 80GB</strong> GPUs. Wulver currently supports the following MIG configurations:</p>
 <ul>
 <li>10gb</li>
 <li>20gb</li>
 <li>40gb</li>
-<li>Full 80GB (non-MIG)</li>
 </ul>
 <p>These profiles correspond to different partitions of compute and memory resources from the A100 80GB GPU. You can view a full comparison in the <a href="profile-comparison/">Profile Comparison section</a>.</p>
-<p>Each profile maps to a Service Unit (SU) usage factor that reflects its computational weight — ranging from 2 SU/hour for a 10gb instance up to 16 SU/hour for a full GPU. You can check full SU overview of MIG <a href="job-submission-and-su-charges/#understanding-su-charges">here</a></p>
+<p>Each profile maps to a Service Unit (SU) usage factor that reflects its computational weight — ranging from 2 SU/hour for a 10gb instance up to 16 SU/hour for a full GPU. You can check full SU overview of MIG <a href="job-submission-and-su-charges/#understanding-su-charges">here</a>.</p>
 <p>MIGs address key challenges in shared environments:</p>
 <ul>
 <li>
@@ -3856,9 +3900,8 @@ MIG lets you select a GPU slice that meets your job’s needs without paying for
 For example:</p>
 <ul>
 <li>A small training job or inference script may only require <code>10–20</code> GB of GPU memory.</li>
-<li>Running such a job on a <code>1g.10gb</code> or <code>2g.20gb</code> MIG instance will consume only a fraction of the SUs compared to using a full GPU.</li>
+<li>Running such a job on a <code>10gb</code> or <code>20gb</code> MIG instance will consume only a fraction of the SUs compared to using a full GPU.</li>
 </ul>
-<p>This is especially important if you’re working within a research group’s annual SU allocation on Wulver.</p>
 <p><strong>No Need to Reserve a Full GPU</strong>:<br> 
 Some jobs — like unit testing, data preprocessing with GPU acceleration, or light model inference — simply don’t need the full resources of an 80GB A100. MIG allows users to avoid bottlenecks and free up resources by choosing an appropriately sized instance.This is especially valuable when:</p>
 <ul>
@@ -3875,8 +3918,8 @@ Each MIG instance has dedicated resources — memory, L2 cache, compute cores �
 <li>Easier debugging and performance tuning</li>
 </ul>
 <p>MIG is compatible with CUDA, cuDNN, PyTorch, TensorFlow, and most GPU-accelerated libraries — no code changes are typically required.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>MIG is not implemented on all GPUs in Wulver. </p>
 </div>
 

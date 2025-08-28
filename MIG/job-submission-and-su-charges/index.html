@@ -84,6 +84,28 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+<p style="font-size: 15px; color: white;">
+  <b>Wulver will be unavailable starting at 8:00 AM on Friday, August 29</b><br>
+Please check the details at <a href="https://hpc.njit.edu/news/" style="color: white; text-decoration: underline;">News and Announcements.</a>
+If you have any questions or need further assistance, please do not hesitate to reach out at <a href="mailto:hpc@njit.edu" style="color: white;">hpc@njit.edu</a>.
+
+</p>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
     </div>
     
     
@@ -2863,6 +2885,8 @@
       
         
       
+        
+      
     
     
     
@@ -2899,27 +2923,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Running_jobs/job_limitation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Job Limitations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -3097,11 +3100,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Running_jobs/job_limitation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Running_jobs/problems-and-misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Problems and Misconceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Running_jobs/ondemand-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Jobs on Ondemand
+    Jobs on OnDemand
   </span>
   
 
@@ -3251,18 +3296,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sample-slurm-script-for-a-mig-job" class="md-nav__link">
+  <a href="#running-jobs-with-mig" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample SLURM Script for a MIG Job
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interactive-session-with-mig" class="md-nav__link">
-    <span class="md-ellipsis">
-      Interactive session with MIG
+      Running Jobs with MIG
     </span>
   </a>
   
@@ -3679,7 +3715,7 @@
         
   
   <span class="md-ellipsis">
-    News
+    News and Announcements
   </span>
   
 
@@ -3835,18 +3871,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sample-slurm-script-for-a-mig-job" class="md-nav__link">
+  <a href="#running-jobs-with-mig" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample SLURM Script for a MIG Job
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interactive-session-with-mig" class="md-nav__link">
-    <span class="md-ellipsis">
-      Interactive session with MIG
+      Running Jobs with MIG
     </span>
   </a>
   
@@ -3910,21 +3937,16 @@
 <td>40G MIG</td>
 <td style="text-align: center;"><code>--gres=gpu:a100_40g:1</code></td>
 </tr>
-<tr>
-<td>80G MIG</td>
-<td style="text-align: center;"><code>--gres=gpu:a100:1</code></td>
-</tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>For an 80G MIG, it is considered a full GPU. In that case, you can alternatively specify <code>--gres=gpu:1</code> in your job script. If you want to see a job script example of requesting a full GPU, please refer to the sample <a href="../../Software/slurm/slurm/#submitting-jobs-on-gpu-nodes">GPU job scripts</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note that MIGs are available in partition=<code>debug_gpu</code> and qos=<code>debug</code>. However, when you use a full GPU using <code>--gres=gpu:a100:1</code> use the partition <code>gpu</code> and qos <code>standard</code> or <code>low</code>. If you want to see a job script example of requesting a full GPU, please refer to the sample <a href="../../Software/slurm/slurm/#submitting-jobs-on-gpu-nodes">GPU job scripts</a>.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Please note that MIGs are available in partition=<code>debug_gpu</code> and qos=<code>debug</code></p>
-</div>
-<h3 id="sample-slurm-script-for-a-mig-job">Sample SLURM Script for a MIG Job<a class="headerlink" href="#sample-slurm-script-for-a-mig-job" title="Permanent link">&para;</a></h3>
+<h2 id="running-jobs-with-mig">Running Jobs with MIG<a class="headerlink" href="#running-jobs-with-mig" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="running-jobs-with-mig-sample-slurm-script-for-a-mig-job" name="__tabbed_1" type="radio" /><input id="running-jobs-with-mig-interactive-session-with-mig" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="running-jobs-with-mig-sample-slurm-script-for-a-mig-job">Sample SLURM Script for a MIG Job</label><label for="running-jobs-with-mig-interactive-session-with-mig">Interactive session with MIG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
 <span class="c1">#SBATCH --job-name=gpu_job</span>
 <span class="c1">#SBATCH --output=%x.%j.out</span>
@@ -3940,7 +3962,8 @@
 
 srun<span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span class="w"> </span>options&gt;
 </code></pre></div>
-<h3 id="interactive-session-with-mig">Interactive session with MIG<a class="headerlink" href="#interactive-session-with-mig" title="Permanent link">&para;</a></h3>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nv">$srun</span><span class="w"> </span>--partition<span class="o">=</span>debug_gpu<span class="w"> </span><span class="se">\</span>
 --account<span class="o">=</span><span class="nv">$PI_ucid</span><span class="w"> </span><span class="se">\</span>
 --qos<span class="o">=</span>debug<span class="w"> </span><span class="se">\</span>
@@ -3948,6 +3971,9 @@ srun<span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span
 --time<span class="o">=</span><span class="m">00</span>:59:00<span class="w"> </span><span class="se">\</span>
 --pty<span class="w"> </span>bash
 </code></pre></div>
+</div>
+</div>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can submit your job to multiple MIG instances. For example: <code>--gres=gpu:a100_10g:2</code> will allocate 2 instances of <code>10G</code> MIG.</p>
@@ -3962,8 +3988,8 @@ srun<span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span
 <p>Each component contributes to the SU calculation. The SU cost is charged per node per hour using the formula:</p>
 <div class="highlight"><pre><span></span><code>SU = MAX(#CPUs, Memory (in GB) / 4) + 16 × (GPU memory requested / 80GB)
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>GPU memory requested is based on the MIG profile, not your actual memory usage during the job.</p>
 </div>
 <table>

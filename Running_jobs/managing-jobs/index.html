@@ -15,7 +15,7 @@
         <link rel="prev" href="../checkpointing/">
       
       
-        <link rel="next" href="../ondemand-jobs/">
+        <link rel="next" href="../job_limitation/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -83,6 +83,28 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+<p style="font-size: 15px; color: white;">
+  <b>Wulver will be unavailable starting at 8:00 AM on Friday, August 29</b><br>
+Please check the details at <a href="https://hpc.njit.edu/news/" style="color: white; text-decoration: underline;">News and Announcements.</a>
+If you have any questions or need further assistance, please do not hesitate to reach out at <a href="mailto:hpc@njit.edu" style="color: white;">hpc@njit.edu</a>.
+
+</p>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
       
     </div>
     
@@ -2865,6 +2887,8 @@
       
         
       
+        
+      
     
     
     
@@ -2901,27 +2925,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../job_limitation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Job Limitations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -3144,9 +3147,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seff-command" class="md-nav__link">
+  <a href="#use-these-commands-to-manage-and-monitor-your-jobs" class="md-nav__link">
     <span class="md-ellipsis">
-      Seff command
+      Use these commands to manage and monitor your jobs
     </span>
   </a>
   
@@ -3168,11 +3171,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../job_limitation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problems-and-misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Problems and Misconceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ondemand-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Jobs on Ondemand
+    Jobs on OnDemand
   </span>
   
 
@@ -3672,7 +3717,7 @@
         
   
   <span class="md-ellipsis">
-    News
+    News and Announcements
   </span>
   
 
@@ -3850,9 +3895,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seff-command" class="md-nav__link">
+  <a href="#use-these-commands-to-manage-and-monitor-your-jobs" class="md-nav__link">
     <span class="md-ellipsis">
-      Seff command
+      Use these commands to manage and monitor your jobs
     </span>
   </a>
   
@@ -3935,7 +3980,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="seff-command"><code>Seff</code> command<a class="headerlink" href="#seff-command" title="Permanent link">&para;</a></h2>
+<h2 id="use-these-commands-to-manage-and-monitor-your-jobs">Use these commands to manage and monitor your jobs<a class="headerlink" href="#use-these-commands-to-manage-and-monitor-your-jobs" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="use-these-commands-to-manage-and-monitor-your-jobs-seff" name="__tabbed_1" type="radio" /><input id="use-these-commands-to-manage-and-monitor-your-jobs-squeue" name="__tabbed_1" type="radio" /><input id="use-these-commands-to-manage-and-monitor-your-jobs-scancel" name="__tabbed_1" type="radio" /><input id="use-these-commands-to-manage-and-monitor-your-jobs-quota_info" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="use-these-commands-to-manage-and-monitor-your-jobs-seff">seff</label><label for="use-these-commands-to-manage-and-monitor-your-jobs-squeue">squeue</label><label for="use-these-commands-to-manage-and-monitor-your-jobs-scancel">scancel</label><label for="use-these-commands-to-manage-and-monitor-your-jobs-quota_info">quota_info</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ul>
 <li>The <code>seff</code> command is a handy tool to assess how efficiently your job used the requested resources <strong>after it has completed</strong>. </li>
 <li>Using <code>seff</code> can help you adjust your future job scripts to <strong>request only as much memory/time as truly needed</strong>, improving scheduler fairness and reducing wasted resources.</li>
@@ -3947,7 +3995,7 @@ Usage:<span class="w"> </span>seff<span class="w"> </span><span class="o">[</spa
 <span class="w">       </span>-v<span class="w">    </span>Version
 <span class="w">       </span>-d<span class="w">    </span>Debug<span class="w"> </span>mode:<span class="w"> </span>display<span class="w"> </span>raw<span class="w"> </span>Slurm<span class="w"> </span>data
 </code></pre></div>
-<strong>Example output</strong></p>
+   <strong>Example output</strong></p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>seff<span class="w"> </span><span class="m">575079</span>
 Job<span class="w"> </span>ID:<span class="w"> </span><span class="m">575079</span>
 Cluster:<span class="w"> </span>wulver
@@ -3960,6 +4008,81 @@ Job<span class="w"> </span>Wall-clock<span class="w"> </span>time:<span class="w
 Memory<span class="w"> </span>Utilized:<span class="w"> </span><span class="m">4</span>.21<span class="w"> </span>MB
 Memory<span class="w"> </span>Efficiency:<span class="w"> </span><span class="m">0</span>.11%<span class="w"> </span>of<span class="w"> </span><span class="m">3</span>.91<span class="w"> </span>GB
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>The <code>squeue</code> command lets you check all the jobs currently running/pending/queued in the Wulver.</li>
+<li>You can use <code>squeue -u $LOGNAME</code> to check your your jobs in the queue.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>squeue
+JOBID<span class="w"> </span>PARTITION<span class="w">     </span>NAME<span class="w">     </span>USER<span class="w"> </span>ST<span class="w">       </span>TIME<span class="w">  </span>NODES<span class="w"> </span>NODELIST<span class="o">(</span>REASON<span class="o">)</span>
+<span class="m">586871</span><span class="w">   </span>general<span class="w"> </span>start_se<span class="w">    </span>bb474<span class="w"> </span>PD<span class="w">       </span><span class="m">0</span>:00<span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>ReqNodeNotAvail,<span class="w"> </span>Reserved<span class="w"> </span><span class="k">for</span><span class="w"> </span>maintenance<span class="o">)</span>
+<span class="m">587618</span><span class="w">   </span>general<span class="w"> </span>NF2300_G<span class="w">    </span>km876<span class="w">  </span>R<span class="w">      </span><span class="m">40</span>:02<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0072
+<span class="m">587004</span><span class="w">   </span>general<span class="w">     </span>ens1<span class="w">    </span>sh784<span class="w">  </span>R<span class="w">   </span><span class="m">18</span>:20:27<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0012
+<span class="m">586894</span><span class="w">   </span>general<span class="w"> </span>13a+H-E1<span class="w">   </span>ab2757<span class="w">  </span>R<span class="w">   </span><span class="m">23</span>:57:52<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0042
+<span class="m">586893</span><span class="w">   </span>general<span class="w"> </span>13a+H-E1<span class="w">   </span>ab2757<span class="w">  </span>R<span class="w">   </span><span class="m">23</span>:57:59<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0042
+<span class="m">586892</span><span class="w">   </span>general<span class="w"> </span>13a+H-E1<span class="w">   </span>ab2757<span class="w">  </span>R<span class="w">   </span><span class="m">23</span>:58:04<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0042
+<span class="m">586891</span><span class="w">   </span>general<span class="w"> </span>13a+H-E1<span class="w">   </span>ab2757<span class="w">  </span>R<span class="w">   </span><span class="m">23</span>:58:10<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0042
+<span class="m">586638</span><span class="w">   </span>general<span class="w"> </span>TS_CPC-c<span class="w">   </span>ab2757<span class="w">  </span>R<span class="w"> </span><span class="m">1</span>-19:40:55<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0097
+<span class="m">585445</span><span class="w">   </span>general<span class="w"> </span>SN4A6CL0<span class="w">   </span>sm3557<span class="w">  </span>R<span class="w"> </span><span class="m">5</span>-14:51:47<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0055
+<span class="m">585442</span><span class="w">   </span>general<span class="w"> </span>SN4A6CL0<span class="w">   </span>sm3557<span class="w">  </span>R<span class="w"> </span><span class="m">5</span>-14:51:56<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0055
+<span class="m">587554</span><span class="w">   </span>general<span class="w">  </span>dpptest<span class="w">    </span>ea442<span class="w">  </span>R<span class="w">    </span><span class="m">1</span>:18:59<span class="w">      </span><span class="m">1</span><span class="w"> </span>n0094
+<span class="m">587619</span><span class="w">   </span>general<span class="w"> </span>Metionin<span class="w">     </span>zr76<span class="w">  </span>R<span class="w">      </span><span class="m">40</span>:01<span class="w">      </span><span class="m">7</span><span class="w"> </span>n<span class="o">[</span><span class="m">0071</span>-0076,0094<span class="o">]</span>
+<span class="m">586867</span><span class="w">   </span>general<span class="w">  </span>AU_mod1<span class="w">     </span>zr76<span class="w">  </span>R<span class="w"> </span><span class="m">1</span>-00:20:18<span class="w">      </span><span class="m">9</span><span class="w"> </span>n<span class="o">[</span><span class="m">0012</span>,0030,0032,0034,0037,0040,0042,0060-0061<span class="o">]</span>
+<span class="m">586713</span><span class="w">   </span>general<span class="w"> </span>Au_mod3_<span class="w">     </span>zr76<span class="w">  </span>R<span class="w"> </span><span class="m">1</span>-15:39:10<span class="w">      </span><span class="m">8</span><span class="w"> </span>n<span class="o">[</span><span class="m">0093</span>,0099,0102-0103,0109,0113,0118-0119<span class="o">]</span>
+<span class="m">586615</span><span class="w">   </span>general<span class="w"> </span>Au_mod3_<span class="w">     </span>zr76<span class="w">  </span>R<span class="w"> </span><span class="m">1</span>-20:57:38<span class="w">     </span><span class="m">14</span><span class="w"> </span>n<span class="o">[</span><span class="m">0022</span>,0034,0044,0050-0051,0055,0084,0096,0113,0116-0119,0121<span class="o">]</span>
+<span class="m">586493</span><span class="w">   </span>general<span class="w"> </span>Au_mod2_<span class="w">     </span>zr76<span class="w">  </span>R<span class="w"> </span><span class="m">2</span>-00:56:11<span class="w">      </span><span class="m">5</span><span class="w"> </span>n<span class="o">[</span><span class="m">0013</span>-0014,0018-0020<span class="o">]</span>
+<span class="m">586492</span><span class="w">   </span>general<span class="w"> </span>Au_mod2_<span class="w">     </span>zr76<span class="w">  </span>R<span class="w"> </span><span class="m">2</span>-00:56:41<span class="w">      </span><span class="m">5</span><span class="w"> </span>n<span class="o">[</span><span class="m">0006</span>,0013,0114,0120-0121<span class="o">]</span>
+<span class="m">586432</span><span class="w">   </span>general<span class="w">     </span>DlPC<span class="w">     </span>pst4<span class="w">  </span>R<span class="w"> </span><span class="m">2</span>-02:16:21<span class="w">      </span><span class="m">9</span><span class="w"> </span>n<span class="o">[</span><span class="m">0087</span>,0094,0097,0101,0110,0113,0116-0118<span class="o">]</span>
+<span class="m">586290</span><span class="w">   </span>general<span class="w">     </span>DsPE<span class="w">     </span>pst4<span class="w">  </span>R<span class="w"> </span><span class="m">2</span>-17:36:10<span class="w">      </span><span class="m">9</span><span class="w"> </span>n<span class="o">[</span><span class="m">0015</span>,0017,0022,0030-0031,0034,0037,0041,0043<span class="o">]</span>
+<span class="m">587612</span><span class="w">   </span>general<span class="w">     </span>DsPC<span class="w">     </span>pst4<span class="w">  </span>R<span class="w">      </span><span class="m">50</span>:32<span class="w">      </span><span class="m">5</span><span class="w"> </span>n<span class="o">[</span><span class="m">0065</span>,0070-0071,0094,0113<span class="o">]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>The <code>scancel</code> command lets you cancel your job. </li>
+<li>It take your JobID as argument <code>scancel [job_id]</code>       </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>The <code>quota_info</code> command lets you check your storage space and SUs consumed. <a href="../service-units/#check-quota">More info</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>quota_info
+Usage<span class="w"> </span><span class="k">for</span><span class="w"> </span>account:<span class="w"> </span><span class="m">2025</span>-summer-wksp-612-kjc59-ls565
+<span class="w">       </span>SLURM<span class="w"> </span>Service<span class="w"> </span>Units:<span class="w"> </span><span class="m">42</span><span class="w"> </span>CPU<span class="w"> </span>Hours<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">2500</span><span class="w"> </span>CPU<span class="w"> </span>Hour<span class="w"> </span>quota<span class="o">)</span>
+<span class="w">              </span>User<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">42</span><span class="w"> </span>CPU<span class="w"> </span>Hours<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">42</span><span class="w"> </span>CPU<span class="w"> </span>Hours<span class="o">)</span>
+<span class="w">       </span>PROJECT<span class="w"> </span>Storage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>No<span class="w"> </span>quota<span class="o">)</span>
+<span class="w">              </span>User<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>No<span class="w"> </span>quota<span class="o">)</span>
+<span class="w">       </span>SCRATCH<span class="w"> </span>Storage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>No<span class="w"> </span>quota<span class="o">)</span><span class="w"> </span>
+<span class="w">              </span>User<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>No<span class="w"> </span>quota<span class="o">)</span>
+Usage<span class="w"> </span><span class="k">for</span><span class="w"> </span>account:<span class="w"> </span>kjc59
+<span class="w">       </span>SLURM<span class="w"> </span>Service<span class="w"> </span>Units:<span class="w"> </span><span class="m">4162</span><span class="w"> </span>CPU<span class="w"> </span>Hours<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">304719</span><span class="w"> </span>CPU<span class="w"> </span>Hour<span class="w"> </span>quota<span class="o">)</span>
+<span class="w">              </span>User<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">2802</span><span class="w"> </span>CPU<span class="w"> </span>Hours<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">4162</span><span class="w"> </span>CPU<span class="w"> </span>Hours<span class="o">)</span>
+<span class="w">       </span>PROJECT<span class="w"> </span>Storage:<span class="w"> </span><span class="m">223</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">2048</span><span class="w"> </span>GB<span class="w"> </span>quota<span class="o">)</span>
+<span class="w">              </span>User<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">19</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>No<span class="w"> </span>quota<span class="o">)</span>
+<span class="w">       </span>SCRATCH<span class="w"> </span>Storage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">10240</span><span class="w"> </span>GB<span class="w"> </span>quota<span class="o">)</span><span class="w"> </span>
+<span class="w">              </span>User<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>No<span class="w"> </span>quota<span class="o">)</span>
+Usage<span class="w"> </span><span class="k">for</span><span class="w"> </span>account:<span class="w"> </span>walsh
+<span class="w">       </span>SLURM<span class="w"> </span>Service<span class="w"> </span>Units:<span class="w"> </span><span class="m">1917</span><span class="w"> </span>CPU<span class="w"> </span>Hours<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">302709</span><span class="w"> </span>CPU<span class="w"> </span>Hour<span class="w"> </span>quota<span class="o">)</span>
+<span class="w">              </span>User<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>CPU<span class="w"> </span>Hours<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">1917</span><span class="w"> </span>CPU<span class="w"> </span>Hours<span class="o">)</span>
+<span class="w">       </span>PROJECT<span class="w"> </span>Storage:<span class="w"> </span><span class="m">81</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">2048</span><span class="w"> </span>GB<span class="w"> </span>quota<span class="o">)</span>
+<span class="w">              </span>User<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>No<span class="w"> </span>quota<span class="o">)</span>
+<span class="w">       </span>SCRATCH<span class="w"> </span>Storage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">10240</span><span class="w"> </span>GB<span class="w"> </span>quota<span class="o">)</span><span class="w"> </span>
+<span class="w">              </span>User<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">0</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>No<span class="w"> </span>quota<span class="o">)</span>
+HOME<span class="w"> </span>Storage<span class="w"> </span>ls565<span class="w"> </span>Usage:<span class="w"> </span><span class="m">37</span><span class="w"> </span>GB<span class="w"> </span><span class="o">(</span>of<span class="w"> </span><span class="m">50</span><span class="w"> </span>GB<span class="w"> </span>quota<span class="o">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please keep checking your job's status using <code>squeue -u $LOGNAME</code> so that it doesn't stay pending due to incorrect job submission parameters.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You can only cancel your jobs. Please don't try to cancel other users jobs.</p>
+</div>
 
 
 
