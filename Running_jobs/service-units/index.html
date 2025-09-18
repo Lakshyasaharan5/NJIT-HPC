@@ -4140,23 +4140,28 @@ Requesting more memory than the default will result in higher SU charges than if
 </tr>
 <tr>
 <td>4 CPUs + 20MIG</td>
-<td style="text-align: center;">MAX(4, 4G/4G) + 16 * (20G/80G) = 8</td>
+<td style="text-align: center;">MAX(4, 4*4G/4G) + 16 * (20G/80G) = 8</td>
 <td style="text-align: center;">SU is charged based on the same number of CPUs and 20G of GPU memory</td>
 </tr>
 <tr>
 <td>4 CPUs + 40MIG</td>
-<td style="text-align: center;">MAX(4, 4G/4G) + 16 * (40G/80G) = 12</td>
+<td style="text-align: center;">MAX(4, 4*4G/4G) + 16 * (40G/80G) = 12</td>
 <td style="text-align: center;">SU is charged based on the same number of CPUs and 40G of GPU memory</td>
 </tr>
 <tr>
 <td>4 CPUs + Full GPU</td>
-<td style="text-align: center;">MAX(4, 4G/4G) + 16 * (80G/80G) = 20</td>
+<td style="text-align: center;">MAX(4, 4*4G/4G) + 16 * (80G/80G) = 20</td>
 <td style="text-align: center;">SU is charged based on the same number of CPUs and 80G of GPU (A full GPU) memory</td>
 </tr>
 <tr>
 <td>4 CPUs + <code>--mem=64G</code> + Full GPU</td>
 <td style="text-align: center;">MAX(4, 64G/4G) + 16 * (80G/80G) = 32</td>
 <td style="text-align: center;">The MAX function evaluates the maximum of 4 SUs (from CPUs), and 64G/4G= 16 SUs (from memory). In addition, 16 SUs are charged from 80G of GPU (A full GPU) memory, bringing the total SU charge to 32 SUs</td>
+</tr>
+<tr>
+<td>4 CPUs + <code>--mem-per-cpu=8G</code> + Full GPU</td>
+<td style="text-align: center;">MAX(4, 4*8G/4G) + 16 * (80G/80G) = 24</td>
+<td style="text-align: center;">The MAX function the evaluates the maximum of 4 SUs (from CPUs), and 4*8G/4G= 8 SUs (from memory). In addition, 16 SUs are charged from 80G of GPU (A full GPU) memory, bringing the total SU charge to 24 SUs</td>
 </tr>
 </tbody>
 </table>
