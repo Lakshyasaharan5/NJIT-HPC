@@ -4035,10 +4035,14 @@ Check the table below to see how SU will be charged for different partitions. </
 </tr>
 <tr>
 <td style="text-align: left;"><code>--partition=bigmem</code></td>
-<td style="text-align: left;">MAX(1.5 *CPUs, RAM/16G) SU</td>
+<td style="text-align: left;">MAX(1.5 *CPUs, 1.5 *RAM/16G) SU</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>--partition=debug</code></td>
+<td style="text-align: left;">No charges, must be used with <code>--qos=debug</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--partition=debug_gpu</code></td>
 <td style="text-align: left;">No charges, must be used with <code>--qos=debug</code></td>
 </tr>
 </tbody>
@@ -4102,23 +4106,23 @@ Requesting more memory than the default will result in higher SU charges than if
 <tbody>
 <tr>
 <td>4 CPUs</td>
-<td style="text-align: center;">MAX(4*1.5, 4*16G/16G) = 6</td>
+<td style="text-align: center;">MAX(4*1.5, 1.5*4*16G/16G) = 6</td>
 <td style="text-align: center;">On <code>bigmem</code> partition the usage factor is 1.5</td>
 </tr>
 <tr>
 <td>4 CPUs + <code>--mem=64G</code></td>
-<td style="text-align: center;">MAX(4*1.5, 64G/16G) = 6</td>
-<td style="text-align: center;">Since 64G memory is specified, the MAX function the evaluates the maximum of 4*1.5= 6 SUs, and 64G/16G= 4 SUs, resulting in a charge of 4 SUs</td>
+<td style="text-align: center;">MAX(4*1.5, 1.5*64G/16G) = 6</td>
+<td style="text-align: center;">Since 64G memory is specified, the MAX function the evaluates the maximum of 4*1.5= 6 SUs, and 1.5*64G/16G= 6 SUs, resulting in a charge of 6 SUs</td>
 </tr>
 <tr>
 <td>4 CPUs + <code>--mem=128G</code></td>
-<td style="text-align: center;">MAX(4*1.5, 128G/16G) = 8</td>
-<td style="text-align: center;">MAX function the evaluates the maximum of 4*1.5= 6 SUs, and 128G/16G= 8 SU, resulting in a charge of 8 SUs</td>
+<td style="text-align: center;">MAX(4*1.5, 1.5*128G/16G) = 12</td>
+<td style="text-align: center;">MAX function the evaluates the maximum of 4*1.5= 6 SUs, and 1.5*128G/16G= 12 SU, resulting in a charge of 12 SUs</td>
 </tr>
 <tr>
 <td>4 CPUs + <code>--mem-per-cpu=8G</code></td>
-<td style="text-align: center;">MAX(4*1.5, 8G*4/16G) = 6</td>
-<td style="text-align: center;">MAX function the evaluates the maximum of 4*1.5= 6 SUs, and 8G*4CPUs/16G = 2 SUs , resulting in a charge of 6 SUs</td>
+<td style="text-align: center;">MAX(4*1.5, 1.5*8G*4/16G) = 6</td>
+<td style="text-align: center;">MAX function the evaluates the maximum of 4*1.5= 6 SUs, and 1.5*8G*4CPUs/16G = 3 SUs , resulting in a charge of 6 SUs</td>
 </tr>
 </tbody>
 </table>

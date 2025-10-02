@@ -4053,7 +4053,7 @@ Wulver has three partitions, differing in GPUs or RAM available:
 <tr>
 <th style="text-align: left;">Partition</th>
 <th style="text-align: right;">Nodes</th>
-<th style="text-align: right;">Cores/Node</th>
+<th style="text-align: right;">Cores per Node</th>
 <th style="text-align: left;">CPU</th>
 <th style="text-align: left;">GPU</th>
 <th style="text-align: left;">Memory</th>
@@ -4061,7 +4061,7 @@ Wulver has three partitions, differing in GPUs or RAM available:
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>--partition=general</code></td>
+<td style="text-align: left;">--partition=general</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: left;">2.5G GHz AMD EPYC 7763 (2)</td>
@@ -4069,23 +4069,31 @@ Wulver has three partitions, differing in GPUs or RAM available:
 <td style="text-align: left;">512 GB</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>--partition=debug</code></td>
+<td style="text-align: left;">--partition=debug</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">4</td>
 <td style="text-align: left;">2.5G GHz AMD EPYC 7763 (2)</td>
 <td style="text-align: left;">NA</td>
-<td style="text-align: left;">512 GB</td>
+<td style="text-align: left;">16 GB</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>--partition=gpu</code></td>
+<td style="text-align: left;">--partition=debug_gpu</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">2.0 GHz AMD EPYC 7713 (2)</td>
+<td style="text-align: left;">MIG (10g, 20g, 40g)</td>
+<td style="text-align: left;">16 GB</td>
+</tr>
+<tr>
+<td style="text-align: left;">--partition=gpu</td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: left;">2.0 GHz AMD EPYC 7713 (2)</td>
-<td style="text-align: left;">NVIDIA A100 GPUs (4)</td>
+<td style="text-align: left;">NVIDIA&nbsp;A100&nbsp;GPUs&nbsp;(4);<br>MIG (10g, 20g, 40g);<br>L40</td>
 <td style="text-align: left;">512 GB</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>--partition=bigmem</code></td>
+<td style="text-align: left;">--partition=bigmem</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: left;">2.5G GHz AMD EPYC 7763 (2)</td>
@@ -4132,7 +4140,7 @@ Wulver has three levels of “priority”, utilized under SLURM as Quality of Se
 <tr>
 <td style="text-align: left;">--qos=debug</td>
 <td style="text-align: left;">Intended for debugging and testing jobs</td>
-<td style="text-align: left;">No SU Charges, maximum 4 CPUs are allowed, must be used with <br><code>--partition=debug</code></td>
+<td style="text-align: left;">No SU Charges, maximum 4 CPUs and 16G Mem is allowed, must be used with <code>--partition=debug</code> or <code>debug_gpu</code></td>
 <td style="text-align: right;">8</td>
 <td style="text-align: left;">Everyone</td>
 </tr>
@@ -4204,10 +4212,14 @@ See the table below to see SU will be charged for different partitions.
 </tr>
 <tr>
 <td style="text-align: left;"><code>--partition=bigmem</code></td>
-<td style="text-align: left;">MAX(1.5 *CPUs, RAM/16G) SU</td>
+<td style="text-align: left;">MAX(1.5 *CPUs, 1.5 *RAM/16G) SU</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>--partition=debug</code></td>
+<td style="text-align: left;">No charges, must be used with <code>--qos=debug</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--partition=debug_gpu</code></td>
 <td style="text-align: left;">No charges, must be used with <code>--qos=debug</code></td>
 </tr>
 </tbody>
