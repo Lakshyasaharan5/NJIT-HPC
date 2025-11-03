@@ -3841,6 +3841,87 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Courses/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Resources for Coursework
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Resources for Coursework
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Courses/course-node-memory-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Node and Memory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../faq/rhel_9_faq/" class="md-nav__link">
         
@@ -4203,6 +4284,10 @@
 </tbody>
 </table>
 <h2 id="create-and-activate-a-conda-virtual-environment">Create and Activate a Conda Virtual Environment<a class="headerlink" href="#create-and-activate-a-conda-virtual-environment" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The login node has limited memory and processing resources, which can slow down conda environment creation and package installation. It is recommended to start an <a href="../../../Running_jobs/interactive-jobs/">interactive session</a> on a compute node before creating or modifying your conda environment.</p>
+</div>
 <p>Load the Miniforge3 Module</p>
 <div class="highlight"><pre><span></span><code>module load Miniforge3
 </code></pre></div>
@@ -4216,10 +4301,10 @@ To create an environment with a specific python version, use <code>conda create 
 <h3 id="activate-and-deactivate-conda-environment">Activate and Deactivate Conda Environment<a class="headerlink" href="#activate-and-deactivate-conda-environment" title="Permanent link">&para;</a></h3>
 <p>Once you create an environment, you need to activate the environment to install python packages
 Use <code>conda activate ENV</code> to activate the Conda environment (<code>ENV</code> is the name of the environment). Following the activation of the conda environment, the name of the environment appears at the left of the hostname in the terminal. </p>
-<div class="highlight"><pre><span></span><code>login1-41<span class="w"> </span>~<span class="w"> </span>&gt;:<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Miniforge3
-login1-41<span class="w"> </span>~<span class="w"> </span>&gt;:<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>ENV<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
-login1-41<span class="w"> </span>~<span class="w"> </span>&gt;:<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ENV
-<span class="o">(</span>ENV<span class="o">)</span><span class="w"> </span>login-41<span class="w"> </span>~<span class="w"> </span>&gt;:
+<div class="highlight"><pre><span></span><code><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Miniforge3
+<span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>ENV<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+<span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ENV
+<span class="o">(</span>ENV<span class="o">)</span><span class="w"> </span><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$
 </code></pre></div>
 <p>Once you finish the installation of Python packages, deactivate the conda environment using <code>conda deactivate ENV</code>. </p>
 <div class="admonition warning">
@@ -4228,7 +4313,7 @@ login1-41<span class="w"> </span>~<span class="w"> </span>&gt;:<span class="w"> 
 </div>
 <h2 id="install-python-packages-via-conda">Install Python Packages Via Conda<a class="headerlink" href="#install-python-packages-via-conda" title="Permanent link">&para;</a></h2>
 <p>Once Conda environment is activated, you can install packages via <code>conda install package_name</code> command. For example, if you want to install <code>matplotlib</code>, you need to use</p>
-<p><div class="highlight"><pre><span></span><code><span class="o">(</span>ENV<span class="o">)</span><span class="w"> </span>login-41<span class="w"> </span>~<span class="w"> </span>&gt;:<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>matplotlib
+<p><div class="highlight"><pre><span></span><code><span class="o">(</span>ENV<span class="o">)</span><span class="w"> </span><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>matplotlib
 </code></pre></div>
 where <code>conda-forge</code> is the name of the conda channel. </p>
 <div class="admonition warning">
@@ -4253,26 +4338,34 @@ The advantage of using <code>.condarc</code> is that you don't have to mention t
 <p>Here, we provide some examples of how to use <code>conda</code> to install applications. </p>
 <h3 id="install-tensorflow-with-gpu">Install TensorFlow with GPU<a class="headerlink" href="#install-tensorflow-with-gpu" title="Permanent link">&para;</a></h3>
 <p>The following example will create a new conda environment based on Python 3.9 and install TensorFlow in the environment.</p>
-<div class="highlight"><pre><span></span><code>login1-41<span class="w"> </span>~<span class="w"> </span>&gt;:<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Miniforge3
-login1-41<span class="w"> </span>~<span class="w"> </span>&gt;:<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>tf<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
-Collecting<span class="w"> </span>package<span class="w"> </span>metadata<span class="w"> </span><span class="o">(</span>current_repodata.json<span class="o">)</span>:<span class="w"> </span><span class="k">done</span>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Miniforge3
+<span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>tf<span class="w"> </span>
+Channels:
+<span class="w"> </span>-<span class="w"> </span>conda-forge
+Platform:<span class="w"> </span>linux-64
+Collecting<span class="w"> </span>package<span class="w"> </span>metadata<span class="w"> </span><span class="o">(</span>repodata.json<span class="o">)</span>:<span class="w"> </span><span class="k">done</span>
 Solving<span class="w"> </span>environment:<span class="w"> </span><span class="k">done</span>
+
+
+<span class="o">==</span>&gt;<span class="w"> </span>WARNING:<span class="w"> </span>A<span class="w"> </span>newer<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>conda<span class="w"> </span>exists.<span class="w"> </span>&lt;<span class="o">==</span>
+<span class="w">    </span>current<span class="w"> </span>version:<span class="w"> </span><span class="m">24</span>.11.3
+<span class="w">    </span>latest<span class="w"> </span>version:<span class="w"> </span><span class="m">25</span>.9.1
+
+Please<span class="w"> </span>update<span class="w"> </span>conda<span class="w"> </span>by<span class="w"> </span>running
+
+<span class="w">    </span>$<span class="w"> </span>conda<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>conda
 
 <span class="c1">## Package Plan ##</span>
 
-<span class="w">  </span>environment<span class="w"> </span>location:<span class="w"> </span>/home/g/guest24/.conda/envs/tf
+<span class="w">  </span>environment<span class="w"> </span>location:<span class="w"> </span>/home/ls565/.conda/envs/tf
 
-<span class="w">  </span>added<span class="w"> </span>/<span class="w"> </span>updated<span class="w"> </span>specs:
-<span class="w">    </span>-<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+Proceed<span class="w"> </span><span class="o">([</span>y<span class="o">]</span>/n<span class="o">)</span>?<span class="w"> </span>y
 
+Downloading<span class="w"> </span>and<span class="w"> </span>Extracting<span class="w"> </span>Packages:
 
-The<span class="w"> </span>following<span class="w"> </span>packages<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>downloaded:
-
-<span class="w"> </span>&lt;output<span class="w"> </span>snipped&gt;
-
-Proceed<span class="w"> </span><span class="o">([</span>y<span class="o">]</span>/n<span class="o">)</span>?y
-
-<span class="w"> </span>&lt;output<span class="w"> </span>snipped&gt;
+Preparing<span class="w"> </span>transaction:<span class="w"> </span><span class="k">done</span>
+Verifying<span class="w"> </span>transaction:<span class="w"> </span><span class="k">done</span>
+Executing<span class="w"> </span>transaction:<span class="w"> </span><span class="k">done</span>
 <span class="c1">#</span>
 <span class="c1"># To activate this environment, use</span>
 <span class="c1">#</span>
@@ -4283,47 +4376,64 @@ Proceed<span class="w"> </span><span class="o">([</span>y<span class="o">]</span
 <span class="c1">#     $ conda deactivate</span>
 </code></pre></div>
 <p>Activate the new 'tf' environment
-<div class="highlight"><pre><span></span><code>login1-41<span class="w"> </span>~<span class="w"> </span>&gt;:<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>tf
-<span class="o">(</span>tf<span class="o">)</span><span class="w"> </span>login-41<span class="w"> </span>~<span class="w"> </span>&gt;:
+<div class="highlight"><pre><span></span><code><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>tf
+<span class="o">(</span>tf<span class="o">)</span><span class="w"> </span><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$
 </code></pre></div>
 Install tensorflow-gpu
-<div class="highlight"><pre><span></span><code><span class="o">(</span>tf<span class="o">)</span><span class="w"> </span>node430-41<span class="w"> </span>~<span class="w"> </span>&gt;:<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>anaconda<span class="w"> </span>tensorflow-gpu
-Collecting<span class="w"> </span>package<span class="w"> </span>metadata<span class="w"> </span><span class="o">(</span>current_repodata.json<span class="o">)</span>:<span class="w"> </span><span class="k">done</span>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>tf<span class="o">)</span><span class="w"> </span><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>tensorflow-gpu
+Channels:
+<span class="w"> </span>-<span class="w"> </span>conda-forge
+Platform:<span class="w"> </span>linux-64
+Collecting<span class="w"> </span>package<span class="w"> </span>metadata<span class="w"> </span><span class="o">(</span>repodata.json<span class="o">)</span>:<span class="w"> </span><span class="k">done</span>
 Solving<span class="w"> </span>environment:<span class="w"> </span><span class="k">done</span>
+
+<span class="o">==</span>&gt;<span class="w"> </span>WARNING:<span class="w"> </span>A<span class="w"> </span>newer<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>conda<span class="w"> </span>exists.<span class="w"> </span>&lt;<span class="o">==</span>
+<span class="w">    </span>current<span class="w"> </span>version:<span class="w"> </span><span class="m">24</span>.11.3
+<span class="w">    </span>latest<span class="w"> </span>version:<span class="w"> </span><span class="m">25</span>.9.1
+
+Please<span class="w"> </span>update<span class="w"> </span>conda<span class="w"> </span>by<span class="w"> </span>running
+
+<span class="w">    </span>$<span class="w"> </span>conda<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>conda
 
 <span class="c1">## Package Plan ##</span>
 
-<span class="w">  </span>environment<span class="w"> </span>location:<span class="w"> </span>/home/g/guest24/miniconda3/envs/tf
+<span class="w">  </span>environment<span class="w"> </span>location:<span class="w"> </span>/home/ls565/.conda/envs/tf
 
 <span class="w">  </span>added<span class="w"> </span>/<span class="w"> </span>updated<span class="w"> </span>specs:
 <span class="w">    </span>-<span class="w"> </span>tensorflow-gpu
 
-&lt;output<span class="w"> </span>snipped&gt;
 
-The<span class="w"> </span>following<span class="w"> </span>packages<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>SUPERSEDED<span class="w"> </span>by<span class="w"> </span>a<span class="w"> </span>higher-priority<span class="w"> </span>channel:
+The<span class="w"> </span>following<span class="w"> </span>packages<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>downloaded:
 
-<span class="w">  </span>ca-certificates<span class="w">                                 </span>pkgs/main<span class="w"> </span>--&gt;<span class="w"> </span>anaconda
-<span class="w">  </span>certifi<span class="w">                                         </span>pkgs/main<span class="w"> </span>--&gt;<span class="w"> </span>anaconda
-<span class="w">  </span>openssl<span class="w">                                         </span>pkgs/main<span class="w"> </span>--&gt;<span class="w"> </span>anaconda
+<span class="w">    </span>package<span class="w">                    </span><span class="p">|</span><span class="w">            </span>build
+<span class="w">    </span>---------------------------<span class="p">|</span>-----------------
+<span class="w">    </span>_x86_64-microarch-level-3<span class="w">  </span><span class="p">|</span><span class="w">           </span>2_zen3<span class="w">           </span><span class="m">8</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
+<span class="w">    </span>...
+<span class="w">    </span>cuda-nvcc-tools-12.9.86<span class="w">    </span><span class="p">|</span><span class="w">       </span>he02047a_2<span class="w">        </span><span class="m">26</span>.1<span class="w"> </span>MB<span class="w">  </span>conda-forge
+<span class="w">    </span>cuda-nvvm-tools-12.9.86<span class="w">    </span><span class="p">|</span><span class="w">       </span>h4bc722e_2<span class="w">        </span><span class="m">23</span>.1<span class="w"> </span>MB<span class="w">  </span>conda-forge
+<span class="w">    </span>cuda-version-12.9<span class="w">          </span><span class="p">|</span><span class="w">       </span>h4f385c5_3<span class="w">          </span><span class="m">21</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
+<span class="w">    </span>cudnn-9.13.1.26<span class="w">            </span><span class="p">|</span><span class="w">       </span>hbcb9cd8_0<span class="w">          </span><span class="m">19</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
+<span class="w">    </span>...
+<span class="w">    </span>pip-25.2<span class="w">                   </span><span class="p">|</span><span class="w">     </span>pyh8b19718_0<span class="w">         </span><span class="m">1</span>.1<span class="w"> </span>MB<span class="w">  </span>conda-forge
+<span class="w">    </span>protobuf-6.31.1<span class="w">            </span><span class="p">|</span><span class="w">  </span>py312hb8af0ac_2<span class="w">         </span><span class="m">468</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
+<span class="w">    </span>pygments-2.19.2<span class="w">            </span><span class="p">|</span><span class="w">     </span>pyhd8ed1ab_0<span class="w">         </span><span class="m">868</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
+<span class="w">    </span>python-3.12.12<span class="w">             </span><span class="p">|</span>hd63d673_1_cpython<span class="w">        </span><span class="m">30</span>.1<span class="w"> </span>MB<span class="w">  </span>conda-forge
+<span class="w">    </span>...<span class="w">    </span>
+<span class="w">    </span>tensorflow-2.19.1<span class="w">          </span><span class="p">|</span>cuda128py312hae5ec6b_250<span class="w">     </span><span class="m">48</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
+<span class="w">    </span>tensorflow-gpu-2.19.1<span class="w">      </span><span class="p">|</span>cuda128h6316801_250<span class="w">          </span><span class="m">48</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
+<span class="w">    </span>...
+<span class="w">    </span>------------------------------------------------------------
+<span class="w">                                           </span>Total:<span class="w">        </span><span class="m">2</span>.30<span class="w"> </span>GB
+Proceed<span class="w"> </span><span class="o">([</span>y<span class="o">]</span>/n<span class="o">)</span>?<span class="w"> </span>y
 
-
-Proceed<span class="w"> </span><span class="o">([</span>y<span class="o">]</span>/n<span class="o">)</span>?y
-
-&lt;output<span class="w"> </span>snipped&gt;
-
-mkl_fft-1.1.0<span class="w">        </span><span class="p">|</span><span class="w"> </span><span class="m">143</span><span class="w"> </span>KB<span class="w">    </span><span class="p">|</span><span class="w"> </span><span class="c1">####################################################################################### | 100%</span>
-urllib3-1.25.9<span class="w">       </span><span class="p">|</span><span class="w"> </span><span class="m">98</span><span class="w"> </span>KB<span class="w">     </span><span class="p">|</span><span class="w"> </span><span class="c1">####################################################################################### | 100%</span>
-cudatoolkit-10.1.243<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">513</span>.2<span class="w"> </span>MB<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="c1">####################################################################################### | 100%</span>
-protobuf-3.12.3<span class="w">      </span><span class="p">|</span><span class="w"> </span><span class="m">711</span><span class="w"> </span>KB<span class="w">    </span><span class="p">|</span><span class="w"> </span><span class="c1">####################################################################################### | 100%</span>
-blinker-1.4<span class="w">          </span><span class="p">|</span><span class="w"> </span><span class="m">21</span><span class="w"> </span>KB<span class="w">     </span><span class="p">|</span><span class="w"> </span><span class="c1">####################################################################################### | 100%</span>
-requests-2.24.0<span class="w">      </span><span class="p">|</span><span class="w"> </span><span class="m">54</span><span class="w"> </span>KB<span class="w">     </span><span class="p">|</span><span class="w"> </span><span class="c1">####################################################################################### | 100%</span>
-werkzeug-1.0.1<span class="w">       </span><span class="p">|</span><span class="w"> </span><span class="m">243</span><span class="w"> </span>KB<span class="w">    </span><span class="p">|</span><span class="w"> </span><span class="c1">####################################################################################### | 100%</span>
-Preparing<span class="w"> </span>transaction:<span class="w"> </span><span class="k">done</span>
-Verifying<span class="w"> </span>transaction:<span class="w"> </span><span class="k">done</span>
-Executing<span class="w"> </span>transaction:<span class="w"> </span><span class="k">done</span>
+Downloading<span class="w"> </span>and<span class="w"> </span>Extracting<span class="w"> </span>Packages:
+libcublas-12.9.1.4<span class="w">   </span><span class="p">|</span><span class="w"> </span><span class="m">446</span>.1<span class="w"> </span>MB<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="c1">############################################ | 100% </span>
+libcudnn-9.13.1.26<span class="w">   </span><span class="p">|</span><span class="w"> </span><span class="m">426</span>.3<span class="w"> </span>MB<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="c1">############################################ | 100% </span>
+libtensorflow_cc-2.1<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">362</span>.3<span class="w"> </span>MB<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="c1">############################################ | 100% </span>
+...
 </code></pre></div>
 Check to see if TensorFlow can be loaded
-<div class="highlight"><pre><span></span><code>(tf) login1-41 ~ &gt;: python
+<div class="highlight"><pre><span></span><code>(tf) [ls565@n0058 ~]$ python
 Python 3.9.13 (main, Oct 13 2022, 21:15:33)
 [GCC 11.2.0] :: Anaconda, Inc. on linux
 Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
