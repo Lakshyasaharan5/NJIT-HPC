@@ -9,10 +9,10 @@
       
       
       
-        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/Courses/course-node-memory-config/">
+        <link rel="canonical" href="https://arcs-njit-edu.github.io/Docs/Courses/course-job-submission/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../course-resource-config/">
       
       
         <link rel="next" href="../../faq/rhel_9_faq/">
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#course-nodes-memory-configuration" class="md-skip">
+        <a href="#submitting-course-jobs" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Course Node and Memory
+              Submitting Jobs
             
           </span>
         </div>
@@ -3616,6 +3616,8 @@
       
         
       
+        
+      
     
     
     
@@ -3632,7 +3634,7 @@
               
   
   <span class="md-ellipsis">
-    Resources for Coursework
+    HPC for Course
   </span>
   
 
@@ -3648,10 +3650,31 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
-            Resources for Coursework
+            HPC for Course
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-resource-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3674,7 +3697,7 @@
           
   
   <span class="md-ellipsis">
-    Course Node and Memory
+    Submitting Jobs
   </span>
   
 
@@ -3685,7 +3708,7 @@
         
   
   <span class="md-ellipsis">
-    Course Node and Memory
+    Submitting Jobs
   </span>
   
 
@@ -3707,28 +3730,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#sample-job-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Sample Job scripts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
+    <nav class="md-nav" aria-label="Sample Job scripts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#partition-use-partition" class="md-nav__link">
+  <a href="#cpu-job-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Partition (Use --partition)
+      CPU Job Example
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#priority-use-qos" class="md-nav__link">
+  <a href="#gpu-job-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Priority (Use --qos)
+      GPU Job Example
     </span>
   </a>
   
@@ -3736,6 +3759,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation-of-gpu-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitation of GPU Jobs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive jobs
+    </span>
+  </a>
   
 </li>
       
@@ -3844,28 +3885,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#sample-job-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Sample Job scripts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
+    <nav class="md-nav" aria-label="Sample Job scripts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#partition-use-partition" class="md-nav__link">
+  <a href="#cpu-job-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Partition (Use --partition)
+      CPU Job Example
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#priority-use-qos" class="md-nav__link">
+  <a href="#gpu-job-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Priority (Use --qos)
+      GPU Job Example
     </span>
   </a>
   
@@ -3873,6 +3914,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation-of-gpu-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitation of GPU Jobs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive jobs
+    </span>
+  </a>
   
 </li>
       
@@ -3894,43 +3953,90 @@
   
 
 
-<h1 id="course-nodes-memory-configuration">Course Nodes &amp; Memory Configuration<a class="headerlink" href="#course-nodes-memory-configuration" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>some overview</p>
-<h3 id="partition-use-partition">Partition (Use <code>--partition</code>)<a class="headerlink" href="#partition-use-partition" title="Permanent link">&para;</a></h3>
-<p>some brief info</p>
-<table>
-<thead>
-<tr>
-<th>Partition</th>
-<th style="text-align: center;">Nodes</th>
-<th style="text-align: center;">Cores per Node</th>
-<th style="text-align: center;">GPU</th>
-<th style="text-align: center;">Memory</th>
-<th style="text-align: left;">SU Charge</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--partition=course</code></td>
-<td style="text-align: center;">64</td>
-<td style="text-align: center;">32–48</td>
-<td style="text-align: center;">NA</td>
-<td style="text-align: center;">375 GB</td>
-<td style="text-align: left;"><code>MAX(CPUs, Memory/4G) SU</code></td>
-</tr>
-<tr>
-<td><code>--partition=course_gpu</code></td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">32–48</td>
-<td style="text-align: center;">A100 10G MIG</td>
-<td style="text-align: center;">375 GB</td>
-<td style="text-align: left;"><code>2 + MAX(CPUs, Memory/4G) SU</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="priority-use-qos">Priority (Use <code>--qos</code>)<a class="headerlink" href="#priority-use-qos" title="Permanent link">&para;</a></h3>
-<p>some brief info</p>
+<h1 id="submitting-course-jobs">Submitting Course Jobs<a class="headerlink" href="#submitting-course-jobs" title="Permanent link">&para;</a></h1>
+<p>Submit scripts on Wulver must include specification of partition, account, qos, and time limit. Also the first line in the batch file must be <code>#!/bin/bash -l</code>. </p>
+<p>Below is the minimal example for a 10-minute test job:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="c1">#SBATCH --partition=course</span>
+<span class="c1">#SBATCH --account=2025-fall-ds-492-kjc59-ls565</span>
+<span class="c1">#SBATCH --qos=course</span>
+<span class="c1">#SBATCH --time=00:10:00</span>
+</code></pre></div>
+<h3 id="sample-job-scripts">Sample Job scripts<a class="headerlink" href="#sample-job-scripts" title="Permanent link">&para;</a></h3>
+<p>Make sure to replace <code>--account</code> with your assigned course account.</p>
+<h4 id="cpu-job-example">CPU Job Example<a class="headerlink" href="#cpu-job-example" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=mpi_test_job</span>
+<span class="c1">#SBATCH --output=%x.%j.out</span>
+<span class="c1">#SBATCH --error=%x.%j.err</span>
+<span class="c1">#SBATCH --partition=course</span>
+<span class="c1">#SBATCH --account=2025-fall-ds-492-kjc59-ls565</span>
+<span class="c1">#SBATCH --qos=course</span>
+<span class="c1">#SBATCH --time=00:10:00</span>
+<span class="c1">#SBATCH --ntasks=64</span>
+
+<span class="c1"># Run application commands</span>
+srun<span class="w"> </span>/apps/testjobs/bin/mpihello
+</code></pre></div>
+<ul>
+<li>Runs an MPI job named mpi_test_job.</li>
+<li>Uses 64 processes across available nodes.</li>
+<li>Wall time: 10 minutes.</li>
+</ul>
+<h4 id="gpu-job-example">GPU Job Example<a class="headerlink" href="#gpu-job-example" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=test_gpu_job</span>
+<span class="c1">#SBATCH --output=%x.%j.out</span>
+<span class="c1">#SBATCH --error=%x.%j.err</span>
+<span class="c1">#SBATCH --partition=course_gpu</span>
+<span class="c1">#SBATCH --account=2025-fall-ds-492-kjc59-ls565</span>
+<span class="c1">#SBATCH --qos=course</span>
+<span class="c1">#SBATCH --time=00:20:00</span>
+<span class="c1">#SBATCH --ntasks=2</span>
+<span class="c1">#SBATCH --gres=gpu:a100_10g:1</span>
+
+<span class="c1"># Load application environment</span>
+module<span class="w"> </span>load<span class="w"> </span>CUDA
+
+<span class="c1"># Run application commands</span>
+nvidia-smi
+</code></pre></div>
+<ul>
+<li>Runs a GPU job named test_gpu_job.</li>
+<li>Allocates 2 CPUs and single A100 10G MIG GPU.</li>
+<li>Wall time: 20 minutes.</li>
+</ul>
+<h3 id="limitation-of-gpu-jobs">Limitation of GPU Jobs<a class="headerlink" href="#limitation-of-gpu-jobs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>You cannot request multiple MIG instances in one job. <br>
+For example: <code>--gres=gpu:a100_10g:2</code> <br>
+This will either cause an error or misinterpretation as a single GPU.</p>
+</li>
+<li>
+<p>Each job should request one GPU per job. <br>
+For multiple tasks, use job arrays instead of multiple MIGs.</p>
+</li>
+</ul>
+<h3 id="interactive-jobs">Interactive jobs<a class="headerlink" href="#interactive-jobs" title="Permanent link">&para;</a></h3>
+<p>You can also start an interactive session instead of a batch job.</p>
+<div class="highlight"><pre><span></span><code>interactive<span class="w"> </span>-a<span class="w"> </span>ACCOUNT<span class="w"> </span>-q<span class="w"> </span>QOS<span class="w"> </span>-p<span class="w"> </span>PARTITION<span class="w"> </span>-j<span class="w"> </span>JOB_TYPE
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>-a ACCOUNT</code>  → Your assigned course account</li>
+<li><code>-q course</code>   → QoS for course jobs</li>
+<li><code>-p course</code>   → Partition (use course or course_gpu)</li>
+<li><code>-j JOB_TYPE</code> → Type of job (e.g., cpu or gpu)</li>
+</ul>
+<p>Example</p>
+<div class="highlight"><pre><span></span><code>interactive<span class="w"> </span>-a<span class="w"> </span><span class="m">2025</span>-fall-ds-492-kjc59-ls565<span class="w"> </span>-q<span class="w"> </span>course<span class="w"> </span>-p<span class="w"> </span>course
+</code></pre></div>
+<p>This command launches a temporary compute session for hands-on work or testing.</p>
+<div class="admonition info">
+<p class="admonition-title">Learn More About Job Submission</p>
+<p>For more detailed examples and advanced options, visit the <a href="../../Running_jobs/"><strong>Running Jobs</strong> page</a>.</p>
+</div>
 
 
 
