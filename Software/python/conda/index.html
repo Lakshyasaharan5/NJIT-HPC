@@ -4255,110 +4255,41 @@ channels:
 The advantage of using <code>.condarc</code> is that you don't have to mention the channel name every time you install a package. However, please note that you still need to use the channel name if you want to install Python packages that require a specific channel other than the <code>conda-forge</code> channel.</p>
 <h2 id="examples-of-conda-environemnt">Examples of Conda Environemnt<a class="headerlink" href="#examples-of-conda-environemnt" title="Permanent link">&para;</a></h2>
 <p>Here, we provide some examples of how to use <code>conda</code> to install applications. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the following examples please make sure to start an <a href="../../../Running_jobs/interactive-jobs/#the-interactive-command-gpu-nodes">interactive session</a> on GPU node.</p>
+</div>
 <h3 id="install-tensorflow-with-gpu">Install TensorFlow with GPU<a class="headerlink" href="#install-tensorflow-with-gpu" title="Permanent link">&para;</a></h3>
-<p>The following example will create a new conda environment based on Python 3.9 and install TensorFlow in the environment.</p>
+<ul>
+<li>
+<p>The following example will create a new conda environment and install TensorFlow in the environment.
 <div class="highlight"><pre><span></span><code><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Miniforge3
 <span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>tf<span class="w"> </span>
-Channels:
-<span class="w"> </span>-<span class="w"> </span>conda-forge
-Platform:<span class="w"> </span>linux-64
-Collecting<span class="w"> </span>package<span class="w"> </span>metadata<span class="w"> </span><span class="o">(</span>repodata.json<span class="o">)</span>:<span class="w"> </span><span class="k">done</span>
-Solving<span class="w"> </span>environment:<span class="w"> </span><span class="k">done</span>
-
-
-<span class="o">==</span>&gt;<span class="w"> </span>WARNING:<span class="w"> </span>A<span class="w"> </span>newer<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>conda<span class="w"> </span>exists.<span class="w"> </span>&lt;<span class="o">==</span>
-<span class="w">    </span>current<span class="w"> </span>version:<span class="w"> </span><span class="m">24</span>.11.3
-<span class="w">    </span>latest<span class="w"> </span>version:<span class="w"> </span><span class="m">25</span>.9.1
-
-Please<span class="w"> </span>update<span class="w"> </span>conda<span class="w"> </span>by<span class="w"> </span>running
-
-<span class="w">    </span>$<span class="w"> </span>conda<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>conda
-
-<span class="c1">## Package Plan ##</span>
-
-<span class="w">  </span>environment<span class="w"> </span>location:<span class="w"> </span>/home/ls565/.conda/envs/tf
-
-Proceed<span class="w"> </span><span class="o">([</span>y<span class="o">]</span>/n<span class="o">)</span>?<span class="w"> </span>y
-
-Downloading<span class="w"> </span>and<span class="w"> </span>Extracting<span class="w"> </span>Packages:
-
-Preparing<span class="w"> </span>transaction:<span class="w"> </span><span class="k">done</span>
-Verifying<span class="w"> </span>transaction:<span class="w"> </span><span class="k">done</span>
-Executing<span class="w"> </span>transaction:<span class="w"> </span><span class="k">done</span>
-<span class="c1">#</span>
-<span class="c1"># To activate this environment, use</span>
-<span class="c1">#</span>
-<span class="c1">#     $ conda activate tf</span>
-<span class="c1">#</span>
-<span class="c1"># To deactivate an active environment, use</span>
-<span class="c1">#</span>
-<span class="c1">#     $ conda deactivate</span>
-</code></pre></div>
+</code></pre></div></p>
+</li>
+<li>
 <p>Activate the new 'tf' environment
 <div class="highlight"><pre><span></span><code><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>tf
 <span class="o">(</span>tf<span class="o">)</span><span class="w"> </span><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$
-</code></pre></div>
-Install tensorflow-gpu
+</code></pre></div></p>
+</li>
+<li>
+<p>Install tensorflow-gpu
 <div class="highlight"><pre><span></span><code><span class="o">(</span>tf<span class="o">)</span><span class="w"> </span><span class="o">[</span>ls565@n0058<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>tensorflow-gpu
-Channels:
-<span class="w"> </span>-<span class="w"> </span>conda-forge
-Platform:<span class="w"> </span>linux-64
-Collecting<span class="w"> </span>package<span class="w"> </span>metadata<span class="w"> </span><span class="o">(</span>repodata.json<span class="o">)</span>:<span class="w"> </span><span class="k">done</span>
-Solving<span class="w"> </span>environment:<span class="w"> </span><span class="k">done</span>
-
-<span class="o">==</span>&gt;<span class="w"> </span>WARNING:<span class="w"> </span>A<span class="w"> </span>newer<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>conda<span class="w"> </span>exists.<span class="w"> </span>&lt;<span class="o">==</span>
-<span class="w">    </span>current<span class="w"> </span>version:<span class="w"> </span><span class="m">24</span>.11.3
-<span class="w">    </span>latest<span class="w"> </span>version:<span class="w"> </span><span class="m">25</span>.9.1
-
-Please<span class="w"> </span>update<span class="w"> </span>conda<span class="w"> </span>by<span class="w"> </span>running
-
-<span class="w">    </span>$<span class="w"> </span>conda<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>conda
-
-<span class="c1">## Package Plan ##</span>
-
-<span class="w">  </span>environment<span class="w"> </span>location:<span class="w"> </span>/home/ls565/.conda/envs/tf
-
-<span class="w">  </span>added<span class="w"> </span>/<span class="w"> </span>updated<span class="w"> </span>specs:
-<span class="w">    </span>-<span class="w"> </span>tensorflow-gpu
-
-
-The<span class="w"> </span>following<span class="w"> </span>packages<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>downloaded:
-
-<span class="w">    </span>package<span class="w">                    </span><span class="p">|</span><span class="w">            </span>build
-<span class="w">    </span>---------------------------<span class="p">|</span>-----------------
-<span class="w">    </span>_x86_64-microarch-level-3<span class="w">  </span><span class="p">|</span><span class="w">           </span>2_zen3<span class="w">           </span><span class="m">8</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
-<span class="w">    </span>...
-<span class="w">    </span>cuda-nvcc-tools-12.9.86<span class="w">    </span><span class="p">|</span><span class="w">       </span>he02047a_2<span class="w">        </span><span class="m">26</span>.1<span class="w"> </span>MB<span class="w">  </span>conda-forge
-<span class="w">    </span>cuda-nvvm-tools-12.9.86<span class="w">    </span><span class="p">|</span><span class="w">       </span>h4bc722e_2<span class="w">        </span><span class="m">23</span>.1<span class="w"> </span>MB<span class="w">  </span>conda-forge
-<span class="w">    </span>cuda-version-12.9<span class="w">          </span><span class="p">|</span><span class="w">       </span>h4f385c5_3<span class="w">          </span><span class="m">21</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
-<span class="w">    </span>cudnn-9.13.1.26<span class="w">            </span><span class="p">|</span><span class="w">       </span>hbcb9cd8_0<span class="w">          </span><span class="m">19</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
-<span class="w">    </span>...
-<span class="w">    </span>pip-25.2<span class="w">                   </span><span class="p">|</span><span class="w">     </span>pyh8b19718_0<span class="w">         </span><span class="m">1</span>.1<span class="w"> </span>MB<span class="w">  </span>conda-forge
-<span class="w">    </span>protobuf-6.31.1<span class="w">            </span><span class="p">|</span><span class="w">  </span>py312hb8af0ac_2<span class="w">         </span><span class="m">468</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
-<span class="w">    </span>pygments-2.19.2<span class="w">            </span><span class="p">|</span><span class="w">     </span>pyhd8ed1ab_0<span class="w">         </span><span class="m">868</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
-<span class="w">    </span>python-3.12.12<span class="w">             </span><span class="p">|</span>hd63d673_1_cpython<span class="w">        </span><span class="m">30</span>.1<span class="w"> </span>MB<span class="w">  </span>conda-forge
-<span class="w">    </span>...<span class="w">    </span>
-<span class="w">    </span>tensorflow-2.19.1<span class="w">          </span><span class="p">|</span>cuda128py312hae5ec6b_250<span class="w">     </span><span class="m">48</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
-<span class="w">    </span>tensorflow-gpu-2.19.1<span class="w">      </span><span class="p">|</span>cuda128h6316801_250<span class="w">          </span><span class="m">48</span><span class="w"> </span>KB<span class="w">  </span>conda-forge
-<span class="w">    </span>...
-<span class="w">    </span>------------------------------------------------------------
-<span class="w">                                           </span>Total:<span class="w">        </span><span class="m">2</span>.30<span class="w"> </span>GB
-Proceed<span class="w"> </span><span class="o">([</span>y<span class="o">]</span>/n<span class="o">)</span>?<span class="w"> </span>y
-
-Downloading<span class="w"> </span>and<span class="w"> </span>Extracting<span class="w"> </span>Packages:
-libcublas-12.9.1.4<span class="w">   </span><span class="p">|</span><span class="w"> </span><span class="m">446</span>.1<span class="w"> </span>MB<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="c1">############################################ | 100% </span>
-libcudnn-9.13.1.26<span class="w">   </span><span class="p">|</span><span class="w"> </span><span class="m">426</span>.3<span class="w"> </span>MB<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="c1">############################################ | 100% </span>
-libtensorflow_cc-2.1<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">362</span>.3<span class="w"> </span>MB<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="c1">############################################ | 100% </span>
-...
-</code></pre></div>
-Check to see if TensorFlow can be loaded
-<div class="highlight"><pre><span></span><code>(tf) [ls565@n0058 ~]$ python
-Python 3.9.13 (main, Oct 13 2022, 21:15:33)
-[GCC 11.2.0] :: Anaconda, Inc. on linux
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;
-</code></pre></div>
-Simple TensorFlow test program to make sure the virtual env can access a GPU. Program is called </p>
+</code></pre></div></p>
+</li>
+<li>
+<p>Check if TensorFlow can be loaded
+<div class="highlight"><pre><span></span><code>(tf) [ls565@n0058 ~]$ python -c &quot;import tensorflow as tf; print( tf.__version__)&quot;
+</code></pre></div></p>
+</li>
+<li>
+<p>Check if TensorFlow is compiled with GPU
+<div class="highlight"><pre><span></span><code>(tf) [ls565@n0066 ~]$ python -c &quot;import tensorflow as tf; print(tf.test.is_built_with_gpu_support())&quot;
+</code></pre></div></p>
+</li>
+</ul>
+<p>You can also verify using this simple TensorFlow test program to make sure the virtual env can access a GPU. </p>
 <details class="example">
 <summary>tf.gpu.test.py</summary>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
@@ -4400,38 +4331,7 @@ conda<span class="w"> </span>activate<span class="w"> </span>tf
 </div>
 </div>
 </details>
-<p>Result:
-<div class="highlight"><pre><span></span><code>Starting<span class="w"> </span>/home/g/guest24/.bash_profile<span class="w"> </span>...<span class="w"> </span>standard<span class="w"> </span>AFS<span class="w"> </span>bash<span class="w"> </span>profile
-
-Home<span class="w"> </span>directory<span class="w"> </span>:<span class="w"> </span>/home/g/guest24<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span><span class="k">in</span><span class="w"> </span>AFS<span class="w"> </span>--<span class="w"> </span>skipping<span class="w"> </span>quota<span class="w"> </span>check
-
-On<span class="w"> </span>host<span class="w"> </span>node430<span class="w"> </span>:
-<span class="w">         </span><span class="m">17</span>:14:13<span class="w"> </span>up<span class="w"> </span><span class="m">1</span><span class="w"> </span>day,<span class="w">  </span><span class="m">1</span>:17,<span class="w">  </span><span class="m">0</span><span class="w"> </span>users,<span class="w">  </span>load<span class="w"> </span>average:<span class="w"> </span><span class="m">0</span>.01,<span class="w"> </span><span class="m">0</span>.07,<span class="w"> </span><span class="m">0</span>.06
-
-<span class="w">      </span>Your<span class="w"> </span>Kerberos<span class="w"> </span>ticket<span class="w"> </span>and<span class="w"> </span>AFS<span class="w"> </span>token<span class="w"> </span>status<span class="w"> </span>
-klist:<span class="w"> </span>No<span class="w"> </span>credentials<span class="w"> </span>cache<span class="w"> </span>found<span class="w"> </span><span class="o">(</span>filename:<span class="w"> </span>/tmp/krb5cc_22967_HvCVvuvMMX<span class="o">)</span>
-Kerberos<span class="w"> </span>:
-AFS<span class="w">      </span>:
-
-Loading<span class="w"> </span>default<span class="w"> </span>modules<span class="w"> </span>...
-Create<span class="w"> </span>file<span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;/home/g/guest24/.modules&quot;</span><span class="w"> </span>to<span class="w"> </span>customize.
-
-No<span class="w"> </span>modules<span class="w"> </span>loaded
-<span class="m">2020</span>-07-29<span class="w"> </span><span class="m">17</span>:14:19.047276:<span class="w"> </span>I<span class="w"> </span>tensorflow/core/platform/cpu_feature_guard.cc:143<span class="o">]</span><span class="w"> </span>Your<span class="w"> </span>CPU<span class="w"> </span>supports<span class="w"> </span>instructions<span class="w"> </span>that<span class="w"> </span>this<span class="w"> </span>TensorFlow<span class="w"> </span>binary<span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>compiled<span class="w"> </span>to<span class="w"> </span>use:<span class="w"> </span>SSE4.1<span class="w"> </span>SSE4.2<span class="w"> </span>AVX<span class="w"> </span>AVX2<span class="w"> </span>FMA
-<span class="m">2020</span>-07-29<span class="w"> </span><span class="m">17</span>:14:19.059941:<span class="w"> </span>I<span class="w"> </span>tensorflow/core/platform/profile_utils/cpu_utils.cc:102<span class="o">]</span><span class="w"> </span>CPU<span class="w"> </span>Frequency:<span class="w"> </span><span class="m">2200070000</span><span class="w"> </span>Hz
-<span class="m">2020</span>-07-29<span class="w"> </span><span class="m">17</span>:14:19.060093:<span class="w"> </span>I<span class="w"> </span>tensorflow/compiler/xla/service/service.cc:168<span class="o">]</span><span class="w"> </span>XLA<span class="w"> </span>service<span class="w"> </span>0x55ea8ebfdb90<span class="w"> </span>initialized<span class="w"> </span><span class="k">for</span><span class="w"> </span>platform<span class="w"> </span>Host<span class="w"> </span><span class="o">(</span>this<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>guarantee<span class="w"> </span>that<span class="w"> </span>XLA<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>used<span class="o">)</span>.<span class="w"> </span>Devices:
-<span class="m">2020</span>-07-29<span class="w"> </span><span class="m">17</span>:14:19.060136:<span class="w"> </span>I<span class="w"> </span>tensorflow/compiler/xla/service/service.cc:176<span class="o">]</span><span class="w">   </span>StreamExecutor<span class="w"> </span>device<span class="w"> </span><span class="o">(</span><span class="m">0</span><span class="o">)</span>:<span class="w"> </span>Host,<span class="w"> </span>Default<span class="w"> </span>Version
-<span class="m">2020</span>-07-29<span class="w"> </span><span class="m">17</span>:14:19.061484:<span class="w"> </span>I<span class="w"> </span>tensorflow/stream_executor/platform/default/dso_loader.cc:44<span class="o">]</span><span class="w"> </span>Successfully<span class="w"> </span>opened<span class="w"> </span>dynamic<span class="w"> </span>library<span class="w"> </span>libcuda.so.1
-
-&lt;ouput<span class="w"> </span>snipped&gt;
-
-<span class="m">2020</span>-07-29<span class="w"> </span><span class="m">17</span>:14:19.817386:<span class="w"> </span>I<span class="w"> </span>tensorflow/core/common_runtime/gpu/gpu_device.cc:1102<span class="o">]</span><span class="w"> </span>Device<span class="w"> </span>interconnect<span class="w"> </span>StreamExecutor<span class="w"> </span>with<span class="w"> </span>strength<span class="w"> </span><span class="m">1</span><span class="w"> </span>edge<span class="w"> </span>matrix:
-<span class="m">2020</span>-07-29<span class="w"> </span><span class="m">17</span>:14:19.817392:<span class="w"> </span>I<span class="w"> </span>tensorflow/core/common_runtime/gpu/gpu_device.cc:1108<span class="o">]</span><span class="w">      </span><span class="m">0</span>
-<span class="m">2020</span>-07-29<span class="w"> </span><span class="m">17</span>:14:19.817397:<span class="w"> </span>I<span class="w"> </span>tensorflow/core/common_runtime/gpu/gpu_device.cc:1121<span class="o">]</span><span class="w"> </span><span class="m">0</span>:<span class="w">   </span>N
-<span class="m">2020</span>-07-29<span class="w"> </span><span class="m">17</span>:14:19.819082:<span class="w"> </span>I<span class="w"> </span>tensorflow/core/common_runtime/gpu/gpu_device.cc:1247<span class="o">]</span><span class="w"> </span>Created<span class="w"> </span>TensorFlow<span class="w"> </span>device<span class="w"> </span><span class="o">(</span>/device:GPU:0<span class="w"> </span>with<span class="w"> </span><span class="m">15064</span><span class="w"> </span>MB<span class="w"> </span>memory<span class="o">)</span><span class="w"> </span>-&gt;<span class="w"> </span>physical<span class="w"> </span>GPU<span class="w"> </span><span class="o">(</span>device:<span class="w"> </span><span class="m">0</span>,<span class="w"> </span>name:<span class="w"> </span>Tesla<span class="w"> </span>P100-PCIE-16GB,<span class="w"> </span>pci<span class="w"> </span>bus<span class="w"> </span>id:<span class="w"> </span><span class="m">0000</span>:02:00.0,<span class="w"> </span>compute<span class="w"> </span>capability:<span class="w"> </span><span class="m">6</span>.0<span class="o">)</span>
-Default<span class="w"> </span>GPU<span class="w"> </span>Device:<span class="w"> </span>/device:GPU:0
-</code></pre></div>
-Next, deactivate the environment using <code>conda deactivate tf</code> command.</p>
+<p>Next, deactivate the environment using <code>conda deactivate tf</code> command.</p>
 <h3 id="install-pytorch-with-gpu">Install PyTorch with GPU<a class="headerlink" href="#install-pytorch-with-gpu" title="Permanent link">&para;</a></h3>
 <ul>
 <li>To install PyTorch with GPU, load the <code>Miniforge3</code> module as described above and then use the following</li>
