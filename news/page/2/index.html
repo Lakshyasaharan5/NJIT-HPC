@@ -3603,6 +3603,110 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Courses/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    HPC for Course
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            HPC for Course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Courses/course-resource-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Courses/course-job-submission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submitting Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../faq/rhel_9_faq/" class="md-nav__link">
         
@@ -3701,59 +3805,6 @@
       <header class="md-typeset">
         <h1 id="cluster-maintenance-updates-and-news">Cluster Maintenance Updates and News<a class="headerlink" href="#cluster-maintenance-updates-and-news" title="Permanent link">&para;</a></h1>
       </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-10-14 00:00:00+00:00">October 14, 2023</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="wulver-maintenance"><a class="toclink" href="../../2023/10/14/wulver-maintenance/">Wulver Maintenance</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">GPFS Fileset Changes</p>
-<p>Wulver will be out of service Wed Oct 18<sup>th</sup> between 9:00 am-11:00 am for updates and configuration changes. The maintence will be conducted to fix the <code>stale file handle</code> error on <code>/scratch</code> while accessing files from login node.</p>
-<h2 id="maintencance-plans"><a class="toclink" href="../../2023/10/14/wulver-maintenance/#maintencance-plans">Maintencance Plans</a></h2>
-<h3 id="recommendation"><a class="toclink" href="../../2023/10/14/wulver-maintenance/#recommendation">Recommendation:</a></h3>
-<ul>
-<li>Each fileset gets it’s own inode namespace</li>
-<li>Fileset names to automatically inherit pool policies</li>
-<li>Additional fileset settings for chmod to not conflict with ACLs</li>
-</ul>
-<h3 id="migration-plan"><a class="toclink" href="../../2023/10/14/wulver-maintenance/#migration-plan">Migration Plan:</a></h3>
-<ul>
-<li>Create new filesets and link under /mmfs1/Scratch and /mmfs1/Project<ul>
-<li>New fileset names with sata1-project_xx and nvme1-scratch_xx (no bearing on FS path)</li>
-<li>New fileset have own inode spaces</li>
-</ul>
-</li>
-<li>Rsync data from old to new location</li>
-<li>Job outage for final copy and change</li>
-<li>Final rsyncs<ul>
-<li>Remove symlink for /mmfs1/scratch and create /mmfs1/scratch</li>
-<li>Unlink/relink filesets in new location</li>
-<li>Resolve any links remaining on nodes/images</li>
-</ul>
-</li>
-</ul>
-</div>
-    
-  </div>
-</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">

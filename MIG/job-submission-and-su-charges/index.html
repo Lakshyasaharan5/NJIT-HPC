@@ -3674,6 +3674,110 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Courses/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    HPC for Course
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            HPC for Course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Courses/course-resource-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Courses/course-job-submission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submitting Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../faq/rhel_9_faq/" class="md-nav__link">
         
@@ -3802,7 +3906,7 @@
 
 
 <h1 id="mig-job-submission-and-su-charges">MIG Job Submission and SU Charges<a class="headerlink" href="#mig-job-submission-and-su-charges" title="Permanent link">&para;</a></h1>
-<p>When submitting jobs on Wulver's MIG-enabled A100 GPUs, you must explicitly request the desired MIG profile using the --gres directive in your SLURM script.</p>
+<p>When submitting jobs on Wulver's MIG-enabled A100 GPUs, you must explicitly request the desired MIG profile using the <code>--gres</code> directive in your SLURM script.</p>
 <table>
 <thead>
 <tr>
@@ -3825,9 +3929,9 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Please note that MIGs are available in partition=<code>debug_gpu</code> and qos=<code>debug</code>. However, when you use a full GPU using <code>--gres=gpu:a100:1</code> use the partition <code>gpu</code> and qos <code>standard</code> or <code>low</code>. If you want to see a job script example of requesting a full GPU, please refer to the sample <a href="../../Software/slurm/#submitting-jobs-on-gpu-nodes">GPU job scripts</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to see a job script example of requesting a full GPU, please refer to the sample <a href="../../Running_jobs/batch-jobs/#example-of-batch-job-slurm-script-gpu-nodes">GPU job scripts</a>.</p>
 </div>
 <h2 id="running-jobs-with-mig">Running Jobs with MIG<a class="headerlink" href="#running-jobs-with-mig" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="running-jobs-with-mig-sample-slurm-script-for-a-mig-job" name="__tabbed_1" type="radio" /><input id="running-jobs-with-mig-interactive-session-with-mig" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="running-jobs-with-mig-sample-slurm-script-for-a-mig-job">Sample SLURM Script for a MIG Job</label><label for="running-jobs-with-mig-interactive-session-with-mig">Interactive session with MIG</label></div>
@@ -3837,8 +3941,8 @@
 <span class="c1">#SBATCH --job-name=gpu_job</span>
 <span class="c1">#SBATCH --output=%x.%j.out</span>
 <span class="c1">#SBATCH --error=%x.%j.err</span>
-<span class="c1">#SBATCH --partition=debug_gpu</span>
-<span class="c1">#SBATCH --qos=debug</span>
+<span class="c1">#SBATCH --partition=gpu</span>
+<span class="c1">#SBATCH --qos=standard</span>
 <span class="c1">#SBATCH --account=$PI_ucid         # Replace with PI&#39;s UCID</span>
 <span class="c1">#SBATCH --nodes=1</span>
 <span class="c1">#SBATCH --ntasks-per-node=8</span>
@@ -3850,9 +3954,9 @@ srun<span class="w"> </span>./myexe<span class="w"> </span>&lt;input/output<span
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nv">$srun</span><span class="w"> </span>--partition<span class="o">=</span>debug_gpu<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code><span class="nv">$srun</span><span class="w"> </span>--partition<span class="o">=</span>gpu<span class="w"> </span><span class="se">\</span>
 --account<span class="o">=</span><span class="nv">$PI_ucid</span><span class="w"> </span><span class="se">\</span>
---qos<span class="o">=</span>debug<span class="w"> </span><span class="se">\</span>
+--qos<span class="o">=</span>standard<span class="w"> </span><span class="se">\</span>
 --gres<span class="o">=</span>gpu:a100_10g:1<span class="w"> </span><span class="se">\</span>
 --time<span class="o">=</span><span class="m">00</span>:59:00<span class="w"> </span><span class="se">\</span>
 --pty<span class="w"> </span>bash

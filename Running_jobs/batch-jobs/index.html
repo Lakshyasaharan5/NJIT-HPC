@@ -1646,21 +1646,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example of batch job slurm script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#submitting-jobs-on-cpu-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Submitting Jobs on CPU Nodes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -3682,6 +3667,110 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Courses/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    HPC for Course
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            HPC for Course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Courses/course-resource-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Courses/course-job-submission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submitting Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../faq/rhel_9_faq/" class="md-nav__link">
         
@@ -3779,21 +3868,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example of batch job slurm script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#submitting-jobs-on-cpu-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Submitting Jobs on CPU Nodes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -3831,13 +3905,12 @@
 <li>How long your job may take?</li>
 </ul>
 <h3 id="example-of-batch-job-slurm-script">Example of batch job slurm script<a class="headerlink" href="#example-of-batch-job-slurm-script" title="Permanent link">&para;</a></h3>
-<h4 id="submitting-jobs-on-cpu-nodes">Submitting Jobs on CPU Nodes<a class="headerlink" href="#submitting-jobs-on-cpu-nodes" title="Permanent link">&para;</a></h4>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="submitting-jobs-on-cpu-nodes-cpu-nodes" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-gpu-nodes" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-debug-node" name="__tabbed_1" type="radio" /><input id="submitting-jobs-on-cpu-nodes-bigmem-node" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-cpu-nodes-cpu-nodes">CPU Nodes</label><label for="submitting-jobs-on-cpu-nodes-gpu-nodes">GPU Nodes</label><label for="submitting-jobs-on-cpu-nodes-debug-node">Debug Node</label><label for="submitting-jobs-on-cpu-nodes-bigmem-node">Bigmem Node</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="example-of-batch-job-slurm-script-cpu-nodes" name="__tabbed_1" type="radio" /><input id="example-of-batch-job-slurm-script-gpu-nodes" name="__tabbed_1" type="radio" /><input id="example-of-batch-job-slurm-script-debug-node" name="__tabbed_1" type="radio" /><input id="example-of-batch-job-slurm-script-bigmem-node" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="example-of-batch-job-slurm-script-cpu-nodes">CPU Nodes</label><label for="example-of-batch-job-slurm-script-gpu-nodes">GPU Nodes</label><label for="example-of-batch-job-slurm-script-debug-node">Debug Node</label><label for="example-of-batch-job-slurm-script-bigmem-node">Bigmem Node</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="example">
 <summary>Sample Job Script to use: submit.sh</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="submitting-jobs-on-cpu-nodes-using-1-core" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-threads" name="__tabbed_2" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores-and-threads" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-cpu-nodes-using-1-core">Using 1 core</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores">Using multiple cores</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-threads">Using multiple threads</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores-and-threads">Using multiple cores and threads</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="example-of-batch-job-slurm-script-using-1-core" name="__tabbed_2" type="radio" /><input id="example-of-batch-job-slurm-script-using-multiple-cores" name="__tabbed_2" type="radio" /><input id="example-of-batch-job-slurm-script-using-multiple-threads" name="__tabbed_2" type="radio" /><input id="example-of-batch-job-slurm-script-using-multiple-cores-and-threads" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="example-of-batch-job-slurm-script-using-1-core">Using 1 core</label><label for="example-of-batch-job-slurm-script-using-multiple-cores">Using multiple cores</label><label for="example-of-batch-job-slurm-script-using-multiple-threads">Using multiple threads</label><label for="example-of-batch-job-slurm-script-using-multiple-cores-and-threads">Using multiple cores and threads</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
@@ -3929,7 +4002,7 @@ Here, the <code>ST</code> stands for the status of the job. You may see the stat
 <p>In case of submitting the jobs on GPU, you can use the following SLURM script </p>
 <details class="example">
 <summary>Sample Job Script to use: gpu_submit.sh</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="submitting-jobs-on-cpu-nodes-using-1-core-1-gpu" name="__tabbed_3" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores-1-gpu" name="__tabbed_3" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-multiple-cores-gpus" name="__tabbed_3" type="radio" /><input id="submitting-jobs-on-cpu-nodes-using-migs" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="submitting-jobs-on-cpu-nodes-using-1-core-1-gpu">Using 1 core, 1 GPU</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores-1-gpu">Using multiple cores, 1 GPU</label><label for="submitting-jobs-on-cpu-nodes-using-multiple-cores-gpus">Using multiple cores, GPUs</label><label for="submitting-jobs-on-cpu-nodes-using-migs">Using MIGs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="example-of-batch-job-slurm-script-using-1-core-1-gpu" name="__tabbed_3" type="radio" /><input id="example-of-batch-job-slurm-script-using-multiple-cores-1-gpu" name="__tabbed_3" type="radio" /><input id="example-of-batch-job-slurm-script-using-multiple-cores-gpus" name="__tabbed_3" type="radio" /><input id="example-of-batch-job-slurm-script-using-migs" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="example-of-batch-job-slurm-script-using-1-core-1-gpu">Using 1 core, 1 GPU</label><label for="example-of-batch-job-slurm-script-using-multiple-cores-1-gpu">Using multiple cores, 1 GPU</label><label for="example-of-batch-job-slurm-script-using-multiple-cores-gpus">Using multiple cores, GPUs</label><label for="example-of-batch-job-slurm-script-using-migs">Using MIGs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
