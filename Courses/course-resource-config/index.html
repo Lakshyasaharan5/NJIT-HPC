@@ -3743,21 +3743,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SU Calculation Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#su-calculation-examples_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      SU Calculation Examples
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -3967,21 +3952,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SU Calculation Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#su-calculation-examples_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      SU Calculation Examples
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -4069,38 +4039,6 @@ Each job’s runtime and Service Unit (SU) charge depend on how many nodes and r
 </thead>
 <tbody>
 <tr>
-<td>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td><code>--partition=course</code></td>
-<td style="text-align: center;">64</td>
-<td style="text-align: center;">32–48</td>
-<td style="text-align: center;">NA</td>
-<td style="text-align: center;">375 GB</td>
-<td style="text-align: left;"><code>MAX(CPUs, Memory/4G) SU</code></td>
-</tr>
-<tr>
-<td><code>--partition=course_gpu</code></td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">32–48</td>
-<td style="text-align: center;">A100 10G MIG</td>
-<td style="text-align: center;">375 GB</td>
-<td style="text-align: left;"><code>2 + MAX(CPUs, Memory/4G) SU</code></td>
-</tr>
-<tr>
-<td>=======</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
 <td><code>--&#8203;partition&#8203;=&#8203;course</code></td>
 <td style="text-align: center;">64</td>
 <td style="text-align: center;">32–48</td>
@@ -4116,33 +4054,13 @@ Each job’s runtime and Service Unit (SU) charge depend on how many nodes and r
 <td style="text-align: center;">375 GB</td>
 <td style="text-align: left;"><code>2 + MAX(CPUs, Memory/4G) SU</code></td>
 </tr>
-<tr>
-<td>&gt;&gt;&gt;&gt;&gt;&gt;&gt; course-page</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: left;"></td>
-</tr>
 </tbody>
 </table>
 <p>Courses that require GPU computing are assigned <strong>NVIDIA A100 10G MIG</strong> units for GPU-enabled coursework.</p>
 <h2 id="service-units">Service Units<a class="headerlink" href="#service-units" title="Permanent link">&para;</a></h2>
 <p>Each user is allocated <strong>2500 Service Units (SUs)</strong> for the duration of their course.<br />
 SUs are consumed based on how many cores, memory, and GPUs your job requests and how long it runs.</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<h3 id="su-calculation-examples">SU Calculation Examples<a class="headerlink" href="#su-calculation-examples" title="Permanent link">&para;</a></h3>
-<p><strong>Example 1 – CPU-only job</strong> <br>
-20 cores for 8 hours (no <code>--mem</code> specified, so default 4G per core will be allocated) <br>
-SU = MAX(CPUs, Memory/4G) x Hours <br>
-SU = (20, 4/4) × 8 = 160  </p>
-<p><strong>Example 2 – GPU job</strong>  <br>
-20 cores + 1 GPU for 8 hours with <code>--mem=128G</code> <br>
-SU = [2 + MAX(CPUs, Memory/4G)] x Hours <br>
-SU = [2 + MAX(20, 128/4)] × 8 <br>
-SU = (2 + 32) × 8 = 34 × 8 = 272
-=======</p>
-<h4 id="su-calculation-examples_1">SU Calculation Examples<a class="headerlink" href="#su-calculation-examples_1" title="Permanent link">&para;</a></h4>
+<h4 id="su-calculation-examples">SU Calculation Examples<a class="headerlink" href="#su-calculation-examples" title="Permanent link">&para;</a></h4>
 <p><strong>Example 1 – CPU-only job</strong> <br>
 20 cores for 8 hours (no <code>--mem</code> specified, so default 4G per core will be allocated) 
 <div class="highlight"><pre><span></span><code>SU = MAX(CPUs, Memory/4G) x Hours 
@@ -4154,21 +4072,6 @@ SU = (20, 4/4) × 8 = 160
 SU = [2 + MAX(20, 128/4)] × 8 
 SU = (2 + 32) × 8 = 34 × 8 = 272
 </code></pre></div></p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>course-page</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
 <p><em>To make the most of your SUs, avoid overestimating cores or memory. Over-allocation wastes SUs and delays scheduling.</em></p>
 <h2 id="priority-use-qos">Priority (Use <code>--qos</code>)<a class="headerlink" href="#priority-use-qos" title="Permanent link">&para;</a></h2>
 <p>All course-related jobs must include the <code>--qos=course</code> flag.<br />
@@ -4185,39 +4088,11 @@ This ensures fair scheduling and appropriate priority for classwork jobs.</p>
 </thead>
 <tbody>
 <tr>
-<td>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td><code>--qos=course</code></td>
-<td style="text-align: left;">For all course-related jobs</td>
-<td style="text-align: left;">2500 SUs per user. Jobs can be preempted by higher QoS jobs.</td>
-<td style="text-align: left;">72</td>
-<td style="text-align: left;">Course users only</td>
-</tr>
-<tr>
-<td>=======</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
 <td><code>--&#8203;qos&#8203;=&#8203;course</code></td>
 <td style="text-align: left;">For all course-related jobs</td>
 <td style="text-align: left;">2500 SUs per user. Jobs can be preempted by higher QoS jobs.</td>
 <td style="text-align: left;">72</td>
 <td style="text-align: left;">Course users only</td>
-</tr>
-<tr>
-<td>&gt;&gt;&gt;&gt;&gt;&gt;&gt; course-page</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
