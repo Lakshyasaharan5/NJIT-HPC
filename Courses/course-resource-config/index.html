@@ -3751,15 +3751,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#priority-use-qos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Priority (Use --qos)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#account" class="md-nav__link">
     <span class="md-ellipsis">
       Account
@@ -3780,6 +3771,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-use-qos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority (Use --qos)
+    </span>
+  </a>
   
 </li>
       
@@ -3960,15 +3960,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#priority-use-qos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Priority (Use --qos)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#account" class="md-nav__link">
     <span class="md-ellipsis">
       Account
@@ -3989,6 +3980,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-use-qos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority (Use --qos)
+    </span>
+  </a>
   
 </li>
       
@@ -4058,7 +4058,7 @@ Each job’s runtime and Service Unit (SU) charge depend on how many nodes and r
 </table>
 <p>Courses that require GPU computing are assigned <strong>NVIDIA A100 10G MIG</strong> units for GPU-enabled coursework.</p>
 <h2 id="service-units">Service Units<a class="headerlink" href="#service-units" title="Permanent link">&para;</a></h2>
-<p>Each user is allocated <strong>2500 Service Units (SUs)</strong> for the duration of their course.<br />
+<p>Each user is allocated <strong>2500 Service Units (SUs)</strong> in their account for the duration of their course.<br />
 SUs are consumed based on how many cores, memory, and GPUs your job requests and how long it runs.</p>
 <h4 id="su-calculation-examples">SU Calculation Examples<a class="headerlink" href="#su-calculation-examples" title="Permanent link">&para;</a></h4>
 <p><strong>Example 1 – CPU-only job</strong> <br>
@@ -4073,32 +4073,7 @@ SU = [2 + MAX(20, 128/4)] × 8
 SU = (2 + 32) × 8 = 34 × 8 = 272
 </code></pre></div></p>
 <p><em>To make the most of your SUs, avoid overestimating cores or memory. Over-allocation wastes SUs and delays scheduling.</em></p>
-<h2 id="priority-use-qos">Priority (Use <code>--qos</code>)<a class="headerlink" href="#priority-use-qos" title="Permanent link">&para;</a></h2>
-<p>All course-related jobs must include the <code>--qos=course</code> flag.<br />
-This ensures fair scheduling and appropriate priority for classwork jobs.</p>
-<table>
-<thead>
-<tr>
-<th>Qos</th>
-<th style="text-align: left;">Purpose</th>
-<th style="text-align: left;">Rules</th>
-<th style="text-align: left;">Wall time limit (hours)</th>
-<th style="text-align: left;">Valid Users</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--&#8203;qos&#8203;=&#8203;course</code></td>
-<td style="text-align: left;">For all course-related jobs</td>
-<td style="text-align: left;">2500 SUs per user. Jobs can be preempted by higher QoS jobs.</td>
-<td style="text-align: left;">72</td>
-<td style="text-align: left;">Course users only</td>
-</tr>
-</tbody>
-</table>
-<p>Example:
-<div class="highlight"><pre><span></span><code><span class="c1">#SBATCH --qos=course</span>
-</code></pre></div></p>
+<p>Please visit <a href="../../Running_jobs/service-units/">here</a> for more info on Service Units</p>
 <h2 id="account">Account<a class="headerlink" href="#account" title="Permanent link">&para;</a></h2>
 <p>Every course is assigned a dedicated <strong>account</strong> for SU billing.<br />
 You must specify this account in all SLURM job scripts using the <code>--account</code> flag.</p>
@@ -4124,6 +4099,30 @@ You must specify this account in all SLURM job scripts using the <code>--account
 <li>If you are enrolled in multiple courses or research projects, ensure that you submit jobs using the correct account to avoid suspension or access issues.</li>
 <li>Use the <code>quota_info</code> command to view all accounts assigned to you.</li>
 </ul>
+<h2 id="priority-use-qos">Priority (Use <code>--qos</code>)<a class="headerlink" href="#priority-use-qos" title="Permanent link">&para;</a></h2>
+<p>All course-related jobs must include the <code>--qos=course</code> flag.<br />
+This ensures fair scheduling and appropriate priority for classwork jobs.</p>
+<table>
+<thead>
+<tr>
+<th>Qos</th>
+<th style="text-align: left;">Purpose</th>
+<th style="text-align: left;">Wall time limit (hours)</th>
+<th style="text-align: left;">Valid Users</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--&#8203;qos&#8203;=&#8203;course</code></td>
+<td style="text-align: left;">For all course-related jobs</td>
+<td style="text-align: left;">72</td>
+<td style="text-align: left;">Course users only</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="c1">#SBATCH --qos=course</span>
+</code></pre></div></p>
 <h2 id="course-directory">Course Directory<a class="headerlink" href="#course-directory" title="Permanent link">&para;</a></h2>
 <p>Each student is assigned a dedicated <strong>course directory</strong>, and <strong>all work must be done inside it</strong>, including job scripts and outputs.</p>
 <p>Directory Format
